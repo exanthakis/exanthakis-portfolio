@@ -10,3 +10,16 @@
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: "GeneralSans-Regular";
+  src: url("../public/fonts/GeneralSans-Regular.otf");
+}
+@font-face {
+  font-family: "GeneralSans-Bold";
+  src: url("../public/fonts/GeneralSans-Bold.otf");
+}
+@font-face {
+  font-family: "GeneralSans-Light";
+  src: url("../public/fonts/GeneralSans-Light.otf");
+}
