@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-generalSansRegular relative bg-black text-gray-50 dark:text-opacity-90 mx-auto max-w-7xl`}
+        className={`font-generalSansRegular relative bg-black text-gray-50 dark:text-opacity-90`}
         // className={`font-generalSansRegular bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
       >
         <Image
