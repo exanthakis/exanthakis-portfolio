@@ -1,7 +1,14 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaJava, FaGitAlt, FaBootstrap, FaAws } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript, SiNextdotjs, SiRedux, SiMui } from "react-icons/si";
+import { GrReactjs } from "react-icons/gr";
+import { DiPostgresql } from "react-icons/di";
+import { BiLogoAdobe } from "react-icons/bi";
 
 export const links = [
   {
@@ -13,12 +20,12 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
     name: "Skills",
     hash: "#skills",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
   },
   {
     name: "Contact",
@@ -77,24 +84,87 @@ export const projectsData = [
   },
 ] as const;
 
+// export const skillsData = [
+//   "HTML",
+//   "CSS",
+//   "JavaScript",
+//   "TypeScript",
+//   "React",
+//   "Next.js",
+//   "Node.js",
+//   "Git",
+//   "Tailwind",
+//   "Prisma",
+//   "MongoDB",
+//   "Redux",
+//   "GraphQL",
+//   "Apollo",
+//   "Express",
+//   "PostgreSQL",
+//   "Python",
+//   "Django",
+//   "Framer Motion",
+// ] as const;
+
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  {
+    title: "HTML5",
+    icon: React.createElement(AiOutlineHtml5),
+  },
+  {
+    title: "CSS",
+    icon: React.createElement(IoLogoCss3),
+  },
+  {
+    title: "Tailwind",
+    icon: React.createElement(RiTailwindCssFill),
+  },
+  {
+    title: "MUI",
+    icon: React.createElement(SiMui),
+  },
+  {
+    title: "Bootstrap",
+    icon: React.createElement(FaBootstrap),
+  },
+  {
+    title: "JavaScript",
+    icon: React.createElement(IoLogoJavascript),
+  },
+  {
+    title: "TypeScript",
+    icon: React.createElement(SiTypescript),
+  },
+  {
+    title: "React",
+    icon: React.createElement(GrReactjs),
+  },
+  {
+    title: "Next.js",
+    icon: React.createElement(SiNextdotjs),
+  },
+  {
+    title: "Redux",
+    icon: React.createElement(SiRedux),
+  },
+  {
+    title: "Java",
+    icon: React.createElement(FaJava),
+  },
+  {
+    title: "PostgreSQL",
+    icon: React.createElement(DiPostgresql),
+  },
+  {
+    title: "AWS",
+    icon: React.createElement(FaAws),
+  },
+  {
+    title: "AEM 6.5",
+    icon: React.createElement(BiLogoAdobe),
+  },
+  {
+    title: "Git",
+    icon: React.createElement(FaGitAlt),
+  },
 ] as const;

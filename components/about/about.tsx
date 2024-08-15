@@ -10,7 +10,7 @@ const About = () => {
     <section
       ref={ref}
       id="about"
-      className="mb-28 px-6 py-12 mt-8 text-center w-full leading-8 sm:mb-40 scroll-mt-28 relative"
+      className="py-12 mt-8 text-center w-full leading-8 scroll-mt-28 relative"
     >
       <div
         aria-hidden="true"
