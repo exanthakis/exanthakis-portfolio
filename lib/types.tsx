@@ -6,4 +6,17 @@ type SectionHeadingProps = {
 
 type SectionName = (typeof links)[number]["name"];
 
-export type { SectionHeadingProps, SectionName };
+export enum ButtonType {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+}
+
+interface IButtonProps {
+  buttonType: ButtonType;
+  href: string;
+  children: React.ReactNode;
+}
+
+type ButtonProps = IButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export type { SectionHeadingProps, SectionName, ButtonProps };
