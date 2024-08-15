@@ -1,9 +1,16 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaJava, FaGitAlt, FaBootstrap, FaAws } from "react-icons/fa";
+import {
+  FaReact,
+  FaJava,
+  FaGitAlt,
+  FaBootstrap,
+  FaAws,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
-import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+import { IoLogoCss3, IoLogoJavascript, IoLogoGithub } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiNextdotjs, SiRedux, SiMui } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
@@ -33,6 +40,21 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+
+export const socialLinks = [
+  {
+    link: "https://github.com/exanthakis",
+    icon: React.createElement(IoLogoGithub, {
+      className: "opacity-70 group-hover:translate-x-1 transition text-xl",
+    }),
+  },
+  {
+    link: "https://www.linkedin.com/in/emmanouil-xanthakis",
+    icon: React.createElement(FaLinkedinIn, {
+      className: "opacity-70 group-hover:translate-x-1 transition text-xl",
+    }),
+  },
+];
 
 export const experiencesData = [
   {
@@ -84,28 +106,6 @@ export const projectsData = [
     imageUrl: "",
   },
 ] as const;
-
-// export const skillsData = [
-//   "HTML",
-//   "CSS",
-//   "JavaScript",
-//   "TypeScript",
-//   "React",
-//   "Next.js",
-//   "Node.js",
-//   "Git",
-//   "Tailwind",
-//   "Prisma",
-//   "MongoDB",
-//   "Redux",
-//   "GraphQL",
-//   "Apollo",
-//   "Express",
-//   "PostgreSQL",
-//   "Python",
-//   "Django",
-//   "Framer Motion",
-// ] as const;
 
 export const skillsData = [
   {

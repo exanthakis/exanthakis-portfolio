@@ -1,9 +1,13 @@
 "use client";
 
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
-import { links } from "@/lib/data";
+import { links, socialLinks } from "@/lib/data";
 import { motion } from "framer-motion";
+import { IoLogoGithub } from "react-icons/io";
 import Link from "next/link";
+import Button from "./button";
+import { ButtonType } from "@/lib/types";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -11,22 +15,20 @@ const Header = () => {
 
   return (
     <header className="z-[999] fixed lg:sticky top-0 left-0 w-full flex border-b border-gray-500/5  transition items-center justify-between md:h-[8vh] backdrop-blur bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75">
-      <div className="flex w-full justify-between  mx-auto max-w-7xl">
-        <motion.div
-          className="flex items-center gap-3"
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-        >
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="flex w-full justify-between  mx-auto max-w-7xl"
+      >
+        <div className="flex items-center gap-3">
           <a href="">Emmanouil Xanthakis</a>
-        </motion.div>
+        </div>
         <nav className="flex items-center gap-2 ">
           <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
             {links.map((link) => (
-              <motion.li
+              <li
                 key={link.hash}
                 className="h-3/4 flex items-center justify-center relative"
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
               >
                 <Link
                   href={link.hash}
@@ -54,11 +56,24 @@ const Header = () => {
                     ></motion.span>
                   )}
                 </Link>
-              </motion.li>
+              </li>
             ))}
           </ul>
         </nav>
-      </div>
+
+        <div className="flex justify-center gap-2">
+          {socialLinks.map((social) => (
+            <Button
+              buttonType={ButtonType.LINK}
+              href={social.link}
+              key={social.link}
+              target="_blank"
+            >
+              {social.icon}
+            </Button>
+          ))}
+        </div>
+      </motion.div>
     </header>
   );
 };
