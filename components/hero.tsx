@@ -13,7 +13,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="relative mx-auto flex max-w-3xl flex-col justify-center h-[90vh]"
+      className="relative mx-auto flex max-w-3xl flex-col justify-center h-[92vh]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
