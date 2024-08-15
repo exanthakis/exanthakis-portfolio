@@ -9,6 +9,7 @@ type SectionName = (typeof links)[number]["name"];
 export enum ButtonType {
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  LINK = "link",
 }
 
 interface IButtonProps {

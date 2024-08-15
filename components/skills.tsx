@@ -22,10 +22,10 @@ const fadeInAnimationVariants = {
 };
 
 const Skills = () => {
-  const { ref } = useSectionInView("Skills", 0.5);
+  const { ref } = useSectionInView("Skills");
 
   return (
-    <section ref={ref} className="scroll-mt-28 text-center w-full pb-12">
+    <section ref={ref} className="scroll-mt-28 py-12 text-center w-full pb-12">
       <SectionHeading>Skills</SectionHeading>
 
       <p className="font-sans mb-12 text-center md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
