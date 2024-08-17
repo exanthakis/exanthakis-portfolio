@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import ActiveContextProvider from "@/store/active-context";
 import Image from "next/image";
 import bgImg from "@/public/bg.png";
+import Footer from "@/components/footer";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <ActiveContextProvider>
           <Header />
           {children}
+          <Footer />
         </ActiveContextProvider>
       </body>
     </html>

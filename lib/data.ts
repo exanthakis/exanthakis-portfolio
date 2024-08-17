@@ -18,6 +18,8 @@ import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe } from "react-icons/bi";
 import { PiCertificateThin } from "react-icons/pi";
 
+export const fullName = "Emmanouel Xanthakis";
+
 export const links = [
   {
     name: "Home",

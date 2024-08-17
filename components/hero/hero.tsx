@@ -19,7 +19,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="relative mx-auto flex flex-row-reverse justify-center items-center h-[92dvh]"
+      className="relative mx-auto flex flex-col md:flex-row-reverse justify-center items-center h-[92dvh]"
     >
       {/* <div className="flex items-center justify-center z-10 relative h-3/5"> */}
       <CubeScene />
@@ -42,7 +42,7 @@ const Hero = () => {
         }}
       >
         <h1
-          className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
+          className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px]  lg:leading-[98px] leading-[60px] mt-2`}
         >
           Hi, I&apos;m{" "}
           <span className="text-[#30C1E7]">
@@ -51,7 +51,7 @@ const Hero = () => {
         </h1>
 
         <p
-          className={`text-white font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-100`}
+          className={`text-white font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] leading-[20px] mt-2 text-white-100`}
         >
           A Frontend developer with <span className="font-bold">3 years</span>{" "}
           of experience in developing user interfaces and web applications.
