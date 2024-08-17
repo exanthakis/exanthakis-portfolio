@@ -13,11 +13,7 @@ const Loader = () => {
 
 export default function Scene() {
   return (
-    <Canvas
-      gl={{ antialias: true }}
-      dpr={[1, 1.5]}
-      className="h-svh z-10 absolute"
-    >
+    <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="h-svh z-10 ">
       <directionalLight position={[-5, -5, 5]} intensity={4} />
       <Suspense fallback={<Loader />}>
         <Center>

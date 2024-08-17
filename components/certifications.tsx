@@ -4,7 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { certificationsData } from "@/lib/data";
 import { motion } from "framer-motion";
-import Button from "./button";
+import Button from "./ui/button";
 import { ButtonType } from "@/lib/types";
 import { BsArrowRight } from "react-icons/bs";
 import { GoLinkExternal } from "react-icons/go";
@@ -25,7 +25,7 @@ export const fadeInModAnimationVariants = {
 
 const Certifications = () => {
   return (
-    <div className="scroll-mt-28 text-center w-full mx-auto py-5 mt-5 relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] ">
+    <div className="text-center w-full mx-auto py-5 mt-5 relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] ">
       <div
         aria-hidden="true"
         className="left-1/2 right-1 top-0 w-[300px] sm:left-auto center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2"

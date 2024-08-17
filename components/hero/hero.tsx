@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import Image from "next/image";
-import Button from "../button";
+import Button from "../ui/button";
 import { BsArrowRight } from "react-icons/bs";
 import { ButtonType } from "@/lib/types";
 import dynamic from "next/dynamic";

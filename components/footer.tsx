@@ -1,9 +1,5 @@
 import { fullName, links } from "@/lib/data";
-import Link from "next/link";
 import React from "react";
-import Button from "./button";
-import { ButtonType } from "@/lib/types";
-import { GoLinkExternal } from "react-icons/go";
 
 const Footer = () => {
   return (

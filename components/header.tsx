@@ -5,7 +5,7 @@ import { links, socialLinks } from "@/lib/data";
 import { motion } from "framer-motion";
 import { IoLogoGithub } from "react-icons/io";
 import Link from "next/link";
-import Button from "./button";
+import Button from "./ui/button";
 import { ButtonType } from "@/lib/types";
 import { FaLinkedinIn } from "react-icons/fa";
 
