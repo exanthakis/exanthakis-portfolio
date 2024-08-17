@@ -14,14 +14,14 @@ const Header = () => {
     useActiveSectionContext();
 
   return (
-    <header className="z-[999] fixed lg:sticky top-0 left-0 w-full flex border-b border-gray-500/5  transition items-center justify-between md:h-[8vh] backdrop-blur bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75">
+    <header className="z-[999] fixed lg:sticky top-0 left-0 w-full flex border-b border-gray-500/5  transition items-center justify-between md:h-[8dvh] backdrop-blur bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         className="flex w-full justify-between  mx-auto max-w-7xl"
       >
         <div className="flex items-center gap-3">
-          <a href="">Emmanouil Xanthakis</a>
+          <a href="">Emmanuel Xanthakis</a>
         </div>
         <nav className="flex items-center gap-2 ">
           <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">

@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.110.0",
+    "@react-three/fiber": "^8.17.5",
+    "@react-three/postprocessing": "^2.16.2",
     "framer-motion": "^11.2.11",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "react-intersection-observer": "^9.13.0"
+    "react-intersection-observer": "^9.13.0",
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@types/node": "^20",

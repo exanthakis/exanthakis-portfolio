@@ -2,6 +2,9 @@
 
 import { useSectionInView } from "@/hooks/useSectionInView";
 import AboutShowcase from "./about-showcase";
+import Skills from "../skills";
+import Certifications from "../certifications";
+import Experience from "../experience";
 
 const About = () => {
   const { ref } = useSectionInView("About");
@@ -30,6 +33,9 @@ const About = () => {
       ></div>
 
       <AboutShowcase />
+      <Skills />
+      <Certifications />
+      <Experience />
     </section>
   );
 };

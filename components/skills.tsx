@@ -3,7 +3,6 @@
 import React from "react";
 
 import { skillsData } from "@/lib/data";
-import { useSectionInView } from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
 
@@ -22,10 +21,8 @@ const fadeInAnimationVariants = {
 };
 
 const Skills = () => {
-  const { ref } = useSectionInView("Skills");
-
   return (
-    <section ref={ref} className="scroll-mt-28 py-12 text-center w-full pb-12">
+    <div className="scroll-mt-28 py-12 text-center w-full pb-12">
       <SectionHeading>Skills</SectionHeading>
 
       <p className="font-sans mb-12 text-center md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
@@ -61,7 +58,7 @@ const Skills = () => {
           </motion.li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 
