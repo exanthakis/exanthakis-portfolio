@@ -22,7 +22,7 @@ const Hero = () => {
       className="relative mx-auto flex flex-col md:flex-row-reverse justify-center items-center h-[92dvh]"
     >
       {/* <div className="flex items-center justify-center z-10 relative h-3/5"> */}
-      <CubeScene />
+      {/* <CubeScene /> */}
       {/* <div className="relative z-100 h-full">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -34,7 +34,7 @@ const Hero = () => {
         </div> */}
       {/* </div> */}
       <motion.div
-        className="flex sm:flex-col items-start justify-center gap-8 px-4 text-lg font-medium"
+        className="flex flex-col items-start justify-center gap-8 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

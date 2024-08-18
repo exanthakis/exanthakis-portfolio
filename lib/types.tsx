@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import { links } from "./data";
 
 type SectionHeadingProps = {
@@ -20,4 +21,9 @@ interface IButtonProps {
 
 type ButtonProps = IButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export type { SectionHeadingProps, SectionName, ButtonProps };
+type MobileNavProps = {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+};
+
+export type { SectionHeadingProps, SectionName, ButtonProps, MobileNavProps };
