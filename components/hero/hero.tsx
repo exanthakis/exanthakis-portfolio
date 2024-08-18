@@ -34,40 +34,23 @@ const Hero = () => {
         </div> */}
       {/* </div> */}
       <motion.div
-        className="flex flex-col items-start justify-center gap-8 px-4 text-lg font-medium"
+        className="flex flex-col items-start justify-center gap-y-4 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
       >
-        <h1
-          className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px]  lg:leading-[98px] leading-[60px] mt-2`}
-        >
-          Hi, I&apos;m{" "}
-          <span className="text-[#30C1E7]">
-            <br className="sm:block hidden" /> Emmanuel
-          </span>
+        <h1 className="max-w-md font-black font-calSans bg-white text-left bg-home-hero-title bg-clip-text font-titles text-6xl text-transparent leading-[120%]">
+          Crafting Innovative Digital Experiences
         </h1>
 
         <p
-          className={`text-white font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] leading-[20px] mt-2 text-white-100`}
+          className={`text-white font-medium lg:text-2xl sm:text-xl xs:text-[20px] text-[16px] lg:leading-[40px] leading-[20px] text-white-100`}
         >
           A Frontend developer with <span className="font-bold">3 years</span>{" "}
           of experience in developing user interfaces and web applications.
         </p>
-        {/* <h1 className=" mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl max-w-3xl ">
-          Hi I&apos;m Manolis
-        </h1> */}
-        {/* <h1 className=" mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl max-w-3xl ">
-          Hi I&apos;m a{" "}
-          <span className="font-bold">
-            Front end developer & Software Engineer
-          </span>{" "}
-          with <span className="font-bold">3 years</span> of experience. I enjoy
-          building <span className="italic">sites & apps</span>. My focus is{" "}
-          <span className="underline">React (Next.js)</span>.
-        </h1> */}
 
         <Button buttonType={ButtonType.PRIMARY} href="">
           Contact me here{" "}

@@ -23,3 +23,40 @@
   font-family: "GeneralSans-Light";
   src: url("../public/fonts/GeneralSans-Light.otf");
 }
+@font-face {
+  font-family: "CalSans-SemiBold";
+  src: url("../public/fonts/CalSans-SemiBold.otf");
+}
+
+.bg-home-hero-title {
+  background-image: radial-gradient(
+      162px at 257px 26px,
+      rgba(181, 204, 227, 0.6),
+      transparent
+    ),
+    radial-gradient(162px at 351px 199px, hsla(19, 42%, 75%, 0.6), transparent);
+}
+
+.btn-shadow {
+  box-shadow: var(0 0 #0000, 0 0 #0000), var(0 0 #0000, 0 0 #0000),
+    var(0 6px 16px hsla(0, 0%, 100%, 0.2));
+}
+
+.bg-template-card {
+  background-image: radial-gradient(
+      121.65% 100% at 32.68% 0,
+      #3c4155 0,
+      rgba(60, 65, 85, 0.18) 32.49%,
+      rgba(60, 65, 85, 0) 51.34%
+    ),
+    radial-gradient(
+      91.41% 43.04% at 50% 0,
+      #1a1c24 20.67%,
+      rgba(26, 28, 36, 0) 100%
+    ),
+    radial-gradient(
+      69.96% 25.89% at 50% 100%,
+      #15171e 22.77%,
+      rgba(19, 21, 27, 0) 100%
+    );
+}

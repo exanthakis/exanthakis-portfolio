@@ -12,6 +12,7 @@ const config: Config = {
         generalSansRegular: ["GeneralSans-Regular", "sans-serif"],
         generalSansBold: ["GeneralSans-Bold", "sans-serif"],
         generalSansLight: ["GeneralSans-Light", "sans-serif"],
+        calSans: ["CalSans-SemiBold", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

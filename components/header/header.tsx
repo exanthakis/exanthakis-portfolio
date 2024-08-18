@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="z-50 p-2" onClick={() => setOpen(false)}>
             Emmanouel Xanthakis
-            <span className="sr-only">Glisten.ai Home Page</span>
+            <span className="sr-only">Emmanoul Portfolio Page</span>
           </Link>
           <button
             type="button"
