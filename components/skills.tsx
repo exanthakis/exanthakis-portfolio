@@ -4,7 +4,7 @@ import React from "react";
 
 import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
-import SectionHeading from "./section-heading";
+import SectionHeading from "./ui/section-heading";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -22,7 +22,7 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   return (
-    <div className="py-12 text-center w-full pb-12">
+    <div className="py-12 text-center w-full">
       <SectionHeading>Skills</SectionHeading>
 
       <p className="font-sans mb-12 text-center md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">

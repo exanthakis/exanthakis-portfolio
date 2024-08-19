@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
+import SectionHeading from "./ui/section-heading";
 import { certificationsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import Button from "./ui/button";

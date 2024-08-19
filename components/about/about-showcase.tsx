@@ -1,7 +1,7 @@
 import { useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import SectionHeading from "../section-heading";
+import SectionHeading from "../ui/section-heading";
 
 const AboutShowcase = () => {
   const ref = useRef<HTMLDivElement>(null);
