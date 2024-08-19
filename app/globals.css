@@ -60,3 +60,30 @@
       rgba(19, 21, 27, 0) 100%
     );
 }
+
+.gradient-purple {
+  background: linear-gradient(
+      129.06deg,
+      rgb(154, 106, 255) 0%,
+      rgb(96, 255, 199) 88.16%
+    )
+    text;
+}
+
+.gradient-pink {
+  background: linear-gradient(
+      285.49deg,
+      rgb(245, 55, 249) -14.61%,
+      rgb(247, 190, 43) 106.06%
+    )
+    text;
+}
+.gradient-light {
+  background: linear-gradient(to right bottom, #fff 30%, hsla(0, 0%, 100%, 0.5))
+    text;
+}
+
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+  color: unset;
+}

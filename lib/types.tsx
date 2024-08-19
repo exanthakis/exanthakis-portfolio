@@ -3,6 +3,7 @@ import { links } from "./data";
 
 type SectionHeadingProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
 type SectionName = (typeof links)[number]["name"];
@@ -26,4 +27,14 @@ type MobileNavProps = {
   setOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-export type { SectionHeadingProps, SectionName, ButtonProps, MobileNavProps };
+type DividerProps = {
+  type?: string;
+};
+
+export type {
+  SectionHeadingProps,
+  SectionName,
+  ButtonProps,
+  MobileNavProps,
+  DividerProps,
+};

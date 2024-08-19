@@ -19,7 +19,9 @@ const AboutShowcase = () => {
       className="mx-auto text-left"
       style={{ opacity: opacityProgress }}
     >
-      <SectionHeading>About</SectionHeading>
+      <SectionHeading className="text-gradient gradient-light">
+        About
+      </SectionHeading>
       <p className="font-sans mb-6 text-center md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
         A Frontend developer with{" "}
         <span className="font-medium">over 3 years</span> of experience in
