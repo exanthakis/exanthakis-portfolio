@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 
 import { experiencesData, monthNames, skillsData } from "@/lib/data";
 import Image from "next/image";
@@ -24,7 +24,7 @@ const Experience = () => {
         </span>
       </div>
 
-      <ul className="flex flex-col w-full mx-auto max-w-5xl pt-16 overflow-hidden">
+      <ul className="flex flex-col w-full mx-auto max-w-5xl py-16">
         {experiencesData.map((experience, index) => {
           const date = new Date(experience.date);
           const month = monthNames[date.getMonth()];
