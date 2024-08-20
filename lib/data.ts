@@ -21,6 +21,21 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const fullName = "Emmanouel Xanthakis";
 
+export const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 export const links = [
   {
     name: "Home",
@@ -57,28 +72,40 @@ export const socialLinks = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    id: 1,
+    title: "Front-End Developer (Consultant II)",
+    location: "Chania",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Worked as a Front-End Developer, conducting code reviews and providing guidance to ensure code quality aligned with customer business needs, marketing objectives, and SEO strategy. Utilized a tech stack including React and Sass, leveraging Storybook and Jest to generate snapshot tests for all React components, ensuring consistency and reliability across the application.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2024-07-17",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    id: 2,
+    title: "Front-End Developer (Consultant I)",
+    location: "Chania",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Developed and maintained modern, scalable, and high- performance web applications using the Next.js framework, leveraging various AWS services for full cloud-based implementations (implementing AWS Cognito authentication in Next.js App).",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023-07-17",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    id: 3,
+    title: "Front-End Developer (Business Analyst III)",
+    location: "Chania",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Created responsive websites using the latest front-end technologies, including HTML, SCSS, and jQuery, along with CSS frameworks like Bootstrap, to deliver high-quality, mobile-friendly web experiences.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022-07-17",
+  },
+  {
+    id: 4,
+    title: "Front-End Developer (Business Analyst I)",
+    location: "Chania",
+    description:
+      "Created responsive websites using the latest front-end technologies, including HTML, SCSS, and jQuery, along with CSS frameworks like Bootstrap, to deliver high-quality, mobile-friendly web experiences.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021-07-17",
   },
 ] as const;
 

@@ -49,7 +49,7 @@ const Hero = () => {
           className={`md:text-xl tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal sm:px-20`}
           // className={`text-white font-medium lg:text-2xl sm:text-xl xs:text-[20px] text-[16px] lg:leading-[40px] leading-[20px] text-white-100`}
         >
-          A Frontend developer with <span className="font-bold">3 years</span>{" "}
+          A Front-End developer with <span className="font-bold">3 years</span>{" "}
           of experience in developing user interfaces and web applications.
         </span>
 

@@ -23,7 +23,7 @@ const AboutShowcase = () => {
         About
       </SectionHeading>
       <p className="font-sans mb-6 text-center md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
-        A Frontend developer with{" "}
+        A Front-End developer with{" "}
         <span className="font-medium">over 3 years</span> of experience in
         building large-scale applications, focused on driving performance,
         reliability, and scalability of customer-facing web applications.

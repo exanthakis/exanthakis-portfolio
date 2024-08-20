@@ -11,7 +11,7 @@ const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Emmanouil Xanthakis | Personal Portfolio",
-  description: "Frontend with 3 years experience",
+  description: "Front-End with 3 years experience",
 };
 
 export default function RootLayout({

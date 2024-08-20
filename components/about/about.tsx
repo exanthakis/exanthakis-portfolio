@@ -17,12 +17,9 @@ const About = () => {
       className="text-center w-full leading-8 scroll-mt-28 relative"
     >
       <Divider type={"light"} />
-
       <AboutShowcase />
-
       <Divider />
       <Skills />
-
       <Experience />
       <Certifications />
     </section>

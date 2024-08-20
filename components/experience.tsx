@@ -2,10 +2,9 @@
 
 import React from "react";
 
-import { skillsData } from "@/lib/data";
-import { motion } from "framer-motion";
-import SectionHeading from "./ui/section-heading";
-import Button from "./ui/button";
+import { experiencesData, monthNames, skillsData } from "@/lib/data";
+import Image from "next/image";
+import companyImg from "../public/deloitte-digital-logo.png";
 
 const Experience = () => {
   return (
@@ -13,75 +12,59 @@ const Experience = () => {
       {/* <SectionHeading>Experience</SectionHeading> */}
 
       <div className="w-full flex flex-col pb-10">
-        <h3 className="font-bold text-2xl text-left">Frontend Developer</h3>
+        <h3 className="font-bold text-2xl text-left">Front-End Developer</h3>
         <p className="text-justify mb-2">2021 - Present / Deloitte Digital</p>
         <span className="text-left tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal max-w-3xl">
-          Working as frontend developer Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Deleniti commodi sint ipsum ut, explicabo laboriosam
-          delectus hic eligendi ipsam repudiandae!
+          Promoted annually in my current role as a Front-End Developer at
+          Deloitte Digital, consistently recognized for delivering high-quality,
+          innovative solutions and driving impactful results within the team.
         </span>
       </div>
 
-      <ul className="flex flex-col">
-        <li className="relative flex w-full flex-col sm:flex-row">
-          <div className="flex w-full pb-4 sm:w-[200px] sm:pb-0">
-            <p className="text-sm leading-[1.6] text-slate-11 font-normal">
-              <time className="sticky top-24" dateTime="2024-07-17">
-                Jul 17, 2024
-              </time>
-            </p>
-          </div>
-          <div className="relative hidden sm:flex sm:w-[150px]">
-            <div className="sticky left-0 top-[102px] mt-1.5 h-1.5 w-1.5 rounded-full bg-gray-500"></div>
-            <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-gray-400"></div>
-          </div>
-          <div className="w-full pb-16">
-            <a href="/changelog/new-contact-webhooks">
-              <div className="space-y-4">
-                <img
-                  alt="New Contact Webhooks"
-                  loading="lazy"
-                  width="821"
-                  height="432"
-                  decoding="async"
-                  data-nimg="1"
-                  className="col-span-2 w-full rounded-md border border-slate-6 object-cover lg:rounded-lg"
-                  srcSet="/_next/image?url=%2Fstatic%2Fposts%2Fnew-contact-webhooks.png&amp;w=828&amp;q=75 1x, /_next/image?url=%2Fstatic%2Fposts%2Fnew-contact-webhooks.png&amp;w=1920&amp;q=75 2x"
-                  src="/_next/image?url=%2Fstatic%2Fposts%2Fnew-contact-webhooks.png&amp;w=1920&amp;q=75"
-                  style={{ color: "transparent;" }}
-                />
-                <div className="flex flex-col">
-                  <h2 className="font-book font-styling font-display line-clamp-5 leading-normal text-[2.25rem] tracking-tight leading-[130%] text-slate-12">
-                    New Contact Webhooks
-                  </h2>
-                  <span className="sans mb-4 text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
-                    Receive real-time notifications when contacts are created,
-                    updated, or deleted.
-                  </span>
-                  <div className="flex items-center gap-1.5 md:gap-2">
-                    <img
-                      alt="Felipe Volpone"
-                      loading="lazy"
-                      width="48"
-                      height="48"
-                      decoding="async"
-                      data-nimg="1"
-                      className="h-6 w-6 rounded-full border border-slate-6 object-cover"
-                      srcSet="/_next/image?url=%2Fstatic%2Favatars%2Ffelipe-volpone.jpg&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fstatic%2Favatars%2Ffelipe-volpone.jpg&amp;w=96&amp;q=75 2x"
-                      src="/_next/image?url=%2Fstatic%2Favatars%2Ffelipe-volpone.jpg&amp;w=96&amp;q=75"
-                      style={{ color: "transparent" }}
-                    />
-                    <div className="flex gap-1">
-                      <span className="sans text-sm leading-[1.6] text-slate-11 font-normal">
-                        Felipe Volpone
-                      </span>
-                    </div>
+      <ul className="flex flex-col w-full mx-auto max-w-5xl py-16">
+        {experiencesData.map((experience) => {
+          const date = new Date(experience.date);
+          const month = monthNames[date.getMonth()];
+          const year = date.getFullYear();
+          return (
+            <li
+              key={experience.id}
+              className="relative flex w-full flex-col sm:flex-row"
+            >
+              <div className="flex w-full pb-4 sm:w-[200px] sm:pb-0">
+                <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal">
+                  <time className="sticky top-24" dateTime={experience.date}>
+                    {`${month}, ${year}`}
+                  </time>
+                </p>
+              </div>
+              <div className="relative hidden sm:flex sm:w-[150px]">
+                <div className="sticky left-0 top-[102px] mt-1.5 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
+                <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-[#d6ebfd30]"></div>
+              </div>
+              <div className="w-full pb-16">
+                <div className="space-y-4">
+                  <Image
+                    src={companyImg}
+                    alt="Deloitte logo"
+                    quality="95"
+                    className="opacity-70"
+                    height={32}
+                    width={64}
+                  />
+                  <div className="flex flex-col justify-start items-start text-left">
+                    <h5 className="line-clamp-5 tracking-tight text-2xl pb-4">
+                      {experience.title}
+                    </h5>
+                    <span className="mb-4 text-base  md:leading-[1.5] text-[#f1f7feb5] font-normal">
+                      {experience.description}
+                    </span>
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-        </li>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
