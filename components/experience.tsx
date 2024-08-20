@@ -21,7 +21,7 @@ const Experience = () => {
         </span>
       </div>
 
-      <ul className="flex flex-col w-full mx-auto max-w-5xl py-16">
+      <ul className="flex flex-col w-full mx-auto max-w-5xl pt-16">
         {experiencesData.map((experience) => {
           const date = new Date(experience.date);
           const month = monthNames[date.getMonth()];
