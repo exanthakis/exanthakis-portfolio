@@ -5,20 +5,7 @@ import React from "react";
 import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import SectionHeading from "./ui/section-heading";
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
+import { fadeInAnimationVariants } from "@/lib/animations";
 
 const Skills = () => {
   return (

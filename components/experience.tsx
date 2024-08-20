@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 
 import { experiencesData, monthNames, skillsData } from "@/lib/data";
 import Image from "next/image";
 import companyImg from "../public/deloitte-digital-logo.png";
+import { useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import { slideInFromRightVariants } from "@/lib/animations";
 
 const Experience = () => {
   return (
@@ -21,8 +24,8 @@ const Experience = () => {
         </span>
       </div>
 
-      <ul className="flex flex-col w-full mx-auto max-w-5xl pt-16">
-        {experiencesData.map((experience) => {
+      <ul className="flex flex-col w-full mx-auto max-w-5xl pt-16 overflow-hidden">
+        {experiencesData.map((experience, index) => {
           const date = new Date(experience.date);
           const month = monthNames[date.getMonth()];
           const year = date.getFullYear();
@@ -42,7 +45,14 @@ const Experience = () => {
                 <div className="sticky left-0 top-[102px] mt-1.5 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
                 <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-[#d6ebfd30]"></div>
               </div>
-              <div className="w-full pb-16">
+              <motion.div
+                className="w-full pb-16"
+                variants={slideInFromRightVariants}
+                initial="initial"
+                whileInView="animate"
+                custom={index}
+                viewport={{ once: false, amount: 0.5 }}
+              >
                 <div className="space-y-4">
                   <Image
                     src={companyImg}
@@ -61,7 +71,7 @@ const Experience = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </li>
           );
         })}
