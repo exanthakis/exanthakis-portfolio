@@ -7,6 +7,8 @@ import { MdClose } from "react-icons/md";
 import Button from "../ui/button";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import bgImg from "@/public/bg.png";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -28,10 +30,17 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
     useActiveSectionContext();
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col justify-between items-end bg-gray-950  pr-4 pt-14 pb-6 transition-transform duration-300 ease-in-out motion-reduce:transition-none md:hidden ${
+      className={`fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col justify-between items-end bg-black  pr-4 pt-14 pb-6 transition-transform duration-300 ease-in-out motion-reduce:transition-none md:hidden ${
         open ? "translate-x-0 h-[100dvh]" : "translate-x-[100%]"
       }`}
     >
+      <Image
+        src={bgImg}
+        alt="Background image"
+        quality="95"
+        priority={true}
+        className="absolute left-0 z-[10] h-screen w-full select-none md:top-0 opacity-80"
+      />
       <button
         type="button"
         className="fixed right-4 top-4 mb-4 block p-2 text-3xl text-white md:hidden "
@@ -42,7 +51,7 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
         <span className="sr-only">Close menu</span>
       </button>
 
-      <ul className="grid justify-items-end gap-8 pb-8">
+      <ul className="grid justify-items-end gap-8 pb-8 z-10">
         {links.map((item, index) => (
           <motion.li
             className="first:mt-8"
@@ -59,7 +68,7 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
             <Link
               href={item.hash}
               key={index}
-              className={`block px-3 text-3xl  ${
+              className={`block px-3 text-3xl ${
                 activeSection === item.name ? "text-white" : "text-gray-500"
               }`}
               onClick={() => {

@@ -18,14 +18,14 @@ export const fadeInModAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index,
+      delay: 0.05,
     },
   }),
 };
 
 const Certifications = () => {
   return (
-    <div className="text-center w-full mx-auto py-5 mt-5 relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] ">
+    <div className="text-center w-full mx-auto py-12 mt-32 relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] ">
       <div
         aria-hidden="true"
         className="left-1/2 right-1 top-0 w-[300px] sm:left-auto center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2"
@@ -44,7 +44,7 @@ const Certifications = () => {
         }}
       ></div>
 
-      <ul className="relative pt-16 z-20 grid w-full grid-cols-1 gap-12 sm:grid-cols-2 md:flex-row md:gap-20 lg:grid-cols-3">
+      <ul className="relative z-20 grid w-full grid-cols-1 gap-12 sm:grid-cols-2 md:flex-row md:gap-20 lg:grid-cols-3">
         {certificationsData.map((certification, index) => (
           <motion.li
             className="col-span-1 flex flex-col p-4"

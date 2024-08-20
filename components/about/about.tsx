@@ -22,9 +22,9 @@ const About = () => {
 
       <Divider />
       <Skills />
-      <Certifications />
-      <Divider />
+
       <Experience />
+      <Certifications />
     </section>
   );
 };
