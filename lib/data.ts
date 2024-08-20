@@ -17,6 +17,7 @@ import { GrReactjs } from "react-icons/gr";
 import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe } from "react-icons/bi";
 import { PiCertificateThin } from "react-icons/pi";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const fullName = "Emmanouel Xanthakis";
 
@@ -145,6 +146,10 @@ export const skillsData = [
   {
     title: "Redux",
     icon: React.createElement(SiRedux),
+  },
+  {
+    title: "Framer Motion",
+    icon: React.createElement(TbBrandFramerMotion),
   },
   {
     title: "Java",

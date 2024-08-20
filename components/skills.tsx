@@ -36,7 +36,7 @@ const Skills = () => {
       <ul className="flex flex-wrap justify-center gap-6 text-lg text-gray-800  max-w-[53rem] mx-auto">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="group flex flex-col items-center justify-center gap-4 text-slate-11 outline-none"
+            className="group flex flex-col items-center justify-center gap-4 text-slate-11 outline-none "
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -46,12 +46,12 @@ const Skills = () => {
             }}
             custom={index}
           >
-            <div className="flex h-14 w-[4.25rem] items-center justify-center rounded-2xl border-[.2px]  border-[#f1f7feb5] transition duration-200 ease-in-out group-data-[state='active']:bg-gradient-to-b group-data-[state='active']:from-white/[3%] bg-template-card  hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]">
+            <div className="flex h-14 w-[4.25rem] items-center justify-center rounded-2xl border-[1px] border-[#d6ebfd30] transition duration-200 ease-in-out hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]">
               <span className="inline leading-[0] text-[#e5e7eb] text-2xl">
                 {skill.icon}
               </span>
             </div>
-            <span className="sans transition duration-200 ease-in-out group-hover:text-slate-12 group-data-[state='active']:text-slate-12 text-sm leading-[1.6] text-[#f1f7feb5] font-normal ">
+            <span className="sans transition duration-200 ease-in-out group-hover:text-white group-data-[state='active']:text-slate-12 text-sm leading-[1.6] text-[#f1f7feb5] font-normal ">
               {" "}
               {skill.title}
             </span>
