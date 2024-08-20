@@ -6,6 +6,21 @@ import React from "react";
 import { MdClose } from "react-icons/md";
 import Button from "../ui/button";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+    },
+  }),
+};
 
 const MobileNav = ({ open, setOpen }: MobileNavProps) => {
   const pathname = usePathname();
@@ -13,7 +28,7 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
     useActiveSectionContext();
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col justify-between items-end bg-gray-950 pr-4 pt-14 pb-6 transition-transform duration-300 ease-in-out motion-reduce:transition-none md:hidden ${
+      className={`fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col justify-between items-end bg-gray-950  pr-4 pt-14 pb-6 transition-transform duration-300 ease-in-out motion-reduce:transition-none md:hidden ${
         open ? "translate-x-0 h-[100dvh]" : "translate-x-[100%]"
       }`}
     >
@@ -27,27 +42,40 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
         <span className="sr-only">Close menu</span>
       </button>
 
-      <div className="grid justify-items-end gap-8">
-        {links.map((item) => (
-          <Link
-            href={item.hash}
-            key={item.name}
-            className={`block px-3 text-3xl first:mt-8 ${
-              activeSection === item.name ? "text-white" : "text-gray-500"
-            }`}
-            onClick={() => {
-              setOpen(false);
-              setActiveSection(item.name);
-              setTimeOfLastClick(Date.now());
+      <ul className="grid justify-items-end gap-8 pb-8">
+        {links.map((item, index) => (
+          <motion.li
+            className="first:mt-8"
+            animate={open}
+            key={index}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: false,
             }}
-            aria-current={
-              pathname.includes(item.hash as string) ? "page" : undefined
-            }
+            custom={index}
           >
-            {item.name}
-          </Link>
+            <Link
+              href={item.hash}
+              key={index}
+              className={`block px-3 text-3xl  ${
+                activeSection === item.name ? "text-white" : "text-gray-500"
+              }`}
+              onClick={() => {
+                setOpen(false);
+                setActiveSection(item.name);
+                setTimeOfLastClick(Date.now());
+              }}
+              aria-current={
+                pathname.includes(item.hash as string) ? "page" : undefined
+              }
+            >
+              {item.name}
+            </Link>
+          </motion.li>
         ))}
-      </div>
+      </ul>
       <div className="pt-6 flex justify-center gap-2 px-3">
         {socialLinks.map((social) => (
           <Button
