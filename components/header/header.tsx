@@ -21,9 +21,13 @@ const Header = () => {
         className="md:flex w-full justify-between  mx-auto max-w-7xl"
       >
         <div className="flex items-center justify-between">
-          <Link href="/" className="z-50 p-2" onClick={() => setOpen(false)}>
-            Emmanouel Xanthakis
-            <span className="sr-only">Emmanoul Portfolio Page</span>
+          <Link
+            href="/"
+            className="z-50 p-2 text-lg md:text-base fade-title font-calSans"
+            onClick={() => setOpen(false)}
+          >
+            exanthakis
+            <span className="sr-only">Emmanoul Xanthakis Portfolio Page</span>
           </Link>
           <button
             type="button"
