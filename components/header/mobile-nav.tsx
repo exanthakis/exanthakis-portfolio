@@ -26,7 +26,7 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
         alt="Background image"
         quality="95"
         priority={true}
-        className="absolute left-0 z-[10] h-screen w-full select-none md:top-0 opacity-80"
+        className="absolute left-0 z-10 h-screen w-full select-none md:top-0 opacity-80"
       />
       <button
         type="button"
@@ -72,13 +72,14 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
           </motion.li>
         ))}
       </ul>
-      <div className="pt-6 flex justify-center gap-2 px-3">
+      <div className="pt-6 flex justify-center gap-4 px-3">
         {socialLinks.map((social) => (
           <Button
             buttonType={ButtonType.LINK}
             href={social.link}
             key={social.link}
             target="_blank"
+            className="z-10"
           >
             {social.icon}
           </Button>

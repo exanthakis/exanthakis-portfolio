@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="z-50 p-2 text-lg md:text-base fade-title font-calSans"
+            className="z-50 p-2 text-xl  fade-title font-calSans"
             onClick={() => setOpen(false)}
           >
             exanthakis
