@@ -2,19 +2,19 @@
 
 import React from "react";
 
-import { experiencesData, monthNames, skillsData } from "@/lib/data";
+import { experiencesData, monthNames } from "@/lib/data";
 import Image from "next/image";
 import companyImg from "../public/deloitte-digital-logo.png";
-import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import { slideInFromRightVariants } from "@/lib/animations";
+import Badge from "./ui/badge";
 
 const Experience = () => {
   return (
-    <div className="py-12 text-center w-full">
-      {/* <SectionHeading>Experience</SectionHeading> */}
+    <div className="pt-[10rem] pb-12 text-center w-full relative mt-24  bg-gradient">
+      <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto">
+        <Badge className="bg-[#68CC58]" title={"Experience"} />
 
-      <div className="w-full flex flex-col pb-10">
         <h3 className="font-bold text-2xl text-left">Front-End Developer</h3>
         <p className="text-justify mb-2">2021 - Present / Deloitte Digital</p>
         <span className="text-left tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal max-w-3xl">

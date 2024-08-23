@@ -6,13 +6,14 @@ import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import SectionHeading from "./ui/section-heading";
 import { fadeInAnimationVariants } from "@/lib/animations";
+import Badge from "./ui/badge";
 
 const Skills = () => {
   return (
-    <div className="py-12 text-center w-full">
-      <SectionHeading>Skills</SectionHeading>
+    <div className="text-center w-full mx-auto max-w-7xl">
+      <Badge className="bg-[#d4b144]" title={"Skills"} />
 
-      <p className="font-sans mb-12 text-center md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
+      <p className="text-left tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal pb-10">
         My technical toolkit includes a deep understanding of both{" "}
         <span className="font-medium">front-end</span> and{" "}
         <span className="font-medium">back-end</span> development, as well as a

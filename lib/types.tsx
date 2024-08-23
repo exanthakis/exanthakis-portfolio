@@ -31,10 +31,16 @@ type DividerProps = {
   type?: string;
 };
 
+type BadgeProps = {
+  className: string;
+  title?: string;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
   ButtonProps,
   MobileNavProps,
   DividerProps,
+  BadgeProps,
 };
