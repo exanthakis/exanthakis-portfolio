@@ -11,7 +11,7 @@ import Badge from "./ui/badge";
 
 const Experience = () => {
   return (
-    <div className="pt-[10rem] pb-12 text-center w-full relative mt-24  bg-gradient">
+    <div className="pt-[10rem] pb-12 text-center w-full relative my-24 bg-gradient">
       <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 

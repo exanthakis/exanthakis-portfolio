@@ -25,7 +25,7 @@ export const fadeInModAnimationVariants = {
 
 const Certifications = () => {
   return (
-    <div className="text-center w-full mx-auto py-12 mt-12 relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] max-w-7xl">
+    <div className="text-center w-full mx-auto py-12 my-[8rem] relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] max-w-7xl">
       <div
         aria-hidden="true"
         className="left-1/2 right-1 top-0 w-[300px] sm:left-auto center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2"
