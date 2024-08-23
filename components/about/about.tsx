@@ -18,7 +18,6 @@ const About = () => {
     >
       <Divider type={"light"} />
       <AboutShowcase />
-      <Divider />
       <Skills />
       <Experience />
       <Certifications />
