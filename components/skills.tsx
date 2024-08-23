@@ -12,6 +12,9 @@ const Skills = () => {
   return (
     <div className="text-center w-full mx-auto max-w-7xl">
       <Badge className="bg-[#d4b144]" title={"Skills"} />
+      <h3 className="font-bold text-2xl text-left mb-2">
+        Comprehensive Technical Expertise and Tools
+      </h3>
 
       <p className="text-left tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal pb-10">
         My technical toolkit includes a deep understanding of both{" "}
