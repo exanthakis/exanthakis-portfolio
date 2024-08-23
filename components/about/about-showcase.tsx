@@ -17,7 +17,7 @@ const AboutShowcase = () => {
     <motion.div
       ref={ref}
       className="mx-auto text-left max-w-7xl"
-      style={{ opacity: opacityProgress }}
+      // style={{ opacity: opacityProgress }}
     >
       <SectionHeading className="text-gradient gradient-light">
         About
