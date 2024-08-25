@@ -1,10 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { useScroll, useTransform } from "framer-motion";
-import { motion } from "framer-motion";
 import companyImg from "../../public/deloitte-digital-logo.png";
 import { FiPlus } from "react-icons/fi";
 
