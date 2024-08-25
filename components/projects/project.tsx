@@ -60,7 +60,7 @@ const Project = ({
             w-full shadow-2xl"
             />
             <div className="pt-4 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-full sm:group-even:ml-[18rem]">
-              <ul className="flex flex-wrap gap-8 mb-[-5.625rem]">
+              <ul className="flex flex-wrap gap-8 mb-[-5.625rem] justify-center">
                 {icons.map((icon, index) => (
                   <li key={index} className="text-3xl text-white rounded-full">
                     {icon}
@@ -72,7 +72,7 @@ const Project = ({
               <p className="mt-5 leading-relaxe text-white/70">{description}</p>
               {link && (
                 <Button
-                  className="text-white flex gap-3 items-center pt-5"
+                  className="text-white flex gap-3 items-center pt-5  outline-none"
                   buttonType={ButtonType.LINK}
                   href={link}
                   target="_blank"
