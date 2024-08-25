@@ -16,7 +16,7 @@ const Projects = () => {
       className=" mb-28 w-full mx-auto max-w-7xl"
     >
       <SectionHeading>Projects</SectionHeading>
-      <div className="flex py-8">
+      <div className="flex pt-8 pb-12">
         <h3 className="w-full md:w-1/2 flex items-start justify-start text-4xl">
           Made for modern product teams
         </h3>

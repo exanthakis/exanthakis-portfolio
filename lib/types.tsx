@@ -36,6 +36,12 @@ type BadgeProps = {
   title?: string;
 };
 
+type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -43,4 +49,5 @@ export type {
   MobileNavProps,
   DividerProps,
   BadgeProps,
+  ModalProps,
 };

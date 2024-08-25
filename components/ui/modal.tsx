@@ -1,0 +1,45 @@
+"use client";
+
+import { ButtonType, ModalProps } from "@/lib/types";
+import React, { useEffect, useRef } from "react";
+import { IoCloseOutline } from "react-icons/io5";
+
+const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      dialogRef.current?.showModal();
+      document.body.classList.add("modal-bg"); // Prevent scrolling
+    } else {
+      dialogRef.current?.close();
+      document.body.classList.remove("modal-bg");
+    }
+
+    return () => {
+      document.body.classList.remove("modal-bg");
+    };
+  }, [isOpen]);
+
+  const handleClose = () => {
+    dialogRef.current?.close();
+    onClose();
+  };
+
+  return (
+    <dialog
+      ref={dialogRef}
+      className={`w-[90%] fixed h-[90vh] inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 rounded-3xl noScrollbar outline-none shadow-lg max-w-4xl bg-[#08090a]`}
+    >
+      <div
+        onClick={handleClose}
+        className="fixed top-6 z-10 right-6 w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2 border-[#161616] text-[#8a8f98] hover:bg-[#1c1c1c] hover:text-[#f7f8f8] hover:border-[#1c1c1c]"
+      >
+        <IoCloseOutline className=" group-hover:translate-x-1 transition" />
+      </div>
+      {children}
+    </dialog>
+  );
+};
+
+export default Modal;
