@@ -32,7 +32,7 @@ const DesktopNav = () => {
               {link.name}
               {activeSection === link.name && (
                 <motion.span
-                  className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                  className="bg-gray-100 rounded-full absolute inset-0 -z-10 "
                   layoutId="activeSection"
                   transition={{
                     type: "spring",
