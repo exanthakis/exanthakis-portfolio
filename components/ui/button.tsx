@@ -5,7 +5,7 @@ const Button = ({ buttonType, href, children, ...props }: ButtonProps) => {
     buttonType === ButtonType.SECONDARY
       ? "group bg-transparent text-white hover:bg-gray-950 active:scale-105 transition hover:bg-[#d9edfe25] px-7 py-3"
       : buttonType === ButtonType.PRIMARY
-      ? "group bg-white text-black active:scale-105 transition border border-black/10 dark:bg-white/10 dark:text-white/60 hover:bg-white/90 px-7 py-2 shadow-[0_6px_16px_rgba(255,255,255,.2)] hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]"
+      ? "group bg-white text-white/60  active:scale-105 transition border border-black/10 dark:bg-white/10  hover:bg-white/90 hover:!text-gray-900 px-7 py-2 shadow-[0_6px_16px_rgba(255,255,255,.2)] hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]"
       : "group bg-transparent text-white p-0 m-0";
 
   return (
