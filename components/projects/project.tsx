@@ -31,7 +31,7 @@ const Project = ({
   };
 
   return (
-    <div className="bg-[#08090a] py-8 px-7 h-80 relative text-left flex flex-col overflow-hidden rounded-3xl justify-between hover:brightness-[170%] ">
+    <div className="bg-[#131618] py-8 px-7 h-80 relative text-left flex flex-col overflow-hidden rounded-3xl justify-between hover:brightness-[170%] ">
       <div>
         <Image
           src={companyImg}
@@ -46,7 +46,7 @@ const Project = ({
         <span>{title}</span>
         <div
           onClick={handleOpenModal}
-          className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2 border-[#161616] bg-[#08090a] text-[#8a8f98] hover:bg-[#1c1c1c] hover:text-[#f7f8f8] hover:border-[#1c1c1c]"
+          className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] hover:bg-[#1c1c1c] hover:text-[#f7f8f8] hover:border-[#1c1c1c]"
         >
           <FiPlus className=" group-hover:translate-x-1 transition" />
         </div>

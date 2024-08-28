@@ -1,13 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionHeading from "../ui/section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
+
+  const [width, setWidth] = useState(0);
+  const projectsCarousel = useRef<HTMLDivElement>(null);
+
+  // extra drag space on right
+  const threshold = 50;
+
+  useEffect(() => {
+    if (projectsCarousel && projectsCarousel.current)
+      setWidth(
+        projectsCarousel.current.scrollWidth -
+          projectsCarousel.current.offsetWidth +
+          threshold
+      );
+  }, []);
 
   return (
     <section
@@ -29,15 +45,32 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 md:flex-row lg:grid-cols-3">
-        {projectsData.map((project) => {
-          return (
-            <React.Fragment key={project.title}>
-              <Project {...project} />
-            </React.Fragment>
-          );
-        })}
-      </div>
+      <motion.div
+        ref={projectsCarousel}
+        className="overflow-hidden cursor-grab relative"
+        whileTap={{ cursor: "grabbing" }}
+      >
+        <motion.div
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
+          className="flex gap-10 "
+        >
+          {projectsData.map((project) => {
+            return (
+              <motion.div className="min-w-[30rem]" key={project.title}>
+                <Project {...project} />
+              </motion.div>
+            );
+          })}
+        </motion.div>
+        <div
+          aria-hidden="true"
+          className="-right-10 top-0 w-[300px] h-full center pointer-events-none absolute max-w-full "
+          style={{
+            background: "linear-gradient(to right,transparent 70%,#08090a 95%)",
+          }}
+        ></div>
+      </motion.div>
     </section>
   );
 };

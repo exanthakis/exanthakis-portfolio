@@ -142,6 +142,30 @@ export const projectsData = [
     imageUrl: "",
     link: "",
   },
+  {
+    title: "Word Analytics",
+    description:
+      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    imageUrl: "",
+    link: "",
+  },
+  {
+    title: "Word Analytics",
+    description:
+      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    imageUrl: "",
+    link: "",
+  },
+  {
+    title: "Word Analytics",
+    description:
+      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    imageUrl: "",
+    link: "",
+  },
 ] as const;
 
 export const skillsData = [
