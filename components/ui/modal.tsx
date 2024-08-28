@@ -16,10 +16,24 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
       document.body.classList.remove("modal-bg");
     }
 
+    // Close on backdrop click
+    if (dialogRef.current) {
+      dialogRef.current.addEventListener("click", handleBackdropClick);
+    }
+
     return () => {
       document.body.classList.remove("modal-bg");
+      if (dialogRef.current) {
+        dialogRef.current.removeEventListener("click", handleBackdropClick);
+      }
     };
   }, [isOpen]);
+
+  const handleBackdropClick = (event: MouseEvent) => {
+    if (dialogRef.current && event.target === dialogRef.current) {
+      onClose();
+    }
+  };
 
   const handleClose = () => {
     dialogRef.current?.close();
