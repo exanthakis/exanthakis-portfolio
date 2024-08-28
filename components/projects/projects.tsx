@@ -72,7 +72,7 @@ const Projects = () => {
           aria-hidden="true"
           className="-right-10 top-0 w-[300px] h-full center pointer-events-none absolute max-w-full "
           style={{
-            background: "linear-gradient(to right,transparent 70%,#08090a 95%)",
+            background: "linear-gradient(to right,transparent 70%,#000 95%)",
           }}
         ></div>
       </motion.div>
