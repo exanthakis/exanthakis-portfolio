@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { links } from "./data";
+import { links, projectsData } from "./data";
 
 type SectionHeadingProps = {
   children: React.ReactNode;
@@ -42,6 +42,11 @@ type ModalProps = {
   children: React.ReactNode;
 };
 
+type ProjectPropsModal = {
+  onOpenModal: (disableDrag: boolean) => void;
+};
+type ProjectProps = (typeof projectsData)[number] & ProjectPropsModal;
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -50,4 +55,5 @@ export type {
   DividerProps,
   BadgeProps,
   ModalProps,
+  ProjectProps,
 };

@@ -8,10 +8,8 @@ import Modal from "../ui/modal";
 import { useState } from "react";
 import Divider from "../ui/divider";
 import Button from "../ui/button";
-import { ButtonType } from "@/lib/types";
+import { ButtonType, ProjectProps } from "@/lib/types";
 import { FaExternalLinkAlt } from "react-icons/fa";
-
-type ProjectProps = (typeof projectsData)[number];
 
 const Project = ({
   title,
@@ -19,15 +17,18 @@ const Project = ({
   icons,
   imageUrl,
   link,
+  onOpenModal,
 }: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
+    onOpenModal(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    onOpenModal(false);
   };
 
   return (
@@ -51,7 +52,7 @@ const Project = ({
           <FiPlus className=" group-hover:translate-x-1 transition" />
         </div>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <section className="flex h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll">
+          <section className="flex h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll cursor-default">
             <Image
               src={imageUrl}
               alt={title}

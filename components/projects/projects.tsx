@@ -9,9 +9,10 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
+  const projectsCarousel = useRef<HTMLDivElement>(null);
 
   const [width, setWidth] = useState(0);
-  const projectsCarousel = useRef<HTMLDivElement>(null);
+  const [disableDrag, setDisableDrag] = useState(false);
 
   // extra drag space on right
   const threshold = 50;
@@ -24,6 +25,10 @@ const Projects = () => {
           threshold
       );
   }, []);
+
+  const hanldleOpenModal = (disableDrag: boolean) => {
+    setDisableDrag(disableDrag);
+  };
 
   return (
     <section
@@ -51,14 +56,14 @@ const Projects = () => {
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          drag="x"
+          drag={disableDrag ? false : "x"}
           dragConstraints={{ right: 0, left: -width }}
           className="flex gap-10 "
         >
           {projectsData.map((project, index) => {
             return (
               <motion.div className="min-w-[30rem]" key={index}>
-                <Project {...project} />
+                <Project {...project} onOpenModal={hanldleOpenModal} />
               </motion.div>
             );
           })}
