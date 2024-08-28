@@ -55,9 +55,9 @@ const Projects = () => {
           dragConstraints={{ right: 0, left: -width }}
           className="flex gap-10 "
         >
-          {projectsData.map((project) => {
+          {projectsData.map((project, index) => {
             return (
-              <motion.div className="min-w-[30rem]" key={project.title}>
+              <motion.div className="min-w-[30rem]" key={index}>
                 <Project {...project} />
               </motion.div>
             );

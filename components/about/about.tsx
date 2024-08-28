@@ -8,7 +8,7 @@ import Experience from "../experience";
 import Divider from "../ui/divider";
 
 const About = () => {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About", 0.1);
 
   return (
     <section
