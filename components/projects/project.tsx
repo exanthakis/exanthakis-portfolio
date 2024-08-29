@@ -10,6 +10,7 @@ import Divider from "../ui/divider";
 import Button from "../ui/button";
 import { ButtonType, ProjectProps } from "@/lib/types";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Project = ({
   title,
@@ -32,7 +33,10 @@ const Project = ({
   };
 
   return (
-    <div className="bg-[#131618] py-8 px-7 h-80 relative text-left flex flex-col overflow-hidden rounded-3xl justify-between hover:brightness-[170%] ">
+    <motion.div
+      layout
+      className="bg-[#131618] py-8 px-7 h-80 relative text-left flex flex-col overflow-hidden rounded-3xl justify-between hover:brightness-[170%] "
+    >
       <div>
         <Image
           src={companyImg}
@@ -86,7 +90,7 @@ const Project = ({
           </section>
         </Modal>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

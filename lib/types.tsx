@@ -1,18 +1,24 @@
 import { Dispatch, SetStateAction } from "react";
 import { links, projectsData } from "./data";
 
+export enum ButtonType {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  LINK = "link",
+}
+
+export enum TechStackE {
+  All = "All",
+  REACT = "React",
+  HTML = "Html",
+}
+
 type SectionHeadingProps = {
   children: React.ReactNode;
   className?: string;
 };
 
 type SectionName = (typeof links)[number]["name"];
-
-export enum ButtonType {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  LINK = "link",
-}
 
 interface IButtonProps {
   buttonType: ButtonType;
@@ -45,7 +51,15 @@ type ModalProps = {
 type ProjectPropsModal = {
   onOpenModal: (disableDrag: boolean) => void;
 };
-type ProjectProps = (typeof projectsData)[number] & ProjectPropsModal;
+
+type ProjectsT = (typeof projectsData)[number];
+
+type ProjectProps = ProjectsT & ProjectPropsModal;
+
+type FilterProps = {
+  activeTechStack: TechStackE;
+  onActiveTechStach: (id: TechStackE) => void;
+};
 
 export type {
   SectionHeadingProps,
@@ -55,5 +69,7 @@ export type {
   DividerProps,
   BadgeProps,
   ModalProps,
+  ProjectsT,
   ProjectProps,
+  FilterProps,
 };

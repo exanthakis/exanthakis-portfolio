@@ -6,11 +6,15 @@ import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
+import Filter from "./filter";
+import { ProjectsT, TechStackE } from "@/lib/types";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
   const projectsCarousel = useRef<HTMLDivElement>(null);
 
+  const [filtered, setFiltered] = useState<ProjectsT[]>(projectsData);
+  const [activeTechStack, setActiveTechStackd] = useState(TechStackE.All);
   const [width, setWidth] = useState(0);
   const [disableDrag, setDisableDrag] = useState(false);
 
@@ -18,16 +22,29 @@ const Projects = () => {
   const threshold = 50;
 
   useEffect(() => {
-    if (projectsCarousel && projectsCarousel.current)
+    if (projectsCarousel && projectsCarousel.current) {
       setWidth(
         projectsCarousel.current.scrollWidth -
           projectsCarousel.current.offsetWidth +
           threshold
       );
-  }, []);
+    }
+  }, [activeTechStack]);
 
   const hanldleOpenModal = (disableDrag: boolean) => {
     setDisableDrag(disableDrag);
+  };
+
+  const handleActiveStack = (id: TechStackE) => {
+    setActiveTechStackd(id);
+
+    const filtered =
+      id != TechStackE.All
+        ? projectsData.filter((project: ProjectsT) => {
+            return project.tags.includes(id);
+          })
+        : projectsData;
+    setFiltered(filtered);
   };
 
   return (
@@ -50,19 +67,23 @@ const Projects = () => {
         </p>
       </div>
 
+      <Filter
+        activeTechStack={activeTechStack}
+        onActiveTechStach={handleActiveStack}
+      />
       <motion.div
-        ref={projectsCarousel}
         className="overflow-hidden cursor-grab relative"
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
+          ref={projectsCarousel}
           drag={disableDrag ? false : "x"}
           dragConstraints={{ right: 0, left: -width }}
-          className="flex gap-10 "
+          className="grid grid-flow-col gap-10 "
         >
-          {projectsData.map((project, index) => {
+          {filtered.map((project, index) => {
             return (
-              <motion.div className="min-w-[30rem]" key={index}>
+              <motion.div layout className="min-w-[30rem]" key={index}>
                 <Project {...project} onOpenModal={hanldleOpenModal} />
               </motion.div>
             );

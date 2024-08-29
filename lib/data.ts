@@ -125,6 +125,7 @@ export const projectsData = [
     ],
     imageUrl: CalendarImg,
     link: "https://my-calendar-smoky.vercel.app/",
+    tags: ["React", "Next.js", "Tailwind"],
   },
   {
     title: "rmtDev",
@@ -133,6 +134,7 @@ export const projectsData = [
     icons: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: "",
     link: "",
+    tags: ["React", "Next.js", "Tailwind"],
   },
   {
     title: "Word Analytics",
@@ -141,6 +143,7 @@ export const projectsData = [
     icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: "",
     link: "",
+    tags: ["React", "Next.js", "Tailwind"],
   },
   {
     title: "Word Analytics",
@@ -149,6 +152,7 @@ export const projectsData = [
     icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: "",
     link: "",
+    tags: ["Html", "Next.js", "Tailwind"],
   },
   {
     title: "Word Analytics",
@@ -157,6 +161,7 @@ export const projectsData = [
     icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: "",
     link: "",
+    tags: ["Html", "Next.js", "Tailwind"],
   },
   {
     title: "Word Analytics",
@@ -165,8 +170,9 @@ export const projectsData = [
     icons: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: "",
     link: "",
+    tags: ["React", "Next.js", "Tailwind"],
   },
-] as const;
+];
 
 export const skillsData = [
   {
