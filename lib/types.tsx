@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { links, projectsData } from "./data";
+import { IconBaseProps } from "react-icons";
 
 export enum ButtonType {
   PRIMARY = "primary",
@@ -61,6 +62,11 @@ type FilterProps = {
   onActiveTechStach: (id: TechStackE) => void;
 };
 
+type SkillsItemProps = {
+  icon: React.FunctionComponentElement<IconBaseProps>;
+  title: string;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -72,4 +78,5 @@ export type {
   ProjectsT,
   ProjectProps,
   FilterProps,
+  SkillsItemProps,
 };

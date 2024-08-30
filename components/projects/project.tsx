@@ -11,11 +11,12 @@ import Button from "../ui/button";
 import { ButtonType, ProjectProps } from "@/lib/types";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import SkillsItem from "../skills/skillsitem";
 
 const Project = ({
   title,
   description,
-  icons,
+  techStack,
   imageUrl,
   link,
   onOpenModal,
@@ -66,9 +67,9 @@ const Project = ({
             />
             <div className="pt-4 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-full sm:group-even:ml-[18rem]">
               <ul className="flex flex-wrap gap-8 mb-[-5.625rem] justify-center">
-                {icons.map((icon, index) => (
-                  <li key={index} className="text-3xl text-white rounded-full">
-                    {icon}
+                {techStack.map((teckItem) => (
+                  <li className="group flex flex-col items-center justify-center gap-4 text-slate-11 outline-none ">
+                    <SkillsItem icon={teckItem.icon} title={teckItem.title} />
                   </li>
                 ))}
               </ul>

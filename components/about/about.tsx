@@ -2,7 +2,7 @@
 
 import { useSectionInView } from "@/hooks/useSectionInView";
 import AboutShowcase from "./about-showcase";
-import Skills from "../skills";
+import Skills from "../skills/skills";
 import Certifications from "../certifications";
 import Experience from "../experience";
 import Divider from "../ui/divider";
