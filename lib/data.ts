@@ -211,16 +211,11 @@ export const projectsData = [
   {
     title: "Vacation Rental Website",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    techStack: [
-      { icon: React.createElement(SiNextdotjs), title: "" },
-      // React.createElement(RiTailwindCssFill),
-      // React.createElement(RiSupabaseLine),
-      // React.createElement(RxVercelLogo),
-    ],
+      "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
+    techStack: [skillsData[0], skillsData[1], skillsData[5]],
     imageUrl: CalendarImg,
-    link: "",
-    tags: ["Html", "Next.js", "Tailwind"],
+    link: "https://casavasilia.com/",
+    tags: ["Html", "CSS", "Javascript"],
   },
   {
     title: "Perigrammata",

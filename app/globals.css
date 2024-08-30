@@ -90,7 +90,7 @@
 }
 
 .fade-title {
-  background-image: url("../public/noise-extra.webp"),
+  background-image: url("../public/images/noise-extra.webp"),
     /* linear-gradient(127.94deg, #80b7cc, #6686a0 44.2%, #566b80 67.71%, #7398ad); */
       linear-gradient(to right bottom, #fff 30%, hsla(0, 0%, 100%, 0.5));
   color: transparent;

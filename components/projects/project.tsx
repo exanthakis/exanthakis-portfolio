@@ -2,7 +2,7 @@
 
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import companyImg from "../../public/deloitte-digital-logo.png";
+import companyImg from "../../public/images/deloitte-digital-logo.png";
 import { FiPlus } from "react-icons/fi";
 import Modal from "../ui/modal";
 import { useState } from "react";

@@ -4,7 +4,7 @@ import React from "react";
 
 import { experiencesData, monthNames } from "@/lib/data";
 import Image from "next/image";
-import companyImg from "../public/deloitte-digital-logo.png";
+import companyImg from "../public/images/deloitte-digital-logo.png";
 import { motion } from "framer-motion";
 import { slideInFromRightVariants } from "@/lib/animations";
 import Badge from "./ui/badge";

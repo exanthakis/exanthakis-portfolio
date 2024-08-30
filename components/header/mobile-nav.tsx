@@ -8,7 +8,7 @@ import Button from "../ui/button";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import bgImg from "@/public/bg.png";
+import bgImg from "@/public/images/bg.png";
 import { fadeInAnimationVariants } from "@/lib/animations";
 
 const MobileNav = ({ open, setOpen }: MobileNavProps) => {

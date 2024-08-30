@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import ActiveContextProvider from "@/store/active-context";
 import Image from "next/image";
-import bgImg from "@/public/bg.png";
+import bgImg from "@/public/images/bg.png";
 import Footer from "@/components/footer";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
