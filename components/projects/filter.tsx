@@ -49,7 +49,7 @@ const Filter = ({ activeTechStack, onActiveTechStach }: FilterProps) => {
     onActiveTechStach(id);
   };
   return (
-    <div className="flex gap-4 flex-col items-start justify-center pb-8 w-fit">
+    <div className="flex gap-4 flex-row items-start justify-center pb-8 w-fit">
       <FilterButton
         activeTechStack={activeTechStack}
         currentStack={TechStackE.All}
@@ -57,7 +57,7 @@ const Filter = ({ activeTechStack, onActiveTechStach }: FilterProps) => {
       />
       <FilterButton
         activeTechStack={activeTechStack}
-        currentStack={TechStackE.REACT}
+        currentStack={TechStackE.NEXT}
         onFilterClick={handleFilterClick}
       />
       <FilterButton

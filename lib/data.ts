@@ -215,7 +215,7 @@ export const projectsData = [
     techStack: [skillsData[0], skillsData[1], skillsData[5]],
     imageUrl: CalendarImg,
     link: "https://casavasilia.com/",
-    tags: ["Html", "CSS", "Javascript"],
+    tags: ["HTML", "CSS", "Javascript"],
   },
   {
     title: "Perigrammata",
@@ -229,7 +229,7 @@ export const projectsData = [
     ],
     imageUrl: CalendarImg,
     link: "",
-    tags: ["Html", "Next.js", "Tailwind"],
+    tags: ["HTML", "CSS", "Tailwind"],
   },
 ];
 

@@ -49,7 +49,7 @@ const Project = ({
         />
       </div>
       <div className="flex justify-between items-end w-full">
-        <span>{title}</span>
+        <span className="text-xl">{title}</span>
         <div
           onClick={handleOpenModal}
           className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] hover:bg-[#1c1c1c] hover:text-[#f7f8f8] hover:border-[#1c1c1c]"
