@@ -81,9 +81,9 @@ const Projects = () => {
           dragConstraints={{ right: 0, left: -width }}
           className="grid grid-flow-col gap-10 "
         >
-          {filtered.map((project, index) => {
+          {filtered.map((project) => {
             return (
-              <motion.div layout className="min-w-[30rem]" key={index}>
+              <motion.div layout className="min-w-[30rem]" key={project.id}>
                 <Project {...project} onOpenModal={hanldleOpenModal} />
               </motion.div>
             );

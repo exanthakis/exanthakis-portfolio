@@ -68,7 +68,10 @@ const Project = ({
             <div className="pt-4 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-full sm:group-even:ml-[18rem]">
               <ul className="flex flex-wrap gap-8 mb-[-5.625rem] justify-center">
                 {techStack.map((teckItem) => (
-                  <li className="group flex flex-col items-center justify-center gap-4 text-slate-11 outline-none ">
+                  <li
+                    key={teckItem.title}
+                    className="group flex flex-col items-center justify-center gap-4 text-slate-11 outline-none "
+                  >
                     <SkillsItem icon={teckItem.icon} title={teckItem.title} />
                   </li>
                 ))}
