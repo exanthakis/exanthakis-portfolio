@@ -25,3 +25,17 @@ export const fadeInAnimationVariants = {
     },
   }),
 };
+
+export const widthAnimationVariants = {
+  initial: {
+    width: "10%",
+  },
+  animate: (index: number) => ({
+    width: "100%",
+    transition: {
+      delay: 0.05 * index,
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  }),
+};

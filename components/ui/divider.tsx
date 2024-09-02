@@ -1,9 +1,20 @@
 import React from "react";
 import { DividerProps } from "@/lib/types";
+import { motion } from "framer-motion";
+import { widthAnimationVariants } from "@/lib/animations";
 
 const Divider = ({ type }: DividerProps) => {
   return (
-    <div className="py-12 w-full relative mt-32">
+    <motion.div
+      variants={widthAnimationVariants}
+      custom={1}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: false,
+      }}
+      className="py-12 w-full relative mt-32 mx-auto"
+    >
       <div
         aria-hidden="true"
         className="left-1/2 top-0 w-full center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2"
@@ -22,7 +33,7 @@ const Divider = ({ type }: DividerProps) => {
           }}
         ></div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
