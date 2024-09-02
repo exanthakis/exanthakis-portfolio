@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "../ui/section-heading";
 import { fadeInAnimationVariants } from "@/lib/animations";
 import Badge from "../ui/badge";
-import SkillsItem from "./skillsitem";
+import SkillsItem from "./skillsItem";
 
 const Skills = () => {
   return (

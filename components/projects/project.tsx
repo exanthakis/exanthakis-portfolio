@@ -11,7 +11,7 @@ import Button from "../ui/button";
 import { ButtonType, ProjectProps } from "@/lib/types";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import SkillsItem from "../skills/skillsitem";
+import SkillsItem from "../skills/skillsItem";
 
 const Project = ({
   title,
