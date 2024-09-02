@@ -181,6 +181,7 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    id: 1,
     title: "Portfolio",
     description:
       "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools. Built with Next.js framework, my portfolio demonstrates the seamless combination of server-side rendering and static site generation, ensuring optimal performance and enhanced SEO. The design is driven by Tailwind CSS, allowing for a clean, responsive, and customizable UI with minimal effort. I’ve also deployed the site on Vercel, ensuring fast load times, secure hosting, and scalability.",
@@ -195,6 +196,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
+    id: 2,
     title: "My Calendar",
     description:
       "A user-friendly scheduling tool to help stay organized and manage time effectively. Build Next.js, enabling a fast and dynamic user experience with server-side rendering and static generation. The design is crafted using Tailwind CSS, ensuring a fully responsive and visually appealing interface that adapts across all devices. The app’s backend is supported by Supabase, providing authentication services and secure and real-time database management for seamless event creation, editing, and syncing across multiple devices. Vercel powers the deployment, offering lightning-fast performance and reliable hosting, allowing users to access their calendars anytime, anywhere with optimal speed and reliability.",
@@ -209,6 +211,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
+    id: 3,
     title: "Vacation Rental Website",
     description:
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
@@ -218,6 +221,7 @@ export const projectsData = [
     tags: ["HTML", "CSS", "Javascript"],
   },
   {
+    id: 4,
     title: "Perigrammata",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
