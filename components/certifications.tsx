@@ -8,20 +8,7 @@ import Button from "./ui/button";
 import { ButtonType } from "@/lib/types";
 import { BsArrowRight } from "react-icons/bs";
 import { GoLinkExternal } from "react-icons/go";
-
-export const fadeInModAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05,
-    },
-  }),
-};
+import { fadeInAnimationVariants } from "@/lib/animations";
 
 const Certifications = () => {
   return (
@@ -49,10 +36,10 @@ const Certifications = () => {
           <motion.li
             className="col-span-1 flex flex-col p-4"
             key={index}
-            variants={fadeInModAnimationVariants}
+            variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            custom={index}
+            custom={1}
           >
             <span className="inline mb-4 leading-[0] text-white text-2xl">
               {certification.icon}
