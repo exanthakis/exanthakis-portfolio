@@ -26,6 +26,20 @@ export const fadeInAnimationVariants = {
   }),
 };
 
+export const fadeInParagraphVariants = {
+  initial: {
+    opacity: 0,
+    y: 30,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
 export const widthAnimationVariants = {
   initial: {
     width: "10%",

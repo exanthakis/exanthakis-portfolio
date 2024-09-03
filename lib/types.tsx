@@ -80,6 +80,11 @@ type InputProps = {
   inputType: string;
 };
 
+type AboutParagraphProps = {
+  id: number;
+  children: React.ReactNode;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -94,4 +99,5 @@ export type {
   SkillsItemProps,
   ContactFormEmailProps,
   InputProps,
+  AboutParagraphProps,
 };
