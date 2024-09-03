@@ -70,12 +70,14 @@ type SkillsItemProps = {
 type ContactFormEmailProps = {
   message: string;
   senderEmail: string;
+  fullname: string;
 };
 
 type InputProps = {
   label: string;
   maxLength: number;
   type: string;
+  inputType: string;
 };
 
 export type {

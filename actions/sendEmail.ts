@@ -11,9 +11,15 @@ export const sendEmail = async (formData: FormData) => {
   const data = Object.fromEntries(formData.entries());
   const message = data.message;
   const senderEmail = data.email;
+  const fullname = data.fullname;
 
   // simple server-side validation
   if (!validateString(senderEmail, 100)) {
+    return {
+      error: "Invalid sender email",
+    };
+  }
+  if (!validateString(fullname, 100)) {
     return {
       error: "Invalid sender email",
     };
@@ -35,6 +41,7 @@ export const sendEmail = async (formData: FormData) => {
       react: React.createElement(ContactFormEmail, {
         message,
         senderEmail,
+        fullname,
       }),
     });
   } catch (err) {

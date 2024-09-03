@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { widthAnimationVariants } from "@/lib/animations";
 import { InputProps } from "@/lib/types";
 
-const Input = ({ label, maxLength, type }: InputProps) => {
+const Input = ({ label, maxLength, type, inputType }: InputProps) => {
   return (
     <>
       {type === "input" ? (
         <input
-          type={label}
+          type={inputType}
           name={label}
           required
           maxLength={maxLength}

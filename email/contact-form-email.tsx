@@ -16,6 +16,7 @@ import { ContactFormEmailProps } from "@/lib/types";
 export default function ContactFormEmail({
   message,
   senderEmail,
+  fullname,
 }: ContactFormEmailProps) {
   return (
     <Html>
@@ -26,7 +27,7 @@ export default function ContactFormEmail({
           <Container>
             <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
               <Heading className="leading-tight">
-                You received the following message from the contact form
+                You received the following message from {fullname}
               </Heading>
               <Text>{message}</Text>
               <Hr />

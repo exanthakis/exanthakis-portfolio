@@ -20,11 +20,11 @@ const Contact = () => {
     >
       <SectionHeading>Contact</SectionHeading>
 
-      <p className="text-[#f1f7feb5]  dark:text-white/80 text-left">
+      <p className="text-[#f1f7feb5] dark:text-white/80 text-left">
         You can contact me through this form and I will get back to you as soon
         as possible.
       </p>
-      <div className="max-w-2xl pt-8 mx-auto ">
+      <div className="pt-8 mx-auto ">
         <form
           className="mt-10 flex flex-col text-black/80 "
           action={async (formData) => {
@@ -36,11 +36,31 @@ const Contact = () => {
             toast.success("Email sent successfully");
           }}
         >
-          <div className="relative mt-6 ">
-            <Input label={"email"} maxLength={100} type="input" />
+          <div className="flex-col sm:flex-row flex mt-6 gap-10">
+            <div className="relative w-full sm:w-2/4">
+              <Input
+                label={"email"}
+                maxLength={100}
+                type="input"
+                inputType={"email"}
+              />
+            </div>
+            <div className="relative w-full sm:w-2/4">
+              <Input
+                label={"fullname"}
+                maxLength={100}
+                type="input"
+                inputType={"text"}
+              />
+            </div>
           </div>
           <div className="relative mt-6">
-            <Input label={"message"} maxLength={5000} type="textarea" />
+            <Input
+              label={"message"}
+              maxLength={5000}
+              type="textarea"
+              inputType={"text"}
+            />
           </div>
           <SubmitBtn />
         </form>
