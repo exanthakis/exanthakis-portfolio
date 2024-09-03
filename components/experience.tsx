@@ -11,7 +11,7 @@ import Badge from "./ui/badge";
 
 const Experience = () => {
   return (
-    <div className="pt-[10rem] pb-12 text-center w-full relative my-24 bg-gradient">
+    <div className="pt-[10rem] pb-12 text-center w-full relative my-24 bg-gradient ">
       <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 
@@ -43,7 +43,7 @@ const Experience = () => {
                 <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-[#d6ebfd30]"></div>
               </div>
               <motion.div
-                className="w-full pb-16"
+                className="w-full pb-16 overflow-x-hidden"
                 variants={slideInFromRightVariants}
                 initial="initial"
                 whileInView="animate"
