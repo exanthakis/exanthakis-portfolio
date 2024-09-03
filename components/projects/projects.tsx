@@ -5,16 +5,17 @@ import SectionHeading from "../ui/section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Filter from "./filter";
 import { ProjectsT, TechStackE } from "@/lib/types";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
   const projectsCarousel = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
 
   const [filtered, setFiltered] = useState<ProjectsT[]>(projectsData);
-  const [activeTechStack, setActiveTechStackd] = useState(TechStackE.All);
+  const [activeTechStack, setActiveTechStack] = useState(TechStackE.All);
   const [width, setWidth] = useState(0);
   const [disableDrag, setDisableDrag] = useState(false);
 
@@ -23,6 +24,7 @@ const Projects = () => {
 
   useEffect(() => {
     if (projectsCarousel && projectsCarousel.current) {
+      handleResetDrag();
       setWidth(
         projectsCarousel.current.scrollWidth -
           projectsCarousel.current.offsetWidth +
@@ -36,7 +38,7 @@ const Projects = () => {
   };
 
   const handleActiveStack = (id: TechStackE) => {
-    setActiveTechStackd(id);
+    setActiveTechStack(id);
 
     const filtered =
       id != TechStackE.All
@@ -44,7 +46,16 @@ const Projects = () => {
             return project.tags.includes(id);
           })
         : projectsData;
+
     setFiltered(filtered);
+  };
+
+  // Function to reset the drag to the start
+  const handleResetDrag = () => {
+    controls.start({
+      x: 0,
+      transition: { type: "spring", stiffness: 300, damping: 30 },
+    });
   };
 
   return (
@@ -79,6 +90,7 @@ const Projects = () => {
           ref={projectsCarousel}
           drag={disableDrag ? false : "x"}
           dragConstraints={{ right: 0, left: -width }}
+          animate={controls}
           className="grid grid-flow-col gap-10 "
         >
           {filtered.map((project) => {
