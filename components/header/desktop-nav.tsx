@@ -19,11 +19,11 @@ const DesktopNav = () => {
             <Link
               href={link.hash}
               className={`flex w-full items-center justify-center px-2 py-2
-           hover:text-white-950 transition ${
+           transition ${
              activeSection === link.name
-               ? "text-gray-950 dark:text-gray-200"
+               ? "text-gray-950  hover:text-gray-950"
                : ""
-           }  dark:text-gray-500 dark:hover:text-gray-300`}
+           }   hover:text-gray-300`}
               onClick={() => {
                 setTimeOfLastClick(Date.now());
                 setActiveSection(link.name);
