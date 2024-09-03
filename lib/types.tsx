@@ -67,6 +67,11 @@ type SkillsItemProps = {
   title: string;
 };
 
+type ContactFormEmailProps = {
+  message: string;
+  senderEmail: string;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -79,4 +84,5 @@ export type {
   ProjectProps,
   FilterProps,
   SkillsItemProps,
+  ContactFormEmailProps,
 };

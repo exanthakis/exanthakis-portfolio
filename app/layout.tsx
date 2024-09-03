@@ -6,12 +6,13 @@ import ActiveContextProvider from "@/store/active-context";
 import Image from "next/image";
 import bgImg from "@/public/images/bg.png";
 import Footer from "@/components/footer";
+import { Toaster } from "react-hot-toast";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Emmanouil Xanthakis | Personal Portfolio",
-  description: "Front-End with 3 years experience",
+  title: "Emmanouel Xanthakis | Personal Portfolio",
+  description: "Front-End developer",
 };
 
 export default function RootLayout({
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Toaster position="top-right" />
         </ActiveContextProvider>
       </body>
     </html>
