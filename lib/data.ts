@@ -21,6 +21,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/my-calendar-app.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
+import { BsCalendar3 } from "react-icons/bs";
 
 export const fullName = "Emmanouel Xanthakis";
 
@@ -184,7 +185,7 @@ export const projectsData = [
     id: 1,
     title: "Portfolio",
     description:
-      "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools. Built with Next.js framework, my portfolio demonstrates the seamless combination of server-side rendering and static site generation, ensuring optimal performance and enhanced SEO. The design is driven by Tailwind CSS, allowing for a clean, responsive, and customizable UI with minimal effort. I’ve also deployed the site on Vercel, ensuring fast load times, secure hosting, and scalability.",
+      "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools. This project was about more than just a portfolio refresh it was an exploration of my growth as a designer, developer, and creator. I wanted to craft a digital space that reflects who I am today and where I’m headed tomorrow. Built with Next.js framework, my portfolio demonstrates the seamless combination of server-side rendering and static site generation, ensuring optimal performance and enhanced SEO. The design is driven by Tailwind CSS, allowing for a clean, responsive, and customizable UI with minimal effort. I’ve also deployed the site on Vercel, ensuring fast load times, secure hosting, and scalability.",
     techStack: [
       skillsData[8],
       skillsData[2],
@@ -192,7 +193,7 @@ export const projectsData = [
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: CalendarImg,
-    link: "",
+    link: "https://emmanouelxanthakis.com",
     tags: ["React", "Next.js", "Tailwind"],
   },
   {

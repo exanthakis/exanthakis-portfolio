@@ -27,7 +27,7 @@ const AboutShowcase = () => {
           Heading title lorem ipsum
         </h3>
         <div className="w-full md:w-1/2 flex flex-col items-start justify-center text-sm">
-          <p className="font-sans mb-6 text-left md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
+          <p className="font-sans mb-6 text-left md:text-left text-base md:text-[1.125rem] md:leading-[1.5] font-normal">
             A Front-End developer with{" "}
             <span className="font-medium">over 3 years</span> of experience in
             building large-scale applications, focused on driving performance,
@@ -37,7 +37,7 @@ const AboutShowcase = () => {
             independently or as part of a team, with high levels of organization
             to consistently meet deadlines.
           </p>
-          <p className="font-sans mb-6 text-left md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
+          <p className="font-sans mb-6 text-left md:text-left text-base md:text-[1.125rem] md:leading-[1.5] font-normal">
             Graduate with a degree in{" "}
             <span className="font-medium">Accounting</span>, I decided to pursue
             my passion for programming. I enrolled in a coding bootcamp and
@@ -51,7 +51,7 @@ const AboutShowcase = () => {
             familiar with TypeScript. I am always looking to learn new
             technologies.
           </p>
-          <p className="font-sans text-left md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
+          <p className="font-sans text-left md:text-left text-base md:text-[1.125rem] md:leading-[1.5] font-normal">
             <span className="italic">When I&apos;m not coding</span>, I enjoy
             playing video games, watching movies, and playing with my dog. I
             also enjoy <span className="font-medium">learning new things</span>.

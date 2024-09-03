@@ -39,14 +39,16 @@ const Project = ({
       className="bg-[#131618] py-8 px-7 h-80 relative text-left flex flex-col overflow-hidden rounded-3xl justify-between hover:brightness-[170%] "
     >
       <div>
-        <Image
-          src={companyImg}
-          alt="Deloitte logo"
-          quality="95"
-          className="opacity-70 h-auto max-w-full"
-          height={32}
-          width={64}
-        />
+        <ul className="flex flex-wrap gap-4 mb-[-5.625rem] justify-start">
+          {techStack.map((teckItem) => (
+            <li
+              key={teckItem.title}
+              className="group flex flex-col items-center justify-center gap-4 outline-none opacity-35 text-lg"
+            >
+              {teckItem.icon}
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="flex justify-between items-end w-full">
         <span className="text-xl">{title}</span>
@@ -70,7 +72,7 @@ const Project = ({
                 {techStack.map((teckItem) => (
                   <li
                     key={teckItem.title}
-                    className="group flex flex-col items-center justify-center gap-4 text-slate-11 outline-none "
+                    className="group flex flex-col items-center justify-center gap-4 outline-none "
                   >
                     <SkillsItem icon={teckItem.icon} title={teckItem.title} />
                   </li>

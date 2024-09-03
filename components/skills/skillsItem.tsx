@@ -9,7 +9,7 @@ const SkillsItem = ({ icon, title }: SkillsItemProps) => {
           {icon}
         </span>
       </div>
-      <span className="sans transition duration-200 ease-in-out group-hover:text-white group-data-[state='active']:text-slate-12 text-sm leading-[1.6] text-[#f1f7feb5] font-normal ">
+      <span className="sans transition duration-200 ease-in-out group-hover:text-white text-sm leading-[1.6] text-[#f1f7feb5] font-normal ">
         {title}
       </span>
     </>
