@@ -30,18 +30,15 @@ const Experience = () => {
           const month = monthNames[date.getMonth()];
           const year = date.getFullYear();
           return (
-            <li
-              key={experience.id}
-              className="relative flex w-full flex-col sm:flex-row"
-            >
-              <div className="flex w-full pb-4 sm:w-[200px] sm:pb-0">
+            <li key={experience.id} className="relative flex w-full flex-row">
+              <div className="flex w-[7.375rem] sm:w-[12.5rem] pb-4 ">
                 <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal">
                   <time className="sticky top-24" dateTime={experience.date}>
                     {`${month}, ${year}`}
                   </time>
                 </p>
               </div>
-              <div className="relative hidden sm:flex sm:w-[150px]">
+              <div className="relative flex w-[3rem] sm:w-[9.375rem]">
                 <div className="sticky left-0 top-[102px] mt-1.5 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
                 <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-[#d6ebfd30]"></div>
               </div>
@@ -51,7 +48,7 @@ const Experience = () => {
                 initial="initial"
                 whileInView="animate"
                 custom={index}
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <div className="space-y-4">
                   <Image
