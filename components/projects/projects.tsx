@@ -51,7 +51,7 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className=" mb-28 w-full mx-auto max-w-7xl"
+      className="scroll-mt-28 mb-28 w-full mx-auto max-w-7xl"
     >
       <SectionHeading>Projects</SectionHeading>
       <div className="flex pt-8 pb-12">
