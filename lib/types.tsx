@@ -72,6 +72,12 @@ type ContactFormEmailProps = {
   senderEmail: string;
 };
 
+type InputProps = {
+  label: string;
+  maxLength: number;
+  type: string;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -85,4 +91,5 @@ export type {
   FilterProps,
   SkillsItemProps,
   ContactFormEmailProps,
+  InputProps,
 };
