@@ -67,9 +67,9 @@ const Projects = () => {
       <SectionHeading>Projects</SectionHeading>
       <div className="flex flex-col md:flex-row gap-4 pt-8 pb-12">
         <h3 className="w-full md:w-1/2 flex items-start justify-start text-4xl">
-          Made for modern product teams
+          Side projects over the past couple of years
         </h3>
-        <p className="w-full md:w-1/2 flex items-start justify-start text-[#8a8f98] font-medium">
+        <p className="w-full md:w-1/2 flex items-start justify-start text-secondary font-medium">
           In this section, you’ll find a collection of projects that showcase my
           skills in front-end development. Feel free to explore the code,
           features, and challenges faced during development—each project is a
