@@ -17,6 +17,7 @@ const Project = ({
   techStack,
   imageUrl,
   link,
+  repo,
   onOpenModal,
 }: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -90,17 +91,32 @@ const Project = ({
               <Divider />
               <h3 className="text-5xl font-semibold mt-[-3.125rem]">{title}</h3>
               <p className="mt-5 leading-relaxe text-white/70">{description}</p>
-              {link && (
-                <Button
-                  className="text-white flex gap-3 items-center pt-7 outline-none"
-                  buttonType={ButtonType.LINK}
-                  href={link}
-                  target="_blank"
-                >
-                  Visit website
-                  <FaExternalLinkAlt className=" group-hover:translate-x-1 transition" />
-                </Button>
-              )}
+
+              <div className="flex flex-col sm:flex-row gap-8 pb-10 pt-7">
+                {link && (
+                  <Button
+                    className="text-white flex gap-3 items-center outline-none"
+                    buttonType={ButtonType.LINK}
+                    href={link}
+                    target="_blank"
+                  >
+                    Visit website
+                    <FaExternalLinkAlt className="text-xs group-hover:translate-x-1 transition" />
+                  </Button>
+                )}
+
+                {repo && (
+                  <Button
+                    className="text-white flex gap-3 items-center outline-none"
+                    buttonType={ButtonType.LINK}
+                    href={repo}
+                    target="_blank"
+                  >
+                    Visit repository
+                    <FaExternalLinkAlt className="text-xs group-hover:translate-x-1 transition" />
+                  </Button>
+                )}
+              </div>
             </div>
           </section>
         </Modal>

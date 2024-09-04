@@ -194,6 +194,7 @@ export const projectsData = [
     ],
     imageUrl: CalendarImg,
     link: "https://emmanouelxanthakis.com",
+    repo: "",
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
@@ -209,6 +210,7 @@ export const projectsData = [
     ],
     imageUrl: CalendarImg,
     link: "https://my-calendar-smoky.vercel.app/",
+    repo: "https://github.com/exanthakis/my-calendar",
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
@@ -219,6 +221,7 @@ export const projectsData = [
     techStack: [skillsData[0], skillsData[1], skillsData[5]],
     imageUrl: CalendarImg,
     link: "https://casavasilia.com/",
+    repo: "https://github.com/exanthakis/casavasilia_website",
     tags: ["HTML", "CSS", "Javascript"],
   },
   {
@@ -234,6 +237,7 @@ export const projectsData = [
     ],
     imageUrl: CalendarImg,
     link: "https://perigrammata.tuc.gr/",
+    repo: "",
     tags: ["HTML", "CSS", "Javascript", "PHP"],
   },
 ];
