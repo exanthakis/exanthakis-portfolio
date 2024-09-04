@@ -7,6 +7,7 @@ import {
   FaBootstrap,
   FaAws,
   FaLinkedinIn,
+  FaPhp,
 } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -21,7 +22,6 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/my-calendar-app.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
-import { BsCalendar3 } from "react-icons/bs";
 
 export const fullName = "Emmanouel Xanthakis";
 
@@ -174,7 +174,7 @@ export const experiencesData = [
     title: "Front-End Developer (Business Analyst I)",
     location: "Chania",
     description:
-      "Created responsive websites using the latest front-end technologies, including HTML, SCSS, and jQuery, along with CSS frameworks like Bootstrap, to deliver high-quality, mobile-friendly web experiences.",
+      "Collaborated with the front-end team using Vanilla JS and SCSS.",
     icon: React.createElement(LuGraduationCap),
     date: "2021-07-17",
   },
@@ -225,16 +225,16 @@ export const projectsData = [
     id: 4,
     title: "Perigrammata",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "This web application was developed for my diploma thesis. The system functions as a recommender tool for students, helping them plan their course selections based on the skills they wish to enhance. It also provides insights into the reinforcement rates for ABET achievements in courses they have successfully completed. Additionally, the system enables instructors to export course outlines (in compliance with the Quality Assurance and Certification Authority in Higher Education, ADIP) in standard formats such as PDF and HTML. It also supports the documentation of learning outcomes according to ABET accreditation standards. Users are required to log in using their academic credentials via LDAP authentication.",
     techStack: [
-      { icon: React.createElement(SiNextdotjs), title: "Next.js" },
-      { icon: React.createElement(RiTailwindCssFill), title: "Tailwind CSS" },
-      { icon: React.createElement(RiSupabaseLine), title: "Supabase" },
-      { icon: React.createElement(RxVercelLogo), title: "Vercel" },
+      skillsData[0],
+      skillsData[1],
+      skillsData[5],
+      { icon: React.createElement(FaPhp), title: "PHP" },
     ],
     imageUrl: CalendarImg,
-    link: "",
-    tags: ["HTML", "CSS", "Tailwind"],
+    link: "https://perigrammata.tuc.gr/",
+    tags: ["HTML", "CSS", "Javascript", "PHP"],
   },
 ];
 
