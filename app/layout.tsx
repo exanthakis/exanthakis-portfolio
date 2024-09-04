@@ -7,6 +7,7 @@ import Image from "next/image";
 import bgImg from "@/public/images/bg.png";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/react";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Footer />
           <Toaster position="top-right" />
         </ActiveContextProvider>
+        <Analytics />
       </body>
     </html>
   );
