@@ -20,6 +20,7 @@ import { BiLogoAdobe } from "react-icons/bi";
 import { PiCertificateThin } from "react-icons/pi";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/my-calendar-app.png";
+import PortfolioImg from "../public/images/portfolio.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
 
@@ -192,7 +193,7 @@ export const projectsData = [
       skillsData[10],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
-    imageUrl: CalendarImg,
+    imageUrl: PortfolioImg,
     link: "https://emmanouelxanthakis.com",
     repo: "",
     tags: ["React", "Next.js", "Tailwind"],
