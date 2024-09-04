@@ -92,7 +92,7 @@ const Project = ({
               <p className="mt-5 leading-relaxe text-white/70">{description}</p>
               {link && (
                 <Button
-                  className="text-white flex gap-3 items-center pt-5  outline-none"
+                  className="text-white flex gap-3 items-center pt-7 outline-none"
                   buttonType={ButtonType.LINK}
                   href={link}
                   target="_blank"

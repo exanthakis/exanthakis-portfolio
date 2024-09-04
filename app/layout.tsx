@@ -31,7 +31,7 @@ export default function RootLayout({
           alt="Background image"
           quality="95"
           priority={true}
-          className="absolute left-0 z-[10] h-screen w-full select-none md:top-0 opacity-70"
+          className="absolute left-0 z-[10] h-screen w-full select-none md:top-0 opacity-90"
         />
         <ActiveContextProvider>
           <Header />

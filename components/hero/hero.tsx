@@ -1,11 +1,7 @@
-// left right hero
 "use client";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import Image from "next/image";
-import Button from "../ui/button";
 import { BsArrowRight } from "react-icons/bs";
-import { ButtonType } from "@/lib/types";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
@@ -48,15 +44,14 @@ const Hero = () => {
           Turning Ideas into Digital Products
         </h1>
 
-        <span
+        <p
           className={`md:text-xl tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal sm:px-10`}
-          // className={`text-white font-medium lg:text-2xl sm:text-xl xs:text-[20px] text-[16px] lg:leading-[40px] leading-[20px] text-white-100`}
         >
           I'm a Greek creative developer based in Chania{" "}
           <span className="font-bold">with years</span> of experience in
-          front-end development, developing user interfaces and web
-          applications.
-        </span>
+          front-end development. I turn ideas ideas into dynamic digital
+          products that meet today's needs and adapt to tomorrow's challenges
+        </p>
 
         <Link
           href="#contact"
@@ -69,11 +64,6 @@ const Hero = () => {
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-
-        {/* <Button buttonType={ButtonType.PRIMARY} href="">
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Button> */}
       </motion.div>
     </section>
   );

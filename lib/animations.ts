@@ -1,7 +1,7 @@
 export const slideInFromRightVariants = {
   initial: {
     opacity: 0, // Initially transparent
-    x: 100, // Starts 100 pixels off to the right
+    x: 10, // Starts 100 pixels off to the right
   },
   animate: (index: number) => ({
     opacity: 1, // Becomes fully visible
