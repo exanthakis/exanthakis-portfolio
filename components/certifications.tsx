@@ -9,6 +9,7 @@ import { ButtonType } from "@/lib/types";
 import { BsArrowRight } from "react-icons/bs";
 import { GoLinkExternal } from "react-icons/go";
 import { fadeInAnimationVariants } from "@/lib/animations";
+import Badge from "./ui/badge";
 
 const Certifications = () => {
   return (
@@ -30,6 +31,16 @@ const Certifications = () => {
             "conic-gradient(from 90deg at 50% 50%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 50%), radial-gradient(rgba(200, 200, 200, 0.1) 0%, transparent 80%)",
         }}
       ></div>
+      <div className="w-full flex items-center flex-col pb-10 max-w-7xl mx-auto">
+        <Badge className="bg-[#B59AFF]" title={"Certifications"} />
+
+        <span className="text-center tracking-[-0.16px] text-secondary font-normal max-w-3xl">
+          Additionally, I&apos;ve earned a few certificates emphasizing my
+          dedication to continual learning and skill deevelopment. I&apos;m
+          always open to new learning opportunities, eager to enhance my skills
+          even further.
+        </span>
+      </div>
 
       <ul className="relative z-20 grid w-full grid-cols-1 gap-12 sm:grid-cols-2 md:flex-row md:gap-20 lg:grid-cols-3">
         {certificationsData.map((certification, index) => (
