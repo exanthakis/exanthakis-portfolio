@@ -19,8 +19,9 @@ import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe } from "react-icons/bi";
 import { PiCertificateThin } from "react-icons/pi";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import CalendarImg from "../public/images/my-calendar-app.png";
+import CalendarImg from "../public/images/calendar.png";
 import PortfolioImg from "../public/images/portfolio.png";
+import CasaVasiliaImg from "../public/images/casavasilia.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
 
@@ -220,7 +221,7 @@ export const projectsData = [
     description:
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
     techStack: [skillsData[0], skillsData[1], skillsData[5]],
-    imageUrl: CalendarImg,
+    imageUrl: CasaVasiliaImg,
     link: "https://casavasilia.com/",
     repo: "https://github.com/exanthakis/casavasilia_website",
     tags: ["HTML", "CSS", "Javascript"],
