@@ -1,11 +1,9 @@
 "use client";
 
-import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import companyImg from "../../public/images/deloitte-digital-logo.png";
 import { FiPlus } from "react-icons/fi";
 import Modal from "../ui/modal";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Divider from "../ui/divider";
 import Button from "../ui/button";
 import { ButtonType, ProjectProps } from "@/lib/types";
@@ -22,6 +20,14 @@ const Project = ({
   onOpenModal,
 }: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef<HTMLElement>(null);
+
+  // Scroll to the top of the modal on open
+  useEffect(() => {
+    if (isModalOpen && modalRef.current) {
+      modalRef.current.scrollTop = 0;
+    }
+  }, [isModalOpen]);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -59,7 +65,10 @@ const Project = ({
           <FiPlus className=" group-hover:translate-x-1 transition" />
         </div>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <section className="flex h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll cursor-default">
+          <section
+            ref={modalRef}
+            className="flex justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default"
+          >
             <Image
               src={imageUrl}
               alt={title}
@@ -67,7 +76,7 @@ const Project = ({
               className="
             w-full shadow-2xl"
             />
-            <div className="pt-4 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-full sm:group-even:ml-[18rem]">
+            <div className="pt-4 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-full">
               <ul className="flex flex-wrap gap-8 mb-[-5.625rem] justify-center">
                 {techStack.map((teckItem) => (
                   <li
