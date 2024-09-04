@@ -43,7 +43,8 @@ const Projects = () => {
     const filtered =
       id != TechStackE.All
         ? projectsData.filter((project: ProjectsT) => {
-            return project.tags.includes(id);
+            const found = project.tags.find((tag) => id.includes(tag));
+            return !!found;
           })
         : projectsData;
 

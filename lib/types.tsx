@@ -11,7 +11,7 @@ export enum ButtonType {
 export enum TechStackE {
   All = "All",
   NEXT = "Next.js",
-  HTML = "HTML",
+  HTML = "HTML/CSS/JS",
 }
 
 type SectionHeadingProps = {
