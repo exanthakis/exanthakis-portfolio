@@ -2,13 +2,8 @@
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { BsArrowRight } from "react-icons/bs";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
-
-const CubeScene = dynamic(() => import("@/components/hero/cube-scene"), {
-  ssr: false,
-});
 
 const Hero = () => {
   const { ref } = useSectionInView("Home", 0.5);
@@ -20,18 +15,6 @@ const Hero = () => {
       id="home"
       className="relative mx-auto flex flex-col md:flex-row-reverse justify-center items-center h-[92dvh] max-w-3xl text-center"
     >
-      {/* <div className="flex items-center justify-center z-10 relative h-3/5"> */}
-      {/* <CubeScene /> */}
-      {/* <div className="relative z-100 h-full">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "tween", duration: 0.2 }}
-          >
-            <CubeScene />
-          </motion.div>
-        </div> */}
-      {/* </div> */}
       <motion.div
         className="flex flex-col items-center justify-center gap-y-8 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
