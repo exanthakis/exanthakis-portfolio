@@ -16,7 +16,7 @@ const Contact = () => {
     <section
       ref={ref}
       id="contact"
-      className="scroll-mt-28 mb-20 sm:mb-28 w-full mx-auto max-w-7xl text-center"
+      className="scroll-mt-28 mb-20 sm:mb-28 w-full mx-auto max-w-7xl text-center pt-16"
     >
       <SectionHeading>Contact</SectionHeading>
 
