@@ -22,6 +22,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
 import PortfolioImg from "../public/images/portfolio.png";
 import CasaVasiliaImg from "../public/images/casavasilia.png";
+import PerigrammataImg from "../public/images/perigrammata1.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
 
@@ -237,7 +238,7 @@ export const projectsData = [
       skillsData[5],
       { icon: React.createElement(FaPhp), title: "PHP" },
     ],
-    imageUrl: CalendarImg,
+    imageUrl: PerigrammataImg,
     link: "https://perigrammata.tuc.gr/",
     repo: "",
     tags: ["HTML", "CSS", "Javascript", "PHP"],

@@ -70,7 +70,7 @@ const Project = ({
             ref={modalRef}
             className="flex justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default"
           >
-            <div className="relative w-full shadow-2xl  h-[50%]">
+            <div className="relative w-full shadow-2xl  h-[55%]">
               <Image
                 src={imageUrl}
                 alt={title}
@@ -79,7 +79,7 @@ const Project = ({
                 quality={100} // optional: improves image quality
               />
             </div>
-            <div className="pt-7 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-[50%]">
+            <div className="pt-7 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-[45%]">
               <ul className="flex flex-wrap gap-8 mb-[-5.625rem] justify-center">
                 {techStack.map((teckItem) => (
                   <li
