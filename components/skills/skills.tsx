@@ -17,7 +17,7 @@ const Skills = () => {
         Comprehensive Technical Expertise and Tools
       </h3>
 
-      <p className="text-left tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal pb-10">
+      <p className="text-left tracking-[-0.16px] text-secondary font-normal pb-10">
         My technical toolkit includes a deep understanding of both{" "}
         <span className="font-medium">front-end</span> and{" "}
         <span className="font-medium">back-end</span> development, as well as a

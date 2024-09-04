@@ -4,6 +4,7 @@
 
 :root {
   --primary: rgba(239, 247, 255, 0.615);
+  --secondary: #eff7ff9d;
 }
 
 * {
@@ -168,4 +169,8 @@
 
 .noScrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
+}
+
+.text-secondary {
+  color: var(--secondary);
 }

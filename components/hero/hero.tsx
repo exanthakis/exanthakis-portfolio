@@ -45,7 +45,7 @@ const Hero = () => {
         </h1>
 
         <p
-          className={`md:text-xl tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal sm:px-10`}
+          className={`md:text-xl tracking-[-0.16px] text-secondary font-normal sm:px-10`}
         >
           I'm a Greek creative developer based in Chania{" "}
           <span className="font-bold">with years</span> of experience in

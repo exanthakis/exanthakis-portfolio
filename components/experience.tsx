@@ -17,7 +17,7 @@ const Experience = () => {
 
         <h3 className="font-bold text-2xl text-left">Front-End Developer</h3>
         <p className="text-justify mb-2">2021 - Present / Deloitte Digital</p>
-        <span className="text-left tracking-[-0.16px] text-[rgba(239,247,255,.615)] font-normal max-w-3xl">
+        <span className="text-left tracking-[-0.16px] text-secondary font-normal max-w-3xl">
           Promoted annually in my current role as a Front-End Developer at
           Deloitte Digital, consistently recognized for delivering high-quality,
           innovative solutions and driving impactful results within the team.
