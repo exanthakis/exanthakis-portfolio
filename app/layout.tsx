@@ -8,6 +8,7 @@ import bgImg from "@/public/images/bg.png";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Toaster position="top-right" />
         </ActiveContextProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
