@@ -14,7 +14,8 @@ const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Emmanouel Xanthakis | Personal Portfolio",
-  description: "Front-End developer",
+  description:
+    "Creative front-end developer based in Chania, showcasing a collection of selected works and side projects using JavaScript, React, and Next.js, with a focus on innovative and responsive design.",
 };
 
 export default function RootLayout({
@@ -26,7 +27,6 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body
         className={`font-generalSansRegular relative bg-black text-gray-50 dark:text-opacity-90`}
-        // className={`font-generalSansRegular bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}
       >
         <Image
           src={bgImg}
