@@ -28,7 +28,7 @@ const Skills = () => {
       <ul className="flex flex-wrap justify-center gap-6 text-lg text-gray-800  max-w-[53rem] mx-auto">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="group flex flex-col items-center justify-center gap-4 outline-none "
+            className="group flex flex-col items-center justify-center gap-4 outline-none w-[4.25rem] md:w-auto h-full"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"

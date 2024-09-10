@@ -34,7 +34,7 @@ const Hero = () => {
           <span className="font-bold">with years</span> of experience in
           front-end development. I turn ideas ideas into dynamic digital
           products that meet today&apos;s needs and adapt to tomorrow&apos;s
-          challenges
+          challenges.
         </p>
 
         <Link
