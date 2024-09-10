@@ -13,7 +13,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="relative mx-auto flex flex-col md:flex-row-reverse justify-center items-center h-[92dvh] max-w-3xl text-center"
+      className="relative mx-auto flex mt-12 md:mt-0 justify-center items-center h-[92vh] max-w-3xl text-center"
     >
       <motion.div
         className="flex flex-col items-center justify-center gap-y-8 px-4 text-lg font-medium"
@@ -39,7 +39,7 @@ const Hero = () => {
 
         <Link
           href="#contact"
-          className="group flex items-center gap-2 rounded-full outline-none focus:scale-110 z-10 bg-white text-white/60  active:scale-105 transition border border-black/10 bg-white/10  hover:bg-white/90 hover:!text-gray-900 px-7 py-2 shadow-[0_6px_16px_rgba(255,255,255,.2)] hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]"
+          className="group flex items-center gap-2 rounded-full outline-none focus:scale-110 z-10 bg-white text-black active:scale-105 transition border border-black/10  hover:bg-white/90 hover:!text-gray-900 px-7 py-2 shadow-[0_6px_16px_rgba(255,255,255,.2)] hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());

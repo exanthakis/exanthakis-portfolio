@@ -14,7 +14,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="z-[999] fixed md:py-6 px-4 py-4 lg:sticky top-0 left-0 w-full flex border-b border-gray-500/15  transition items-center justify-between md:h-[8dvh] backdrop-blur bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75">
+    <header className="z-[999] fixed md:py-6 px-4 py-4 lg:sticky top-0 left-0 w-full flex border-b border-gray-500/15  transition items-center justify-between md:h-[8vh] backdrop-blur bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
