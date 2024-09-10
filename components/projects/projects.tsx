@@ -92,7 +92,7 @@ const Projects = () => {
           drag={disableDrag ? false : "x"}
           dragConstraints={{ right: 0, left: -width }}
           animate={controls}
-          className="grid grid-flow-col gap-10 "
+          className="grid grid-flow-col gap-4 md:gap-10 "
         >
           {filtered.map((project) => {
             return (
