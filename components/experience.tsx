@@ -1,15 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { experiencesData, monthNames } from "@/lib/data";
 import Image from "next/image";
-import companyImg from "../public/images/unisystemstransparent.png";
 import { motion } from "framer-motion";
-import { slideInFromRightVariants } from "@/lib/animations";
+import {
+  fadeInAnimationVariants,
+  slideInFromRightVariants,
+} from "@/lib/animations";
 import Badge from "./ui/badge";
+import { GoLinkExternal } from "react-icons/go";
+import { ExperienceItem } from "@/lib/types";
 
 const Experience = () => {
+  const [showExperienceDetails, setShowExperienceDetails] = useState<
+    ExperienceItem[]
+  >([]);
+
   const { month: currentMonth, year: currentYear } = getDateMonthYear(
     experiencesData[0].startDate
   );
@@ -24,6 +32,29 @@ const Experience = () => {
       year,
     };
   }
+
+  const handleExperienceDetails = (id: number) => {
+    const experienceItems = [...showExperienceDetails];
+    const exists = experienceItems.find((el) => el.id === id);
+
+    let items = experienceItems;
+    if (exists) {
+      items = experienceItems.map((el) => {
+        if (el.id === id) {
+          return {
+            id,
+            show: !el.show,
+          };
+        }
+        return el;
+      });
+    } else {
+      items.push({ id, show: true });
+    }
+
+    setShowExperienceDetails(items);
+  };
+
   return (
     <div className="pt-[10rem] pb-12 text-center w-full relative my-24 bg-gradient ">
       <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto">
@@ -50,6 +81,10 @@ const Experience = () => {
             experience.endDate
           );
 
+          const expItem = showExperienceDetails.find(
+            (el) => el.id === experience.id
+          );
+
           return (
             <li
               key={experience.id}
@@ -66,13 +101,15 @@ const Experience = () => {
 
                   {itemEndMonth && itemEndYear ? (
                     <time
-                      className="sticky top-24"
+                      className="sticky top-28"
                       dateTime={experience.endDate}
                     >
                       {`${itemEndMonth}, ${itemEndYear}`}
                     </time>
                   ) : (
-                    <span>{experiencesData[0].endDate}</span> // Present string
+                    <span className="sticky top-28">
+                      {experiencesData[0].endDate}
+                    </span> // Present string
                   )}
                 </p>
               </div>
@@ -81,7 +118,7 @@ const Experience = () => {
                 <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-[#d6ebfd30]"></div>
               </div>
               <motion.div
-                className="w-full pb-16 overflow-x-hidden"
+                className="w-full pb-16 "
                 variants={slideInFromRightVariants}
                 initial="initial"
                 whileInView="animate"
@@ -105,6 +142,38 @@ const Experience = () => {
                       {experience.description}
                     </span>
                   </div>
+
+                  {experience.items && experience.items.length > 0 && (
+                    <div className="flex flex-col md:flex-row flex-wrap !mt-0">
+                      <button
+                        className="flex gap-2 items-center pt-1 pb-5"
+                        onClick={() => handleExperienceDetails(experience.id)}
+                      >
+                        {expItem?.show ? "Read less" : "Read more"}
+                        <GoLinkExternal className="opacity-70 group-hover:translate-x-1 transition" />
+                      </button>
+
+                      {expItem?.show && (
+                        <ol className="flex flex-col md:flex-row flex-wrap justify-start gap-4 text-base  md:leading-[1.5] text-[#f1f7feb5] font-normal">
+                          {experience.items.map((item, index) => (
+                            <motion.li
+                              className="group flex flex-col items-start justify-center outline-none w-full md:w-auto text-start"
+                              key={index}
+                              variants={fadeInAnimationVariants}
+                              initial="initial"
+                              whileInView="animate"
+                              viewport={{
+                                once: true,
+                              }}
+                              custom={index}
+                            >
+                              {item.description}
+                            </motion.li>
+                          ))}
+                        </ol>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </li>

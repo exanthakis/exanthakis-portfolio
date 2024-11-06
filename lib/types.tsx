@@ -85,6 +85,11 @@ type AboutParagraphProps = {
   children: React.ReactNode;
 };
 
+type ExperienceItem = {
+  id: number;
+  show: boolean;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -100,4 +105,5 @@ export type {
   ContactFormEmailProps,
   InputProps,
   AboutParagraphProps,
+  ExperienceItem,
 };

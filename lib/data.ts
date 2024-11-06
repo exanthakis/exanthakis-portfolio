@@ -156,6 +156,7 @@ export const experiencesData = [
     startDate: "2024-11-04",
     endDate: "Present",
     img: UniSystemsImg,
+    items: [],
   },
   {
     id: 2,

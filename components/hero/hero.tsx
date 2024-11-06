@@ -30,11 +30,10 @@ const Hero = () => {
         <p
           className={`md:text-xl tracking-[-0.16px] text-secondary font-normal sm:px-10`}
         >
-          I&apos;m a Greek creative developer based in Chania{" "}
-          <span className="font-bold">with years</span> of experience in
-          front-end development. I turn ideas ideas into dynamic digital
-          products that meet today&apos;s needs and adapt to tomorrow&apos;s
-          challenges.
+          I&apos;m a Greek creative developer based in Chania with years of
+          experience in front-end development. I turn ideas ideas into dynamic
+          digital products that meet today&apos;s needs and adapt to
+          tomorrow&apos;s challenges.
         </p>
 
         <Link
