@@ -27,7 +27,7 @@ import DeloitteImg from "../public/images/deloitte-digital-logo.png";
 import UniSystemsImg from "../public/images/uni-systems-logo-white.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
-
+// test comment
 export const fullName = "Emmanouel Xanthakis";
 
 export const monthNames = [
