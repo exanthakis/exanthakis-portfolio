@@ -4,19 +4,37 @@ import React from "react";
 
 import { experiencesData, monthNames } from "@/lib/data";
 import Image from "next/image";
-import companyImg from "../public/images/deloitte-digital-logo.png";
+import companyImg from "../public/images/unisystemstransparent.png";
 import { motion } from "framer-motion";
 import { slideInFromRightVariants } from "@/lib/animations";
 import Badge from "./ui/badge";
 
 const Experience = () => {
+  const { month: currentMonth, year: currentYear } = getDateMonthYear(
+    experiencesData[0].startDate
+  );
+
+  function getDateMonthYear(experienceDate: string) {
+    const date = new Date(experienceDate);
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+
+    return {
+      month,
+      year,
+    };
+  }
   return (
     <div className="pt-[10rem] pb-12 text-center w-full relative my-24 bg-gradient ">
       <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 
-        <h3 className="font-bold text-2xl text-left">Front-End Developer</h3>
-        <p className="text-justify mb-2">2021 - Present / Deloitte Digital</p>
+        <h3 className="font-bold text-2xl text-left">
+          {experiencesData[0].title}
+        </h3>
+        <p className="text-justify mb-2">
+          {`${currentMonth}, ${currentYear} - ${experiencesData[0].endDate} / ${experiencesData[0].company}`}
+        </p>
         <span className="text-left tracking-[-0.16px] text-secondary font-normal max-w-3xl">
           Promoted annually in my current role as a Front-End Developer at
           Deloitte Digital, consistently recognized for delivering high-quality,
@@ -26,9 +44,12 @@ const Experience = () => {
 
       <ul className="flex flex-col w-full mx-auto max-w-5xl py-16 ">
         {experiencesData.map((experience, index) => {
-          const date = new Date(experience.date);
-          const month = monthNames[date.getMonth()];
-          const year = date.getFullYear();
+          const { month: itemStartMonth, year: itemStartYear } =
+            getDateMonthYear(experience.startDate);
+          const { month: itemEndMonth, year: itemEndYear } = getDateMonthYear(
+            experience.endDate
+          );
+
           return (
             <li
               key={experience.id}
@@ -36,9 +57,23 @@ const Experience = () => {
             >
               <div className="flex w-[7.375rem] sm:w-[12.5rem] pb-4 ">
                 <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal">
-                  <time className="sticky top-24" dateTime={experience.date}>
-                    {`${month}, ${year}`}
+                  <time
+                    className="sticky top-24"
+                    dateTime={experience.startDate}
+                  >
+                    {`${itemStartMonth}, ${itemStartYear} - `}
                   </time>
+
+                  {itemEndMonth && itemEndYear ? (
+                    <time
+                      className="sticky top-24"
+                      dateTime={experience.endDate}
+                    >
+                      {`${itemEndMonth}, ${itemEndYear}`}
+                    </time>
+                  ) : (
+                    <span>{experiencesData[0].endDate}</span> // Present string
+                  )}
                 </p>
               </div>
               <div className="relative flex w-[3rem] sm:w-[9.375rem] overflow-visible">
@@ -55,12 +90,12 @@ const Experience = () => {
               >
                 <div className="space-y-4">
                   <Image
-                    src={companyImg}
-                    alt="Deloitte logo"
+                    src={experience.img}
+                    alt={`${experience.company} logo`}
                     quality="95"
                     className="opacity-70"
                     height={32}
-                    width={64}
+                    width={experience.id === 1 ? 100 : 64}
                   />
                   <div className="flex flex-col justify-start items-start text-left">
                     <h5 className="line-clamp-5 tracking-tight text-2xl pb-4">

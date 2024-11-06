@@ -23,6 +23,8 @@ import CalendarImg from "../public/images/calendar.png";
 import PortfolioImg from "../public/images/portfolio.png";
 import CasaVasiliaImg from "../public/images/casavasilia.png";
 import PerigrammataImg from "../public/images/perigrammata1.png";
+import DeloitteImg from "../public/images/deloitte-digital-logo.png";
+import UniSystemsImg from "../public/images/uni-systems-logo-white.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
 
@@ -147,39 +149,52 @@ export const skillsData = [
 export const experiencesData = [
   {
     id: 1,
-    title: "Front-End Developer (Consultant II)",
+    company: "Uni Systems",
+    title: "Front-End Developer",
+    location: "Chania",
+    description: "Tech stack: NextJS, MUI, Tailwind ",
+    startDate: "2024-11-04",
+    endDate: "Present",
+    img: UniSystemsImg,
+  },
+  {
+    id: 2,
+    company: "Deloitte Digital",
+    title: "Front-End Developer",
     location: "Chania",
     description:
       "Worked as a Front-End Developer, conducting code reviews and providing guidance to ensure code quality aligned with customer business needs, marketing objectives, and SEO strategy. Utilized a tech stack including React and Sass, leveraging Storybook and Jest to generate snapshot tests for all React components, ensuring consistency and reliability across the application.",
     icon: React.createElement(LuGraduationCap),
     date: "2024-07-17",
-  },
-  {
-    id: 2,
-    title: "Front-End Developer (Consultant I)",
-    location: "Chania",
-    description:
-      "Developed and maintained modern, scalable, and high- performance web applications using the Next.js framework, leveraging various AWS services for full cloud-based implementations (implementing AWS Cognito authentication in Next.js App).",
-    icon: React.createElement(LuGraduationCap),
-    date: "2023-07-17",
-  },
-  {
-    id: 3,
-    title: "Front-End Developer (Business Analyst III)",
-    location: "Chania",
-    description:
-      "Created responsive websites using the latest front-end technologies, including HTML, SCSS, and jQuery, along with CSS frameworks like Bootstrap, to deliver high-quality, mobile-friendly web experiences.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022-07-17",
-  },
-  {
-    id: 4,
-    title: "Front-End Developer (Business Analyst I)",
-    location: "Chania",
-    description:
-      "Collaborated with the front-end team using Vanilla JS and SCSS.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2021-07-17",
+    startDate: "2021-08-21",
+    endDate: "2024-11-01",
+    items: [
+      {
+        title: "Front-End Developer (Consultant II)",
+        description:
+          "Worked as a Front-End Developer, conducting code reviews and providing guidance to ensure code quality aligned with customer business needs, marketing objectives, and SEO strategy. Utilized a tech stack including React and Sass, leveraging Storybook and Jest to generate snapshot tests for all React components, ensuring consistency and reliability across the application.",
+        date: "2024-07-17",
+      },
+      {
+        title: "Front-End Developer (Consultant I)",
+        description:
+          "Developed and maintained modern, scalable, and high- performance web applications using the Next.js framework, leveraging various AWS services for full cloud-based implementations (implementing AWS Cognito authentication in Next.js App).",
+        date: "2023-07-17",
+      },
+      {
+        title: "Front-End Developer (Business Analyst III)",
+        description:
+          "Created responsive websites using the latest front-end technologies, including HTML, SCSS, and jQuery, along with CSS frameworks like Bootstrap, to deliver high-quality, mobile-friendly web experiences.",
+        date: "2022-07-17",
+      },
+      {
+        title: "Front-End Developer (Business Analyst I)",
+        description:
+          "Collaborated with the front-end team using Vanilla JS and SCSS.",
+        date: "2021-07-17",
+      },
+    ],
+    img: DeloitteImg,
   },
 ] as const;
 
