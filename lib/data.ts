@@ -164,7 +164,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Chania",
     description:
-      "Worked as a Front-End Developer, conducting code reviews and providing guidance to ensure code quality aligned with customer business needs, marketing objectives, and SEO strategy. Utilized a tech stack including React and Sass, leveraging Storybook and Jest to generate snapshot tests for all React components, ensuring consistency and reliability across the application.",
+      "Worked as a Front-End Developer, conducting code reviews and providing guidance to ensure code quality aligned with customer business needs, marketing objectives, and SEO strategy. Utilized a tech stack including React and Sass, leveraging Storybook and Jest to generate snapshot tests for all React components, ensuring consistency and reliability across the application. Promoted annually, consistently recognized for delivering high-quality, innovative solutions and driving impactful results within the team.",
     icon: React.createElement(LuGraduationCap),
     date: "2024-07-17",
     startDate: "2021-08-21",
@@ -173,7 +173,7 @@ export const experiencesData = [
       {
         title: "Front-End Developer (Consultant II)",
         description:
-          "Worked as a Front-End Developer, conducting code reviews and providing guidance to ensure code quality aligned with customer business needs, marketing objectives, and SEO strategy. Utilized a tech stack including React and Sass, leveraging Storybook and Jest to generate snapshot tests for all React components, ensuring consistency and reliability across the application.",
+          "Integrated payment solutions using Datatrans library with React JS, implementing SecureFields for Visa/Mastercard, Payment button for Google and Apple Pay, and Lightbox for Klarna payment methods to ensure seamless and secure transactions.",
         date: "2024-07-17",
       },
       {

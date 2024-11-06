@@ -10,8 +10,10 @@ import {
   slideInFromRightVariants,
 } from "@/lib/animations";
 import Badge from "./ui/badge";
-import { GoLinkExternal } from "react-icons/go";
+
 import { ExperienceItem } from "@/lib/types";
+import { CiRead } from "react-icons/ci";
+import { CiUnread } from "react-icons/ci";
 
 const Experience = () => {
   const [showExperienceDetails, setShowExperienceDetails] = useState<
@@ -101,13 +103,13 @@ const Experience = () => {
 
                   {itemEndMonth && itemEndYear ? (
                     <time
-                      className="sticky top-28"
+                      className="sticky top-36 md:top-28"
                       dateTime={experience.endDate}
                     >
                       {`${itemEndMonth}, ${itemEndYear}`}
                     </time>
                   ) : (
-                    <span className="sticky top-28">
+                    <span className="sticky top-36 md:top-28">
                       {experiencesData[0].endDate}
                     </span> // Present string
                   )}
@@ -146,18 +148,27 @@ const Experience = () => {
                   {experience.items && experience.items.length > 0 && (
                     <div className="flex flex-col md:flex-row flex-wrap !mt-0">
                       <button
-                        className="flex gap-2 items-center pt-1 pb-5"
+                        className="flex gap-2 items-center pt-1 pb-5 text-sm"
                         onClick={() => handleExperienceDetails(experience.id)}
                       >
-                        {expItem?.show ? "Read less" : "Read more"}
-                        <GoLinkExternal className="opacity-70 group-hover:translate-x-1 transition" />
+                        {expItem?.show ? (
+                          <>
+                            <span>Read less</span>
+                            <CiUnread className="text-lg" />
+                          </>
+                        ) : (
+                          <>
+                            <span>Read more</span>
+                            <CiRead className="text-lg" />
+                          </>
+                        )}
                       </button>
 
                       {expItem?.show && (
-                        <ol className="flex flex-col md:flex-row flex-wrap justify-start gap-4 text-base  md:leading-[1.5] text-[#f1f7feb5] font-normal">
+                        <ul className="flex flex-col md:flex-row flex-wrap justify-start gap-4 text-base md:leading-[1.5]  ">
                           {experience.items.map((item, index) => (
                             <motion.li
-                              className="group flex flex-col items-start justify-center outline-none w-full md:w-auto text-start"
+                              className="group flex flex-col items-start justify-center outline-none w-full md:w-auto text-start relative"
                               key={index}
                               variants={fadeInAnimationVariants}
                               initial="initial"
@@ -167,10 +178,20 @@ const Experience = () => {
                               }}
                               custom={index}
                             >
-                              {item.description}
+                              <div className="absolute -left-4 top-2 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
+                              <div className="">
+                                <p className="text-justify mb-2">
+                                  {`${item.title}, ${
+                                    getDateMonthYear(item.date).year
+                                  }`}
+                                </p>
+                                <span className="text-[#f1f7feb5] font-normal">
+                                  {item.description}
+                                </span>
+                              </div>
                             </motion.li>
                           ))}
-                        </ol>
+                        </ul>
                       )}
                     </div>
                   )}
