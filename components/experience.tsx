@@ -59,7 +59,7 @@ const Experience = () => {
 
   return (
     <div className="pt-[10rem] pb-12 text-center relative my-24 bg-gradient -ml-6 w-screen md:w-[calc(100%+2.5rem)] ">
-      <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto pl-6 pr-6">
+      <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto pl-6 pr-6 md:px-0">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 
         <h3 className="font-bold text-2xl text-left">
