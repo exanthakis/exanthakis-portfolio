@@ -93,7 +93,7 @@ const Experience = () => {
               className="relative flex w-full flex-row overflow-hidden sm:overflow-visible"
             >
               <div className="flex w-[7.375rem] sm:w-[12.5rem] pb-4 ">
-                <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal pr-2">
+                <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal pr-2 flex flex-col">
                   <time
                     className="sticky top-24"
                     dateTime={experience.startDate}
