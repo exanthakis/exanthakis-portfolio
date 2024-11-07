@@ -68,11 +68,11 @@ const Experience = () => {
         <p className="text-justify mb-2">
           {`${currentMonth}, ${currentYear} - ${experiencesData[0].endDate} / ${experiencesData[0].company}`}
         </p>
-        <span className="text-left tracking-[-0.16px] text-secondary font-normal max-w-3xl">
+        {/* <span className="text-left tracking-[-0.16px] text-secondary font-normal max-w-3xl">
           Promoted annually in my current role as a Front-End Developer at
           Deloitte Digital, consistently recognized for delivering high-quality,
           innovative solutions and driving impactful results within the team.
-        </span>
+        </span> */}
       </div>
 
       <ul className="flex flex-col w-full mx-auto max-w-5xl py-16 pl-6 pr-6">
