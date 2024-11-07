@@ -22,8 +22,8 @@ const Skills = () => {
         <span className="font-medium">front-end</span> and{" "}
         <span className="font-medium">back-end</span> development, as well as a
         strong command of various programming languages, frameworks, and tools.
-        Below is a list of the key technologies I leverage to deliver{" "}
-        <span className="underline">high-quality</span> results.
+        Below is a list of the key technologies I leverage to deliver
+        high-quality results.
       </p>
       <ul className="flex flex-wrap justify-center gap-6 text-lg text-gray-800  max-w-[53rem] mx-auto">
         {skillsData.map((skill, index) => (
