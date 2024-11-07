@@ -58,8 +58,8 @@ const Experience = () => {
   };
 
   return (
-    <div className="pt-[10rem] pb-12 text-center w-full relative my-24 bg-gradient ">
-      <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto">
+    <div className="pt-[10rem] pb-12 text-center relative my-24 bg-gradient -ml-6 w-screen md:w-[calc(100%+2.5rem)] ">
+      <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto pl-6 pr-6">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 
         <h3 className="font-bold text-2xl text-left">
@@ -75,7 +75,7 @@ const Experience = () => {
         </span>
       </div>
 
-      <ul className="flex flex-col w-full mx-auto max-w-5xl py-16 ">
+      <ul className="flex flex-col w-full mx-auto max-w-5xl py-16 pl-6 pr-6">
         {experiencesData.map((experience, index) => {
           const { month: itemStartMonth, year: itemStartYear } =
             getDateMonthYear(experience.startDate);
@@ -93,7 +93,7 @@ const Experience = () => {
               className="relative flex w-full flex-row overflow-hidden sm:overflow-visible"
             >
               <div className="flex w-[7.375rem] sm:w-[12.5rem] pb-4 ">
-                <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal">
+                <p className="text-sm leading-[1.6] text-[#f1f7feb5] font-normal pr-2">
                   <time
                     className="sticky top-24"
                     dateTime={experience.startDate}
@@ -120,7 +120,7 @@ const Experience = () => {
                 <div className="absolute left-0.5 top-0.5 h-full w-0.5 bg-[#d6ebfd30]"></div>
               </div>
               <motion.div
-                className="w-full pb-16 "
+                className="w-full pb-16 pr-2 md:pr-0"
                 variants={slideInFromRightVariants}
                 initial="initial"
                 whileInView="animate"

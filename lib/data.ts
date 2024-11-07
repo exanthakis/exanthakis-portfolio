@@ -152,7 +152,8 @@ export const experiencesData = [
     company: "Uni Systems",
     title: "Front-End Developer",
     location: "Chania",
-    description: "Tech stack: NextJS, MUI, Tailwind ",
+    description:
+      "Worked on various public projects leveraging modern frontend technologies, including React, Material-UI (MUI), and Tailwind CSS.",
     startDate: "2024-11-04",
     endDate: "Present",
     img: UniSystemsImg,
