@@ -1,7 +1,5 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import {
-  FaReact,
   FaJava,
   FaGitAlt,
   FaBootstrap,
@@ -17,7 +15,7 @@ import { SiTypescript, SiNextdotjs, SiRedux, SiMui } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe } from "react-icons/bi";
-import { PiCertificateThin } from "react-icons/pi";
+import { SiUdemy } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
 import PortfolioImg from "../public/images/portfolio.png";
@@ -267,19 +265,19 @@ export const certificationsData = [
     title: "AWS Certified Cloud Practitioner",
     date: "09/2023 - 09/2026",
     link: "https://www.credly.com/badges/dc064a46-4b29-4b97-9fa6-480e5137a77f/linked_in_profile",
-    icon: React.createElement(PiCertificateThin),
+    icon: React.createElement(FaAws),
   },
   {
     title: "Adobe Certified Expert - Adobe Experience Manager Sites Developer",
     date: "05/2023 - 11/2025",
     link: "https://www.credly.com/badges/daabab03-fe7f-428f-8220-861797bfa1e8/linked_in_profile",
-    icon: React.createElement(PiCertificateThin),
+    icon: React.createElement(BiLogoAdobe),
   },
   {
     title:
       "Adobe Certified Expert - Adobe Experience Manager Sites Business Practitioner",
     date: "11/2021 - 11/2025",
     link: "https://www.credly.com/badges/1f344fc0-9a10-49b5-9288-985905629f72/linked_in_profile",
-    icon: React.createElement(PiCertificateThin),
+    icon: React.createElement(BiLogoAdobe),
   },
 ] as const;
