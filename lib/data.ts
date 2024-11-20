@@ -153,7 +153,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Chania",
     description:
-      "Worked on various public projects leveraging modern frontend technologies, including React, Material-UI (MUI), and Tailwind CSS.",
+      "Software Engineer in Public Administration and Finance Projects. Specializing in the development and maintenance of software solutions for public sector and government projects using front-end technologies such as React, Material-UI (MUI), and Tailwind CSS.",
     startDate: "2024-11-04",
     endDate: "Present",
     img: UniSystemsImg,
