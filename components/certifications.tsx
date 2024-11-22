@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./ui/section-heading";
+import React, { useEffect, useRef, useState } from "react";
 import { certificationsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import Button from "./ui/button";
@@ -10,8 +9,28 @@ import { BsArrowRight } from "react-icons/bs";
 import { GoLinkExternal } from "react-icons/go";
 import { fadeInAnimationVariants } from "@/lib/animations";
 import Badge from "./ui/badge";
+import Modal from "./ui/modal";
+import { FiPlus } from "react-icons/fi";
 
 const Certifications = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef<HTMLElement>(null);
+
+  // Scroll to the top of the modal on open
+  useEffect(() => {
+    if (isModalOpen && modalRef.current) {
+      modalRef.current.scrollTop = 0;
+    }
+  }, [isModalOpen]);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="text-center w-full mx-auto py-12 my-[8rem] relative overflow-hidden rounded-3xl border-t border-[#d6ebfd30] max-w-7xl">
       <div
@@ -60,16 +79,41 @@ const Certifications = () => {
             </h5>
 
             <p className="text-md text-justify mt-auto">{certification.date}</p>
-            <div className="flex flex-wrap pt-3 text-xs">
-              <Button
-                buttonType={ButtonType.LINK}
-                href={certification.link}
-                target="_blank"
-              >
-                Learn more
-                <GoLinkExternal className="opacity-70 group-hover:translate-x-1 transition" />
-              </Button>
-            </div>
+            {certification.link && certification.link.trim().length > 0 ? (
+              <div className="flex flex-wrap pt-3 text-xs">
+                <Button
+                  buttonType={ButtonType.LINK}
+                  href={certification.link}
+                  target="_blank"
+                >
+                  Learn more
+                  <GoLinkExternal className="opacity-70 group-hover:translate-x-1 transition" />
+                </Button>
+              </div>
+            ) : (
+              <>
+                {/* If certification link is empty then open a modal */}
+                <div
+                  onClick={handleOpenModal}
+                  className="flex gap-2 flex-wrap pt-3 text-xs cursor-pointer"
+                >
+                  Learn more
+                  <GoLinkExternal className="opacity-70 group-hover:translate-x-1 transition" />
+                </div>
+                <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                  <section
+                    ref={modalRef}
+                    className="flex justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default"
+                  >
+                    <div className="py-2 px-4">
+                      <div className="mb-4 rounded-lg border border-[#d6ebfd30] bg-[#d8f4f609] transition ease-in-out hover:bg-[#ddeaf814]">
+                        <h4>Udemy test</h4>
+                      </div>
+                    </div>
+                  </section>
+                </Modal>
+              </>
+            )}
           </motion.li>
         ))}
       </ul>

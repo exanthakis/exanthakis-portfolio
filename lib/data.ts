@@ -280,4 +280,10 @@ export const certificationsData = [
     link: "https://www.credly.com/badges/1f344fc0-9a10-49b5-9288-985905629f72/linked_in_profile",
     icon: React.createElement(BiLogoAdobe),
   },
+  {
+    title: "Udemy Learning Platform Certifications",
+    date: "",
+    link: "",
+    icon: React.createElement(SiUdemy),
+  },
 ] as const;
