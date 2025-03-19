@@ -6,12 +6,20 @@ import {
   FaAws,
   FaLinkedinIn,
   FaPhp,
+  FaVuejs,
 } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoGithub } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiNextdotjs, SiRedux, SiMui } from "react-icons/si";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiRedux,
+  SiMui,
+  SiStorybook,
+  SiVitest,
+} from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe } from "react-icons/bi";
@@ -115,6 +123,10 @@ export const skillsData = [
     icon: React.createElement(SiNextdotjs),
   },
   {
+    title: "Vue js",
+    icon: React.createElement(FaVuejs),
+  },
+  {
     title: "Redux",
     icon: React.createElement(SiRedux),
   },
@@ -131,12 +143,20 @@ export const skillsData = [
     icon: React.createElement(DiPostgresql),
   },
   {
-    title: "AWS",
+    title: "AWS (Basics)",
     icon: React.createElement(FaAws),
   },
   {
     title: "AEM 6.5",
     icon: React.createElement(BiLogoAdobe),
+  },
+  {
+    title: "Storybook",
+    icon: React.createElement(SiStorybook),
+  },
+  {
+    title: "Vitest",
+    icon: React.createElement(SiVitest),
   },
   {
     title: "Git",
@@ -201,13 +221,30 @@ export const experiencesData = [
 export const projectsData = [
   {
     id: 1,
+    title: "CineScope",
+    description:
+      "CineScope is a dynamic movie-hub web application designed to help users discover, explore, and track their favorite films effortlessly. Powered by Vue 3 and TMDB, CineScope provides an intuitive platform to browse top-rated and trending movies while offering detailed insights into any film of interest—all in one place!",
+    techStack: [
+      skillsData[9],
+      skillsData[2],
+      skillsData[16],
+      skillsData[17],
+      { icon: React.createElement(RxVercelLogo), title: "Vercel" },
+    ],
+    imageUrl: PortfolioImg,
+    link: "https://cine-scope-olive.vercel.app/",
+    repo: "https://github.com/exanthakis/cine-scope",
+    tags: ["Vue.js", "Tailwind"],
+  },
+  {
+    id: 2,
     title: "Portfolio",
     description:
       "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools. This project was about more than just a portfolio refresh it was an exploration of my growth as a designer, developer, and creator. I wanted to craft a digital space that reflects who I am today and where I’m headed tomorrow. Built with Next.js framework, my portfolio demonstrates the seamless combination of server-side rendering and static site generation, ensuring optimal performance and enhanced SEO. The design is driven by Tailwind CSS, allowing for a clean, responsive, and customizable UI with minimal effort. I’ve also deployed the site on Vercel, ensuring fast load times, secure hosting, and scalability.",
     techStack: [
       skillsData[8],
       skillsData[2],
-      skillsData[10],
+      skillsData[11],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: PortfolioImg,
@@ -216,7 +253,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
-    id: 2,
+    id: 3,
     title: "My Calendar",
     description:
       "A user-friendly scheduling tool to help stay organized and manage time effectively. Build Next.js, enabling a fast and dynamic user experience with server-side rendering and static generation. The design is crafted using Tailwind CSS, ensuring a fully responsive and visually appealing interface that adapts across all devices. The app’s backend is supported by Supabase, providing authentication services and secure and real-time database management for seamless event creation, editing, and syncing across multiple devices. Vercel powers the deployment, offering lightning-fast performance and reliable hosting, allowing users to access their calendars anytime, anywhere with optimal speed and reliability.",
@@ -232,7 +269,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Vacation Rental Website",
     description:
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
@@ -243,7 +280,7 @@ export const projectsData = [
     tags: ["HTML", "CSS", "Javascript"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Perigrammata",
     description:
       "This web application was developed for my diploma thesis. The system functions as a recommender tool for students, helping them plan their course selections based on the skills they wish to enhance. It also provides insights into the reinforcement rates for ABET achievements in courses they have successfully completed. Additionally, the system enables instructors to export course outlines (in compliance with the Quality Assurance and Certification Authority in Higher Education, ADIP) in standard formats such as PDF and HTML. It also supports the documentation of learning outcomes according to ABET accreditation standards. Users are required to log in using their academic credentials via LDAP authentication.",
