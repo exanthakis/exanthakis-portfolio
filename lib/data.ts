@@ -226,6 +226,7 @@ export const projectsData = [
       "CineScope is a dynamic movie-hub web application designed to help users discover, explore, and track their favorite films effortlessly. Powered by Vue 3 and TMDB, CineScope provides an intuitive platform to browse top-rated and trending movies while offering detailed insights into any film of interest—all in one place!",
     techStack: [
       skillsData[9],
+      skillsData[6],
       skillsData[2],
       skillsData[16],
       skillsData[17],
@@ -243,6 +244,7 @@ export const projectsData = [
       "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools. This project was about more than just a portfolio refresh it was an exploration of my growth as a designer, developer, and creator. I wanted to craft a digital space that reflects who I am today and where I’m headed tomorrow. Built with Next.js framework, my portfolio demonstrates the seamless combination of server-side rendering and static site generation, ensuring optimal performance and enhanced SEO. The design is driven by Tailwind CSS, allowing for a clean, responsive, and customizable UI with minimal effort. I’ve also deployed the site on Vercel, ensuring fast load times, secure hosting, and scalability.",
     techStack: [
       skillsData[8],
+      skillsData[6],
       skillsData[2],
       skillsData[11],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
