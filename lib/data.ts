@@ -27,6 +27,7 @@ import { SiUdemy } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
 import PortfolioImg from "../public/images/portfolio.png";
+import CineScopeImg from "../public/images/cinescope3.jpg";
 import CasaVasiliaImg from "../public/images/casavasilia.png";
 import PerigrammataImg from "../public/images/perigrammata1.png";
 import DeloitteImg from "../public/images/deloitte-digital-logo.png";
@@ -232,7 +233,7 @@ export const projectsData = [
       skillsData[17],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
-    imageUrl: PortfolioImg,
+    imageUrl: CineScopeImg,
     link: "https://cine-scope-olive.vercel.app/",
     repo: "https://github.com/exanthakis/cine-scope",
     tags: ["Vue.js", "Tailwind"],
