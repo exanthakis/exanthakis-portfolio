@@ -56,7 +56,7 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
         >
           <div
             onClick={handleClose}
-            className="fixed top-6 z-10 right-6 w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2 border-[#161616] text-[#8a8f98] hover:bg-[#1c1c1c] hover:text-[#f7f8f8] hover:border-[#1c1c1c]"
+            className="fixed top-6 right-6 w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2  bg-[#1c1c1c] hover:bg-[#424242] text-[#f7f8f8] border-[#1c1c1c] z-10"
           >
             <IoCloseOutline className=" group-hover:translate-x-1 transition" />
           </div>

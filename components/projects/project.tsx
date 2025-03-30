@@ -70,7 +70,7 @@ const Project = ({
             ref={modalRef}
             className="flex justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default"
           >
-            <div className="relative w-full shadow-2xl  h-[55%]">
+            <div className="relative w-full shadow-2xl h-[55%] before:absolute before:top-0 before:left-0 before:z-2 before:h-full before:w-full before:bg-[rgba(0,0,0,0.5)] before:content-[''] before:z-[2]">
               <Image
                 src={imageUrl}
                 alt={title}
@@ -92,7 +92,7 @@ const Project = ({
               </ul>
               <Divider />
               <h3 className="text-5xl font-semibold mt-[-3.125rem]">{title}</h3>
-              <p className="mt-5 leading-relaxe text-white/70">{description}</p>
+              <p className="mt-5 text-white/70">{description}</p>
 
               <div className="flex flex-col sm:flex-row gap-8 pb-10 pt-7">
                 {link && (
