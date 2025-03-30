@@ -33,7 +33,7 @@ const AboutShowcase = () => {
             to create interactive 3D experiences on the web.
           </AboutParagraph>
 
-          <AboutParagraph id={2}>
+          <AboutParagraph id={3}>
             <span className="italic">When I&apos;m not coding</span>, I enjoy
             hiking, watching movies, and traveling to explore new cultures. I
             also love reading about emerging technologies and spending time

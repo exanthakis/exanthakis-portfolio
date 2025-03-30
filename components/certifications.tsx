@@ -11,6 +11,7 @@ import { fadeInAnimationVariants } from "@/lib/animations";
 import Badge from "./ui/badge";
 import Modal from "./ui/modal";
 import { FiPlus } from "react-icons/fi";
+import AboutParagraph from "./about/about-paragraph";
 
 const Certifications = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -103,13 +104,55 @@ const Certifications = () => {
                 <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                   <section
                     ref={modalRef}
-                    className="flex justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default"
+                    className="flex gap-4 justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default px-10 pt-20"
                   >
-                    <div className="py-2 px-4">
-                      <div className="mb-4 rounded-lg border border-[#d6ebfd30] bg-[#d8f4f609] transition ease-in-out hover:bg-[#ddeaf814]">
-                        <h4>Udemy test</h4>
+                    <AboutParagraph id={1}>
+                      <div className="rounded-lg border border-[#d6ebfd30] bg-[#d8f4f609] transition ease-in-out hover:bg-[#ddeaf814] p-2">
+                        Graduate with a{" "}
+                        <span className="font-medium">
+                          Master&apos;s degree
+                        </span>{" "}
+                        in Electrical and Computer Engineering from the
+                        Technical University of Crete, I specialize in creating
+                        seamless and intuitive user experiences. I&apos;m
+                        involved in every step of the process: from development
+                        to testing and deployment. I focus on delivering
+                        high-quality, scalable solutions that drive positive
+                        user experiences.
                       </div>
-                    </div>
+                    </AboutParagraph>
+
+                    <AboutParagraph id={2}>
+                      <div className="rounded-lg border border-[#d6ebfd30] bg-[#d8f4f609] transition ease-in-out hover:bg-[#ddeaf814]">
+                        Graduate with a{" "}
+                        <span className="font-medium">
+                          Master&apos;s degree
+                        </span>{" "}
+                        in Electrical and Computer Engineering from the
+                        Technical University of Crete, I specialize in creating
+                        seamless and intuitive user experiences. I&apos;m
+                        involved in every step of the process: from development
+                        to testing and deployment. I focus on delivering
+                        high-quality, scalable solutions that drive positive
+                        user experiences.
+                      </div>
+                    </AboutParagraph>
+
+                    <AboutParagraph id={3}>
+                      <div className="rounded-lg border border-[#d6ebfd30] bg-[#d8f4f609] transition ease-in-out hover:bg-[#ddeaf814]">
+                        Graduate with a{" "}
+                        <span className="font-medium">
+                          Master&apos;s degree
+                        </span>{" "}
+                        in Electrical and Computer Engineering from the
+                        Technical University of Crete, I specialize in creating
+                        seamless and intuitive user experiences. I&apos;m
+                        involved in every step of the process: from development
+                        to testing and deployment. I focus on delivering
+                        high-quality, scalable solutions that drive positive
+                        user experiences.
+                      </div>
+                    </AboutParagraph>
                   </section>
                 </Modal>
               </>
