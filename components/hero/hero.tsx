@@ -13,7 +13,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="relative flex w-full mt-8 lg:mt-0 justify-center items-center h-[100dvh] md:h-[92vh] text-center"
+      className="relative flex w-full mt-8 lg:mt-0 justify-center items-center h-[100vh] md:h-[92vh] text-center"
     >
       <div className="max-w-3xl mx-auto ">
         <motion.div
