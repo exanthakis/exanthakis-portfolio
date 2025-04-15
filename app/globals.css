@@ -174,3 +174,34 @@
 .text-secondary {
   color: var(--secondary);
 }
+
+.mask-gradient-fade {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.28) 48%,
+    rgba(0, 0, 0, 1) 79%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.28) 48%,
+    rgba(0, 0, 0, 1) 79%
+  );
+}
+
+.mask-gradient-fade2 {
+  inset: -19px 41px 101px;
+  mask: radial-gradient(
+      50% 47% at 50% 46.6%,
+      rgba(0, 0, 0, 0) 6%,
+      rgba(0, 0, 0, 0.1) 23%,
+      rgba(0, 0, 0, 1) 65%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    add;
+}
+
+.bg-black {
+  background-color: #080808;
+}

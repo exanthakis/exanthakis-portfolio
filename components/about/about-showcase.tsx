@@ -5,7 +5,7 @@ import AboutParagraph from "./about-paragraph";
 
 const AboutShowcase = () => {
   return (
-    <motion.div className="mx-auto text-left max-w-7xl">
+    <motion.div className="mx-auto text-left max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10">
       {/* <SectionHeading>About</SectionHeading> */}
       <div className="flex flex-col md:flex-row w-full gap-8 sm:gap-4 md:gap-0 pt-7">
         <h3 className="w-full md:w-1/2 flex items-start justify-start text-4xl">

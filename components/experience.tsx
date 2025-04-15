@@ -59,7 +59,7 @@ const Experience = () => {
 
   return (
     <div className="pt-[10rem] pb-12 text-center relative my-24 bg-gradient -ml-6 w-screen md:w-[calc(100%+2.5rem)] ">
-      <div className="w-full flex flex-col pb-10 max-w-7xl mx-auto pl-6 pr-6">
+      <div className="w-full flex flex-col pb-10 max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 mx-auto pl-6 pr-6">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 
         <h3 className="font-bold text-2xl text-left">
@@ -75,7 +75,7 @@ const Experience = () => {
         </span> */}
       </div>
 
-      <ul className="flex flex-col w-full mx-auto max-w-5xl py-16 pl-6 pr-6">
+      <ul className="flex flex-col w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 py-16 pl-6 pr-6">
         {experiencesData.map((experience, index) => {
           const { month: itemStartMonth, year: itemStartYear } =
             getDateMonthYear(experience.startDate);

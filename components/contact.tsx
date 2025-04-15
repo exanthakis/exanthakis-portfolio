@@ -16,7 +16,7 @@ const Contact = () => {
     <section
       ref={ref}
       id="contact"
-      className="scroll-mt-28 mb-20 sm:mb-28 w-full mx-auto max-w-7xl text-center pt-16"
+      className="scroll-mt-28 mb-20 sm:mb-28 w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 text-center pt-16"
     >
       <SectionHeading>Contact</SectionHeading>
 
@@ -24,7 +24,7 @@ const Contact = () => {
         You can contact me through this form and I will get back to you as soon
         as possible.
       </p>
-      <div className="pt-8 mx-auto ">
+      <div className="pt-8 mx-auto">
         <form
           className="mt-10 flex flex-col text-black/80 "
           action={async (formData) => {

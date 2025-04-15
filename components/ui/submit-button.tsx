@@ -8,11 +8,11 @@ const SubmitBtn = () => {
   return (
     <button
       type="submit"
-      className="group mt-14 flex items-center justify-center gap-2 h-[3rem] w-[8rem] rounded-full bg-white text-black  active:scale-105 transition border border-black/10  hover:bg-white/80 hover:!text-gray-900 px-7 py-2 "
+      className="group mt-14 flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg bg-white text-black  active:scale-105 transition border border-black/10  hover:bg-white/80 hover:!text-gray-900 w-fit "
       disabled={pending}
     >
       {pending ? (
-        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-black"></div>
+        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-black px-3 py-1"></div>
       ) : (
         <>
           Submit{" "}

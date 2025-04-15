@@ -11,7 +11,7 @@ import SkillsItem from "./skillsItem";
 
 const Skills = () => {
   return (
-    <div className="text-center w-full mx-auto max-w-7xl pt-28">
+    <div className="text-center w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 pt-28">
       <Badge className="bg-[#d4b144]" title={"Skills"} />
       <h3 className="font-bold text-2xl text-left mb-2">
         Comprehensive Technical Expertise and Tools

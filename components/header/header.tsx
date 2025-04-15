@@ -18,12 +18,12 @@ const Header = () => {
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="md:flex w-full justify-between  mx-auto max-w-7xl"
+        className="md:flex w-full justify-between  mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10"
       >
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="z-50 p-2 text-xl  fade-title font-calSans"
+            className="z-50 py-2 text-xl  fade-title font-calSans"
             onClick={() => setOpen(false)}
           >
             exanthakis

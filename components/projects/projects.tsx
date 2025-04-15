@@ -63,7 +63,7 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className="scroll-mt-28 mb-28 w-full mx-auto max-w-7xl"
+      className="scroll-mt-5 mb-28 w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10"
     >
       <SectionHeading>Projects</SectionHeading>
       <div className="flex flex-col md:flex-row gap-4 pt-8 pb-12">
