@@ -192,14 +192,20 @@
 
 .mask-gradient-fade2 {
   inset: -19px 41px 101px;
-  mask: radial-gradient(
-      50% 47% at 50% 46.6%,
-      rgba(0, 0, 0, 0) 6%,
-      rgba(0, 0, 0, 0.1) 23%,
-      rgba(0, 0, 0, 1) 65%,
-      rgba(0, 0, 0, 0) 100%
-    )
-    add;
+  mask-image: radial-gradient(
+    50% 47% at 50% 46.6%,
+    rgba(0, 0, 0, 0) 6%,
+    rgba(0, 0, 0, 0.1) 23%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    50% 47% at 50% 46.6%,
+    rgba(0, 0, 0, 0) 6%,
+    rgba(0, 0, 0, 0.1) 23%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .bg-black {
