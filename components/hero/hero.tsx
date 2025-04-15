@@ -24,7 +24,7 @@ const Hero = () => {
             delay: 0.1,
           }}
         >
-          <h1 className="font-black font-calSans bg-white bg-home-hero-title bg-clip-text font-titles px-8 text-4xl sm:text-5xl text-transparent leading-[120%]">
+          <h1 className="font-black font-calSans bg-white bg-home-hero-title bg-clip-text font-titles px-0 md:px-8 text-5xl   text-transparent leading-[120%]">
             Turning Ideas into Digital Products
           </h1>
 
