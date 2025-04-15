@@ -21,7 +21,7 @@ const Skills = () => {
         <span className="font-medium"> front-end</span> development, with some
         experience in <span className="font-medium"> back-end</span> as well,
         along with solid skills in different programming languages, frameworks,
-        and tools. Here's a list of the main technologies I&apos;ve used to
+        and tools. Here&apos;s a list of the main technologies I&apos;ve used to
         build projects.
       </p>
       <ul className="flex flex-wrap justify-center gap-6 text-lg text-gray-800  max-w-[53rem] mx-auto">
