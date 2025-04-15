@@ -11,7 +11,7 @@ import {
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoGithub } from "react-icons/io";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiTailwindCssFill, RiTeamFill } from "react-icons/ri";
 import {
   SiTypescript,
   SiNextdotjs,
@@ -19,7 +19,9 @@ import {
   SiMui,
   SiStorybook,
   SiVitest,
+  SiStackblitz,
 } from "react-icons/si";
+import { CgPerformance } from "react-icons/cg";
 import { GrReactjs } from "react-icons/gr";
 import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe } from "react-icons/bi";
@@ -83,6 +85,21 @@ export const socialLinks = [
     icon: React.createElement(FaLinkedinIn, {
       className: "opacity-70 group-hover:translate-x-1 transition text-xl",
     }),
+  },
+];
+
+export const mainSkillsData = [
+  {
+    title: "Modern Stack Expertise",
+    icon: React.createElement(SiStackblitz),
+  },
+  {
+    title: "Performance-Optimized Interfaces",
+    icon: React.createElement(CgPerformance),
+  },
+  {
+    title: "Agile Collaboration Across Teams",
+    icon: React.createElement(RiTeamFill),
   },
 ];
 

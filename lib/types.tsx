@@ -65,6 +65,7 @@ type FilterProps = {
 type SkillsItemProps = {
   icon: React.FunctionComponentElement<IconBaseProps>;
   title: string;
+  size?: "main" | "default";
 };
 
 type ContactFormEmailProps = {

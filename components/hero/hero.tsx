@@ -4,6 +4,8 @@ import { useSectionInView } from "@/hooks/useSectionInView";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
+import { mainSkillsData } from "@/lib/data";
+import SkillsItem from "../skills/skillsItem";
 
 const Hero = () => {
   const { ref } = useSectionInView("Home", 0.5);
@@ -50,6 +52,21 @@ const Hero = () => {
           </Link>
         </motion.div>
       </div>
+      <ul className="absolute bottom-6 z-10 flex flex-wrap justify-center gap-10 text-lg text-gray-800  sm:max-w-[53rem] mx-auto">
+        {mainSkillsData.map((skill, index) => (
+          <motion.li
+            className="group flex flex-col items-center justify-center gap-4 outline-none w-[calc(100%/4)] sm:w-[calc(100%/5)]  h-full "
+            key={index}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.1,
+            }}
+          >
+            <SkillsItem icon={skill.icon} title={skill.title} size="main" />
+          </motion.li>
+        ))}
+      </ul>
       <div className="absolute bottom-0 w-full z-3 overflow-hidden h-[700px] bg-[radial-gradient(50%_53%_at_50%_100%,_#171717,_#ababab00)]"></div>
       <div className=" bg-[radial-gradient(50%_53%_at_50%_100%,_#171717,_#ababab00)] absolute bottom-0 framer2 h-[33vh] w-full z-[3]"></div>
     </section>
