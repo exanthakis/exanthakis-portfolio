@@ -14,16 +14,15 @@ const Skills = () => {
     <div className="text-center w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 pt-28">
       <Badge className="bg-[#d4b144]" title={"Skills"} />
       <h3 className="font-bold text-2xl text-left mb-2">
-        Comprehensive Technical Expertise and Tools
+        Technical Skills and Tools
       </h3>
-
-      <p className="text-left tracking-[-0.16px] text-secondary font-normal pb-10">
-        My technical toolkit includes a deep understanding of both{" "}
-        <span className="font-medium">front-end</span> and{" "}
-        <span className="font-medium">back-end</span> development, as well as a
-        strong command of various programming languages, frameworks, and tools.
-        Below is a list of the key technologies I leverage to deliver
-        high-quality results.
+      <p className="text-left  text-secondary font-normal pb-10">
+        My technical toolkit focuses mainly on{" "}
+        <span className="font-medium"> front-end</span> development, with some
+        experience in <span className="font-medium"> back-end</span> as well,
+        along with solid skills in different programming languages, frameworks,
+        and tools. Here's a list of the main technologies I’ve used to build
+        projects.
       </p>
       <ul className="flex flex-wrap justify-center gap-6 text-lg text-gray-800  max-w-[53rem] mx-auto">
         {skillsData.map((skill, index) => (

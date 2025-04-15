@@ -16,21 +16,21 @@ const AboutShowcase = () => {
             Graduate with a{" "}
             <span className="font-medium">Master&apos;s degree</span> in
             Electrical and Computer Engineering from the Technical University of
-            Crete, I specialize in creating seamless and intuitive user
-            experiences. I&apos;m involved in every step of the process: from
-            development to testing and deployment. I focus on delivering
-            high-quality, scalable solutions that drive positive user
-            experiences.
+            Crete, I specialize in creating unique user experiences. I&apos;m
+            involved in every step of the process: from development to testing
+            and deployment. I focus on delivering high-quality, scalable
+            solutions that drive positive user experiences.
           </AboutParagraph>
 
           <AboutParagraph id={2}>
             I typically use a combination of{" "}
             <span className="font-medium">
-              JavaScript, React, Redux, Webpack, and GitHub Actions
+              JavaScript, React, Redux, Vite, and GitHub Actions
             </span>
             . I have a keen eye for design and am meticulous about continuously
-            learning and improving my skills. Currently, I am learning Three.js
-            to create interactive 3D experiences on the web.
+            learning and improving my skills. Currently, I am learning Vue.js to
+            broaden my frontend framework expertise and enhance my ability to
+            build dynamic, scalable user interfaces with greater flexibility.
           </AboutParagraph>
 
           <AboutParagraph id={2}>
