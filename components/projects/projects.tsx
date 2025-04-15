@@ -73,9 +73,7 @@ const Projects = () => {
         <p className="w-full md:w-1/2 flex items-start justify-start text-secondary font-medium">
           In this section, you’ll find a collection of projects that showcase my
           skills in front-end development. Feel free to explore the code,
-          features, and challenges faced during development—each project is a
-          testament to my passion for continuous learning and improvement in the
-          ever-evolving tech landscape.
+          features, and challenges faced during development.
         </p>
       </div>
 
