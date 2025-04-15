@@ -179,16 +179,17 @@ const Experience = () => {
                               custom={index}
                             >
                               <div className="absolute -left-4 top-2 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
-                              <div className="">
+
+                              {item.title && (
                                 <p className="text-justify mb-2">
                                   {`${item.title}, ${
                                     getDateMonthYear(item.date).year
                                   }`}
                                 </p>
-                                <span className="text-[#f1f7feb5] font-normal">
-                                  {item.description}
-                                </span>
-                              </div>
+                              )}
+                              <span className="text-[#f1f7feb5] font-normal">
+                                {item.description}
+                              </span>
                             </motion.li>
                           ))}
                         </ul>

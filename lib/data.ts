@@ -189,11 +189,24 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Chania",
     description:
-      "Software Engineer in Public Administration and Finance Projects. Specializing in the development and maintenance of software solutions for public sector and government projects using front-end technologies such as React, Material-UI (MUI), and Tailwind CSS.",
+      "Software Engineer in Public Administration and Finance Projects. Specializing in the development and maintenance of software solutions for public sector and government projects using React & Material-UI (MUI).",
     startDate: "2024-11-04",
     endDate: "Present",
     img: UniSystemsImg,
-    items: [],
+    items: [
+      {
+        title: "",
+        description:
+          "Implemented secure authentication with React, OpenID Connect (OIDC) & Keycloak as the identity provider, leveraging JSON Web Tokens (JWT) for secure routing and role-based access control.",
+        date: "",
+      },
+      {
+        title: "",
+        description:
+          "Developed custom React hook utilizing TanStack React Query & Axios to efficiently fetch data, enabling caching and optimizing performance.",
+        date: "",
+      },
+    ],
   },
   {
     id: 2,
@@ -210,13 +223,13 @@ export const experiencesData = [
       {
         title: "Front-End Developer (Consultant II)",
         description:
-          "Integrated payment solutions using Datatrans library with React JS, implementing SecureFields for Visa/Mastercard, Payment button for Google and Apple Pay, and Lightbox for Klarna payment methods to ensure seamless and secure transactions.",
+          "Integrated payment solutions using Datatrans library with React, implementing SecureFields for Visa/Mastercard, Payment button for Google and Apple Pay, and Lightbox for Klarna payment methods to ensure seamless and secure transactions.",
         date: "2024-07-17",
       },
       {
         title: "Front-End Developer (Consultant I)",
         description:
-          "Developed and maintained modern, scalable, and high- performance web applications using the Next.js framework, leveraging various AWS services for full cloud-based implementations (implementing AWS Cognito authentication in Next.js App).",
+          "Developed and maintained modern, scalable, and high- performance web applications using the Next.js framework, leveraging various AWS services for full cloud-based implementations (implementing AWS Cognito authentication).",
         date: "2023-07-17",
       },
       {
