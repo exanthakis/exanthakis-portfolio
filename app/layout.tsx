@@ -29,8 +29,8 @@ export default function RootLayout({
         className={`font-generalSansRegular relative bg-black text-gray-50 dark:text-opacity-90`}
       >
         {/* Circle hero bg */}
-        <div className="absolute -z-10 h-[103vh] sm:h-screen  w-full overflow-hidden flex items-center justify-center top-0 md:left-0 md:top-auto">
-          <div className="mask-gradient-fade z-2 m-auto inset-0 aspect-square grayscale-[1] absolute overflow-visible opacity-20 md:opacity-40 max-w-[1180px] w-[1080px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-0 md:w-auto ">
+        <div className="absolute -z-10 h-screen  w-full overflow-hidden flex items-center justify-center top-0 md:left-0 md:top-auto">
+          <div className="mask-gradient-fade h-[inherit] bottom-0 z-2 m-auto inset-0 aspect-square grayscale-[1] absolute overflow-visible opacity-20 md:opacity-40 max-w-[1180px] w-[1080px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-0 md:w-auto ">
             <div className="mask-gradient-fade2 z-1 h-full rotate-180">
               <Image
                 src={bgImg}
