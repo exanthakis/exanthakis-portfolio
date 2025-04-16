@@ -1,7 +1,12 @@
 import { SkillsItemProps } from "@/lib/types";
 import React from "react";
 
-const SkillsItem = ({ icon, title, size = "default" }: SkillsItemProps) => {
+const SkillsItem = ({
+  icon,
+  title,
+  iconColor = "#e5e7eb",
+  size = "default",
+}: SkillsItemProps) => {
   const isMain = size === "main";
 
   return (
@@ -14,9 +19,8 @@ const SkillsItem = ({ icon, title, size = "default" }: SkillsItemProps) => {
         }`}
       >
         <span
-          className={`inline leading-[0] text-[#e5e7eb] ${
-            isMain ? "text-xl" : "text-2xl"
-          }`}
+          style={{ color: iconColor }}
+          className={`inline leading-[0]  ${isMain ? "text-xl" : "text-2xl"}`}
         >
           {icon}
         </span>

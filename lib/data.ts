@@ -92,14 +92,17 @@ export const mainSkillsData = [
   {
     title: "Modern Stack Expertise",
     icon: React.createElement(SiStackblitz),
+    iconColor: "#FFF42B",
   },
   {
     title: "Performance-Optimized Interfaces",
     icon: React.createElement(CgPerformance),
+    iconColor: "#68CC58",
   },
   {
     title: "Agile Collaboration Across Teams",
     icon: React.createElement(RiTeamFill),
+    iconColor: "#C3E0E5",
   },
 ];
 

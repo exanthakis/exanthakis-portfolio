@@ -33,7 +33,7 @@ const Projects = () => {
     }
   }, [activeTechStack]);
 
-  const hanldleOpenModal = (disableDrag: boolean) => {
+  const handleOpenModal = (disableDrag: boolean) => {
     setDisableDrag(disableDrag);
   };
 
@@ -71,9 +71,9 @@ const Projects = () => {
           Side projects over the past couple of years
         </h3>
         <p className="w-full md:w-1/2 flex items-start justify-start text-secondary font-medium">
-          In this section, you’ll find a collection of projects that showcase my
-          skills in front-end development. Feel free to explore the code,
-          features, and challenges faced during development.
+          In this section, you&apos;ll find a collection of projects that
+          showcase my skills in front-end development. Feel free to explore the
+          code, features, and challenges faced during development.
         </p>
       </div>
 
@@ -99,7 +99,7 @@ const Projects = () => {
                 className="min-w-[26rem] sm:min-w-[30rem]"
                 key={project.id}
               >
-                <Project {...project} onOpenModal={hanldleOpenModal} />
+                <Project {...project} onOpenModal={handleOpenModal} />
               </motion.div>
             );
           })}
@@ -108,7 +108,7 @@ const Projects = () => {
           aria-hidden="true"
           className="-right-10 top-0 w-[300px] h-full center pointer-events-none absolute max-w-full "
           style={{
-            background: "linear-gradient(to right,transparent 70%,#000 95%)",
+            background: "linear-gradient(to right,transparent 70%,#080808 95%)",
           }}
         ></div>
       </motion.div>

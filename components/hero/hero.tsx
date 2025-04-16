@@ -63,7 +63,12 @@ const Hero = () => {
               delay: 0.1,
             }}
           >
-            <SkillsItem icon={skill.icon} title={skill.title} size="main" />
+            <SkillsItem
+              icon={skill.icon}
+              title={skill.title}
+              iconColor={skill.iconColor}
+              size="main"
+            />
           </motion.li>
         ))}
       </ul>
