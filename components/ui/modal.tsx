@@ -52,13 +52,13 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
           exit={"exit"}
           variants={modalVariant}
           ref={dialogRef}
-          className={`w-[90%] fixed h-[90vh] inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 rounded-3xl noScrollbar outline-none shadow-lg max-w-4xl bg-[#08090a]`}
+          className={`noScrollbar fixed inset-0 left-1/2 top-1/2 z-10 h-[90vh] w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#08090a] shadow-lg outline-none`}
         >
           <div
             onClick={handleClose}
-            className="fixed top-6 right-6 w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2  bg-[#1c1c1c] hover:bg-[#424242] text-[#f7f8f8] border-[#1c1c1c] z-10"
+            className="fixed right-6 top-6 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1c1c1c] bg-[#1c1c1c] text-[#f7f8f8] hover:bg-[#424242]"
           >
-            <IoCloseOutline className=" group-hover:translate-x-1 transition" />
+            <IoCloseOutline className="transition group-hover:translate-x-1" />
           </div>
           {children}
         </motion.dialog>

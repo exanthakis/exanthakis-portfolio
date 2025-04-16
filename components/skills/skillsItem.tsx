@@ -1,16 +1,11 @@
 import { SkillsItemProps } from "@/lib/types";
 import React from "react";
 
-const SkillsItem = ({
-  icon,
-  title,
-  iconColor = "#e5e7eb",
-  size = "default",
-}: SkillsItemProps) => {
+const SkillsItem = ({ icon, title, iconColor = "#e5e7eb", size = "default" }: SkillsItemProps) => {
   const isMain = size === "main";
 
   return (
-    <div className="flex flex-col items-center gap-2 group">
+    <div className="group flex flex-col items-center gap-2">
       <div
         className={`flex items-center justify-center transition duration-200 ease-in-out ${
           isMain
@@ -20,16 +15,14 @@ const SkillsItem = ({
       >
         <span
           style={{ color: iconColor }}
-          className={`inline leading-[0]  ${isMain ? "text-xl" : "text-2xl"}`}
+          className={`inline leading-[0] ${isMain ? "text-xl" : "text-2xl"}`}
         >
           {icon}
         </span>
       </div>
       <span
-        className={`sans transition duration-200 ease-in-out group-hover:text-white font-normal ${
-          isMain
-            ? "text-xs leading-2 text-[#f1f7feb5]"
-            : "text-sm leading-[1.6] text-[#f1f7feb5]"
+        className={`sans font-normal transition duration-200 ease-in-out group-hover:text-white ${
+          isMain ? "leading-2 text-xs text-[#f1f7feb5]" : "text-sm leading-[1.6] text-[#f1f7feb5]"
         }`}
       >
         {title}

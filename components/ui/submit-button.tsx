@@ -8,7 +8,7 @@ const SubmitBtn = () => {
   return (
     <button
       type="submit"
-      className="group mt-14 flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg bg-white text-black  active:scale-105 transition border border-black/10  hover:bg-white/80 hover:!text-gray-900 w-fit "
+      className="group mt-14 flex w-fit items-center justify-center gap-2 rounded-lg border border-black/10 bg-white px-3 py-1.5 text-black transition hover:bg-white/80 hover:!text-gray-900 active:scale-105"
       disabled={pending}
     >
       {pending ? (
@@ -16,7 +16,7 @@ const SubmitBtn = () => {
       ) : (
         <>
           Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1" />{" "}
         </>
       )}
     </button>

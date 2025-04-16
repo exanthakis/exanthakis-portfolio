@@ -11,11 +11,7 @@ const About = () => {
   const { ref } = useSectionInView("About", 0.1);
 
   return (
-    <section
-      ref={ref}
-      id="about"
-      className="text-center w-full leading-8 scroll-mt-28 relative"
-    >
+    <section ref={ref} id="about" className="relative w-full scroll-mt-28 text-center leading-8">
       <Divider type={"light"} />
       <AboutShowcase />
       <Skills />

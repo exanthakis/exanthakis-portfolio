@@ -14,16 +14,16 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="z-[999] fixed md:py-6 px-4 py-4 lg:sticky top-0 left-0 w-full flex border-b border-gray-500/15  transition items-center justify-between md:h-[8vh] backdrop-blur bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75">
+    <header className="bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75 fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 px-4 py-4 backdrop-blur transition md:h-[8vh] md:py-6 lg:sticky">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="md:flex w-full justify-between  mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10"
+        className="mx-auto w-full max-w-5xl justify-between px-0 md:flex md:max-w-4xl md:px-10 lg:max-w-6xl"
       >
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="z-50 py-2 text-xl  fade-title font-calSans"
+            className="fade-title z-50 py-2 font-calSans text-xl"
             onClick={() => setOpen(false)}
           >
             exanthakis
@@ -46,7 +46,7 @@ const Header = () => {
         {/* Desktop Nav */}
         <DesktopNav />
 
-        <div className="hidden md:flex justify-center gap-2">
+        <div className="hidden justify-center gap-2 md:flex">
           {socialLinks.map((social) => (
             <Button
               buttonType={ButtonType.LINK}

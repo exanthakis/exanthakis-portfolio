@@ -16,17 +16,16 @@ const Contact = () => {
     <section
       ref={ref}
       id="contact"
-      className="scroll-mt-28 mb-20 sm:mb-28 w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 text-center pt-16"
+      className="mx-auto mb-20 w-full max-w-5xl scroll-mt-28 px-0 pt-16 text-center sm:mb-28 md:max-w-4xl md:px-10 lg:max-w-6xl"
     >
       <SectionHeading>Contact</SectionHeading>
 
-      <p className="text-[#f1f7feb5] dark:text-white/80 text-left">
-        You can contact me through this form and I will get back to you as soon
-        as possible.
+      <p className="text-left text-[#f1f7feb5] dark:text-white/80">
+        You can contact me through this form and I will get back to you as soon as possible.
       </p>
-      <div className="pt-8 mx-auto">
+      <div className="mx-auto pt-8">
         <form
-          className="mt-10 flex flex-col text-black/80 "
+          className="mt-10 flex flex-col text-black/80"
           action={async (formData) => {
             const { emailData, error } = await sendEmail(formData);
             if (error) {
@@ -36,31 +35,16 @@ const Contact = () => {
             toast.success("Email sent successfully");
           }}
         >
-          <div className="flex-col sm:flex-row flex mt-6 gap-10">
+          <div className="mt-6 flex flex-col gap-10 sm:flex-row">
             <div className="relative w-full sm:w-2/4">
-              <Input
-                label={"email"}
-                maxLength={100}
-                type="input"
-                inputType={"email"}
-              />
+              <Input label={"email"} maxLength={100} type="input" inputType={"email"} />
             </div>
             <div className="relative w-full sm:w-2/4">
-              <Input
-                label={"fullname"}
-                maxLength={100}
-                type="input"
-                inputType={"text"}
-              />
+              <Input label={"fullname"} maxLength={100} type="input" inputType={"text"} />
             </div>
           </div>
           <div className="relative mt-6">
-            <Input
-              label={"message"}
-              maxLength={5000}
-              type="textarea"
-              inputType={"text"}
-            />
+            <Input label={"message"} maxLength={5000} type="textarea" inputType={"text"} />
           </div>
           <SubmitBtn />
         </form>

@@ -43,34 +43,34 @@ const Project = ({
   return (
     <motion.div
       layout
-      className="bg-[#131618] py-8 px-7 h-80 relative text-left flex flex-col overflow-hidden rounded-3xl justify-between hover:brightness-[170%] "
+      className="relative flex h-80 flex-col justify-between overflow-hidden rounded-3xl bg-[#131618] px-7 py-8 text-left hover:brightness-[170%]"
     >
       <div>
-        <ul className="flex flex-wrap gap-4 mb-[-5.625rem] justify-start">
+        <ul className="mb-[-5.625rem] flex flex-wrap justify-start gap-4">
           {techStack.map((teckItem) => (
             <li
               key={teckItem.title}
-              className="group flex flex-col items-center justify-center gap-4 outline-none opacity-35 text-lg"
+              className="group flex flex-col items-center justify-center gap-4 text-lg opacity-35 outline-none"
             >
               {teckItem.icon}
             </li>
           ))}
         </ul>
       </div>
-      <div className="flex justify-between items-end w-full">
+      <div className="flex w-full items-end justify-between">
         <span className="text-xl">{title}</span>
         <div
           onClick={handleOpenModal}
-          className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] hover:bg-[#1c1c1c] hover:text-[#f7f8f8] hover:border-[#1c1c1c]"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] hover:border-[#1c1c1c] hover:bg-[#1c1c1c] hover:text-[#f7f8f8]"
         >
-          <FiPlus className=" group-hover:translate-x-1 transition" />
+          <FiPlus className="transition group-hover:translate-x-1" />
         </div>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
           <section
             ref={modalRef}
-            className="flex justify-start h-full noScrollbar flex-col border border-black/5 rounded-lg overflow-hidden relative text-white overflow-y-scroll overflow-x-hidden cursor-default"
+            className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
           >
-            <div className="relative w-full shadow-2xl h-[55%] before:absolute before:top-0 before:left-0 before:z-2 before:h-full before:w-full before:bg-[rgba(0,0,0,0.5)] before:content-[''] before:z-[2]">
+            <div className="before:z-2 relative h-[55%] w-full shadow-2xl before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:bg-[rgba(0,0,0,0.5)] before:content-['']">
               <Image
                 src={imageUrl}
                 alt={title}
@@ -79,43 +79,43 @@ const Project = ({
                 quality={100} // optional: improves image quality
               />
             </div>
-            <div className="pt-7 pb-7 w-full px-5 sm:pl-10 sm:pt-10 flex flex-col h-[45%]">
-              <ul className="flex flex-wrap gap-8 mb-[-5.625rem] justify-center">
+            <div className="flex h-[45%] w-full flex-col px-5 pb-7 pt-7 sm:pl-10 sm:pt-10">
+              <ul className="mb-[-5.625rem] flex flex-wrap justify-center gap-8">
                 {techStack.map((teckItem) => (
                   <li
                     key={teckItem.title}
-                    className="group flex flex-col items-center justify-center gap-4 outline-none "
+                    className="group flex flex-col items-center justify-center gap-4 outline-none"
                   >
                     <SkillsItem icon={teckItem.icon} title={teckItem.title} />
                   </li>
                 ))}
               </ul>
               <Divider />
-              <h3 className="text-5xl font-semibold mt-[-3.125rem]">{title}</h3>
+              <h3 className="mt-[-3.125rem] text-5xl font-semibold">{title}</h3>
               <p className="mt-5 text-white/70">{description}</p>
 
-              <div className="flex flex-col sm:flex-row gap-8 pb-10 pt-7">
+              <div className="flex flex-col gap-8 pb-10 pt-7 sm:flex-row">
                 {link && (
                   <Button
-                    className="text-white flex gap-3 items-center outline-none"
+                    className="flex items-center gap-3 text-white outline-none"
                     buttonType={ButtonType.LINK}
                     href={link}
                     target="_blank"
                   >
                     Visit website
-                    <FaExternalLinkAlt className="text-xs group-hover:translate-x-1 transition" />
+                    <FaExternalLinkAlt className="text-xs transition group-hover:translate-x-1" />
                   </Button>
                 )}
 
                 {repo && (
                   <Button
-                    className="text-white flex gap-3 items-center outline-none"
+                    className="flex items-center gap-3 text-white outline-none"
                     buttonType={ButtonType.LINK}
                     href={repo}
                     target="_blank"
                   >
                     Visit repository
-                    <FaExternalLinkAlt className="text-xs group-hover:translate-x-1 transition" />
+                    <FaExternalLinkAlt className="text-xs transition group-hover:translate-x-1" />
                   </Button>
                 )}
               </div>

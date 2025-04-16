@@ -11,23 +11,19 @@ import SkillsItem from "./skillsItem";
 
 const Skills = () => {
   return (
-    <div className="text-center w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10 pt-28">
+    <div className="mx-auto w-full max-w-5xl px-0 pt-28 text-center md:max-w-4xl md:px-10 lg:max-w-6xl">
       <Badge className="bg-[#d4b144]" title={"Skills"} />
-      <h3 className="font-bold text-2xl text-left mb-2">
-        Technical Skills and Tools
-      </h3>
-      <p className="text-left  text-secondary font-normal pb-10">
-        My technical toolkit focuses mainly on{" "}
-        <span className="font-medium"> front-end</span> development, with some
-        experience in <span className="font-medium"> back-end</span> as well,
-        along with solid skills in different programming languages, frameworks,
-        and tools. Here&apos;s a list of the main technologies I&apos;ve used to
-        build projects.
+      <h3 className="mb-2 text-left text-2xl font-bold">Technical Skills and Tools</h3>
+      <p className="text-secondary pb-10 text-left font-normal">
+        My technical toolkit focuses mainly on <span className="font-medium"> front-end</span>{" "}
+        development, with some experience in <span className="font-medium"> back-end</span> as well,
+        along with solid skills in different programming languages, frameworks, and tools.
+        Here&apos;s a list of the main technologies I&apos;ve used to build projects.
       </p>
-      <ul className="flex flex-wrap justify-center gap-6 text-lg text-gray-800  max-w-[53rem] mx-auto">
+      <ul className="mx-auto flex max-w-[53rem] flex-wrap justify-center gap-6 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="group flex flex-col items-center justify-center gap-4 outline-none w-[4.25rem] md:w-auto h-full"
+            className="group flex h-full w-[4.25rem] flex-col items-center justify-center gap-4 outline-none md:w-auto"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"

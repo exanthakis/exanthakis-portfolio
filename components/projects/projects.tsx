@@ -26,9 +26,7 @@ const Projects = () => {
     if (projectsCarousel && projectsCarousel.current) {
       handleResetDrag();
       setWidth(
-        projectsCarousel.current.scrollWidth -
-          projectsCarousel.current.offsetWidth +
-          threshold
+        projectsCarousel.current.scrollWidth - projectsCarousel.current.offsetWidth + threshold,
       );
     }
   }, [activeTechStack]);
@@ -63,26 +61,23 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className="scroll-mt-5 mb-28 w-full mx-auto max-w-5xl md:max-w-4xl lg:max-w-6xl px-0 md:px-10"
+      className="mx-auto mb-28 w-full max-w-5xl scroll-mt-5 px-0 md:max-w-4xl md:px-10 lg:max-w-6xl"
     >
       <SectionHeading>Projects</SectionHeading>
-      <div className="flex flex-col md:flex-row gap-4 pt-8 pb-12">
-        <h3 className="w-full md:w-1/2 flex items-start justify-start text-4xl">
+      <div className="flex flex-col gap-4 pb-12 pt-8 md:flex-row">
+        <h3 className="flex w-full items-start justify-start text-4xl md:w-1/2">
           Side projects over the past couple of years
         </h3>
-        <p className="w-full md:w-1/2 flex items-start justify-start text-secondary font-medium">
-          In this section, you&apos;ll find a collection of projects that
-          showcase my skills in front-end development. Feel free to explore the
-          code, features, and challenges faced during development.
+        <p className="text-secondary flex w-full items-start justify-start font-medium md:w-1/2">
+          In this section, you&apos;ll find a collection of projects that showcase my skills in
+          front-end development. Feel free to explore the code, features, and challenges faced
+          during development.
         </p>
       </div>
 
-      <Filter
-        activeTechStack={activeTechStack}
-        onActiveTechStach={handleActiveStack}
-      />
+      <Filter activeTechStack={activeTechStack} onActiveTechStack={handleActiveStack} />
       <motion.div
-        className="overflow-hidden cursor-grab relative"
+        className="relative cursor-grab overflow-hidden"
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
@@ -90,15 +85,11 @@ const Projects = () => {
           drag={disableDrag ? false : "x"}
           dragConstraints={{ right: 0, left: -width }}
           animate={controls}
-          className="grid grid-flow-col gap-4 md:gap-10 "
+          className="grid grid-flow-col gap-4 md:gap-10"
         >
           {filtered.map((project) => {
             return (
-              <motion.div
-                layout
-                className="min-w-[26rem] sm:min-w-[30rem]"
-                key={project.id}
-              >
+              <motion.div layout className="min-w-[26rem] sm:min-w-[30rem]" key={project.id}>
                 <Project {...project} onOpenModal={handleOpenModal} />
               </motion.div>
             );
@@ -106,7 +97,7 @@ const Projects = () => {
         </motion.div>
         <div
           aria-hidden="true"
-          className="-right-10 top-0 w-[300px] h-full center pointer-events-none absolute max-w-full "
+          className="center pointer-events-none absolute -right-10 top-0 h-full w-[300px] max-w-full"
           style={{
             background: "linear-gradient(to right,transparent 70%,#080808 95%)",
           }}

@@ -12,7 +12,7 @@ const FilterBadge = ({
     <div
       className={`${
         activeTechStack === currentStack ? "bg-[#68cc58]" : "bg-[#1c1c1c]"
-      } w-1 h-6 rounded-full transition duration-500`}
+      } h-6 w-1 rounded-full transition duration-500`}
     ></div>
   );
 };
@@ -29,27 +29,22 @@ const FilterButton = ({
   return (
     <button
       className={`flex gap-3 transition duration-500 ${
-        activeTechStack === currentStack
-          ? "text-white font-medium"
-          : "text-[#62666d] font-normal"
+        activeTechStack === currentStack ? "font-medium text-white" : "font-normal text-[#62666d]"
       }`}
       onClick={() => onFilterClick(currentStack)}
     >
-      <FilterBadge
-        activeTechStack={activeTechStack}
-        currentStack={currentStack}
-      />
+      <FilterBadge activeTechStack={activeTechStack} currentStack={currentStack} />
       <span className="">{currentStack}</span>
     </button>
   );
 };
 
-const Filter = ({ activeTechStack, onActiveTechStach }: FilterProps) => {
+const Filter = ({ activeTechStack, onActiveTechStack }: FilterProps) => {
   const handleFilterClick = (id: TechStackE) => {
-    onActiveTechStach(id);
+    onActiveTechStack(id);
   };
   return (
-    <div className="flex gap-4 flex-row items-start justify-center pb-8 w-fit">
+    <div className="flex w-fit flex-row items-start justify-center gap-4 pb-8">
       <FilterButton
         activeTechStack={activeTechStack}
         currentStack={TechStackE.All}

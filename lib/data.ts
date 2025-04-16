@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  FaJava,
-  FaGitAlt,
-  FaBootstrap,
-  FaAws,
-  FaLinkedinIn,
-  FaPhp,
-  FaVuejs,
-} from "react-icons/fa";
+import { FaJava, FaGitAlt, FaBootstrap, FaAws, FaLinkedinIn, FaPhp, FaVuejs } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoGithub } from "react-icons/io";
@@ -243,8 +235,7 @@ export const experiencesData = [
       },
       {
         title: "Front-End Developer (Business Analyst I)",
-        description:
-          "Collaborated with the front-end team using Vanilla JS and SCSS.",
+        description: "Collaborated with the front-end team using Vanilla JS and SCSS.",
         date: "2021-07-17",
       },
     ],
@@ -347,8 +338,7 @@ export const certificationsData = [
     icon: React.createElement(BiLogoAdobe),
   },
   {
-    title:
-      "Adobe Certified Expert - Adobe Experience Manager Sites Business Practitioner",
+    title: "Adobe Certified Expert - Adobe Experience Manager Sites Business Practitioner",
     date: "11/2021 - 11/2025",
     link: "https://www.credly.com/badges/1f344fc0-9a10-49b5-9288-985905629f72/linked_in_profile",
     icon: React.createElement(BiLogoAdobe),

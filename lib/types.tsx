@@ -59,7 +59,7 @@ type ProjectProps = ProjectsT & ProjectPropsModal;
 
 type FilterProps = {
   activeTechStack: TechStackE;
-  onActiveTechStach: (id: TechStackE) => void;
+  onActiveTechStack: (id: TechStackE) => void;
 };
 
 type SkillsItemProps = {
