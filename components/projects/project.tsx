@@ -47,12 +47,12 @@ const Project = ({
     >
       <div>
         <ul className="mb-[-5.625rem] flex flex-wrap justify-start gap-4">
-          {techStack.map((teckItem) => (
+          {techStack.map((techItem) => (
             <li
-              key={teckItem.title}
-              className="group flex flex-col items-center justify-center gap-4 text-lg opacity-35 outline-none"
+              key={techItem.title}
+              className="group flex flex-col items-center justify-center gap-4 text-lg opacity-100 outline-none"
             >
-              {teckItem.icon}
+              {techItem.icon}
             </li>
           ))}
         </ul>
@@ -81,12 +81,12 @@ const Project = ({
             </div>
             <div className="flex h-[45%] w-full flex-col px-5 pb-7 pt-7 sm:pl-10 sm:pt-10">
               <ul className="mb-[-5.625rem] flex flex-wrap justify-center gap-8">
-                {techStack.map((teckItem) => (
+                {techStack.map((techItem) => (
                   <li
-                    key={teckItem.title}
+                    key={techItem.title}
                     className="group flex flex-col items-center justify-center gap-4 outline-none"
                   >
-                    <SkillsItem icon={teckItem.icon} title={teckItem.title} />
+                    <SkillsItem icon={techItem.icon} title={techItem.title} />
                   </li>
                 ))}
               </ul>
