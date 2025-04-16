@@ -8,8 +8,9 @@ import Divider from "../ui/divider";
 import Button from "../ui/button";
 import { ButtonType, ProjectProps } from "@/lib/types";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import SkillsItem from "../skills/skillsItem";
+import { IoCloseOutline } from "react-icons/io5";
 
 const Project = ({
   title,
@@ -65,63 +66,73 @@ const Project = ({
         >
           <FiPlus className="transition group-hover:translate-x-1" />
         </div>
-        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <section
-            ref={modalRef}
-            className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
-          >
-            <div className="before:z-2 relative h-[55%] w-full shadow-2xl before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:bg-[rgba(0,0,0,0.5)] before:content-['']">
-              <Image
-                src={imageUrl}
-                alt={title}
-                layout="fill" // ensures the image covers the container
-                objectFit="cover" // makes sure the image covers the container without stretching
-                quality={100} // optional: improves image quality
-              />
-            </div>
-            <div className="flex h-[45%] w-full flex-col px-5 pb-7 pt-7 sm:pl-10 sm:pt-10">
-              <ul className="mb-[-5.625rem] flex flex-wrap justify-center gap-8">
-                {techStack.map((techItem) => (
-                  <li
-                    key={techItem.title}
-                    className="group flex flex-col items-center justify-center gap-4 outline-none"
-                  >
-                    <SkillsItem icon={techItem.icon} title={techItem.title} />
-                  </li>
-                ))}
-              </ul>
-              <Divider />
-              <h3 className="mt-[-3.125rem] text-5xl font-semibold">{title}</h3>
-              <p className="mt-5 text-white/70">{description}</p>
-
-              <div className="flex flex-col gap-8 pb-10 pt-7 sm:flex-row">
-                {link && (
-                  <Button
-                    className="flex items-center gap-3 text-white outline-none"
-                    buttonType={ButtonType.LINK}
-                    href={link}
-                    target="_blank"
-                  >
-                    Visit website
-                    <FaExternalLinkAlt className="text-xs transition group-hover:translate-x-1" />
-                  </Button>
-                )}
-
-                {repo && (
-                  <Button
-                    className="flex items-center gap-3 text-white outline-none"
-                    buttonType={ButtonType.LINK}
-                    href={repo}
-                    target="_blank"
-                  >
-                    Visit repository
-                    <FaExternalLinkAlt className="text-xs transition group-hover:translate-x-1" />
-                  </Button>
-                )}
+        <AnimatePresence>
+          {isModalOpen && (
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+              <div
+                onClick={handleCloseModal}
+                className="absolute right-3 top-3 z-[11] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1c1c1c] bg-[#1c1c1c] text-[#f7f8f8] hover:bg-[#424242]"
+              >
+                <IoCloseOutline className="transition group-hover:translate-x-1" />
               </div>
-            </div>
-          </section>
-        </Modal>
+              <section
+                ref={modalRef}
+                className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
+              >
+                <div className="before:z-2 relative h-[55%] w-full shadow-2xl before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:bg-[rgba(0,0,0,0.5)] before:content-['']">
+                  <Image
+                    src={imageUrl}
+                    alt={title}
+                    layout="fill" // ensures the image covers the container
+                    objectFit="cover" // makes sure the image covers the container without stretching
+                    quality={100} // optional: improves image quality
+                  />
+                </div>
+                <div className="flex h-[45%] w-full flex-col px-5 pb-7 pt-7 sm:pl-10 sm:pt-10">
+                  <ul className="mb-[-5.625rem] flex flex-wrap justify-center gap-8">
+                    {techStack.map((techItem) => (
+                      <li
+                        key={techItem.title}
+                        className="group flex flex-col items-center justify-center gap-4 outline-none"
+                      >
+                        <SkillsItem icon={techItem.icon} title={techItem.title} />
+                      </li>
+                    ))}
+                  </ul>
+                  <Divider />
+                  <h3 className="mt-[-3.125rem] text-5xl font-semibold">{title}</h3>
+                  <p className="mt-5 text-white/70">{description}</p>
+
+                  <div className="flex flex-col gap-8 pb-10 pt-7 sm:flex-row">
+                    {link && (
+                      <Button
+                        className="flex items-center gap-3 text-white outline-none"
+                        buttonType={ButtonType.LINK}
+                        href={link}
+                        target="_blank"
+                      >
+                        Visit website
+                        <FaExternalLinkAlt className="text-xs transition group-hover:translate-x-1" />
+                      </Button>
+                    )}
+
+                    {repo && (
+                      <Button
+                        className="flex items-center gap-3 text-white outline-none"
+                        buttonType={ButtonType.LINK}
+                        href={repo}
+                        target="_blank"
+                      >
+                        Visit repository
+                        <FaExternalLinkAlt className="text-xs transition group-hover:translate-x-1" />
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </section>
+            </Modal>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );

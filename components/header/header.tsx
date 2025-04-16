@@ -14,7 +14,10 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75 fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 px-4 py-4 backdrop-blur transition md:h-[8vh] md:py-6 lg:sticky">
+    <header
+      id="menu"
+      className="bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75 fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 px-4 py-4 backdrop-blur transition md:h-[8vh] md:py-6 lg:sticky"
+    >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
