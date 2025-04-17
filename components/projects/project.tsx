@@ -91,12 +91,20 @@ const Project = ({
                 <div className="flex h-[45%] w-full flex-col px-5 pb-7 pt-7 sm:pl-10 sm:pt-10">
                   <ul className="mb-[-5.625rem] flex flex-wrap justify-center gap-8">
                     {techStack.map((techItem) => (
-                      <li
+                      <motion.li
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.5 },
+                          visible: { opacity: 1, scale: 1 },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        exit="visible"
+                        transition={{ type: "spring" }}
                         key={techItem.title}
                         className="group flex flex-col items-center justify-center gap-4 outline-none"
                       >
                         <SkillsItem icon={techItem.icon} title={techItem.title} />
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
                   <Divider />

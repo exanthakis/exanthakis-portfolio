@@ -31,9 +31,13 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     <>
       <div className="backdrop" onClick={onClose} />
       <motion.dialog
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 30 }}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
         open
         className={`noScrollbar none fixed inset-0 top-10 z-50 mx-auto h-[90vh] w-[90%] max-w-4xl rounded-3xl bg-[#08090a] shadow-lg outline-none`}
       >
