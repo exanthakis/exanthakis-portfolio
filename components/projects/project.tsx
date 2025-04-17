@@ -60,21 +60,33 @@ const Project = ({
       </div>
       <div className="flex w-full items-end justify-between">
         <span className="text-xl">{title}</span>
-        <div
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+            color: "#f7f8f8",
+            backgroundColor: "#1c1c1c",
+            borderColor: "#1c1c1c",
+          }}
+          transition={{ type: "spring", stiffness: 500 }}
           onClick={handleOpenModal}
-          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] hover:border-[#1c1c1c] hover:bg-[#1c1c1c] hover:text-[#f7f8f8]"
+          className="h flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98]"
         >
           <FiPlus className="transition group-hover:translate-x-1" />
-        </div>
+        </motion.div>
         <AnimatePresence>
           {isModalOpen && (
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-              <div
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  backgroundColor: "#424242",
+                }}
+                transition={{ type: "spring", stiffness: 500 }}
                 onClick={handleCloseModal}
-                className="absolute right-3 top-3 z-[11] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1c1c1c] bg-[#1c1c1c] text-[#f7f8f8] hover:bg-[#424242]"
+                className="absolute right-3 top-3 z-[11] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1c1c1c] bg-[#1c1c1c] text-[#f7f8f8]"
               >
                 <IoCloseOutline className="transition group-hover:translate-x-1" />
-              </div>
+              </motion.div>
               <section
                 ref={modalRef}
                 className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
@@ -94,11 +106,15 @@ const Project = ({
                       <motion.li
                         variants={{
                           hidden: { opacity: 0, scale: 0.5 },
-                          visible: { opacity: 1, scale: 1 },
+                          visible: {
+                            opacity: 1,
+                            scale: [0.8, 1.2, 1],
+                            transition: { duration: 0.7 },
+                          },
                         }}
                         initial="hidden"
                         animate="visible"
-                        exit="visible"
+                        exit={{ opacity: 1, scale: 1 }}
                         transition={{ type: "spring" }}
                         key={techItem.title}
                         className="group flex flex-col items-center justify-center gap-4 outline-none"

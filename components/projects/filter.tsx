@@ -28,13 +28,15 @@ const FilterButton = ({
 }) => {
   return (
     <button
-      className={`flex gap-3 transition duration-500 ${
+      className={`group flex gap-3 transition duration-500 ${
         activeTechStack === currentStack ? "font-medium text-white" : "font-normal text-[#62666d]"
       }`}
       onClick={() => onFilterClick(currentStack)}
     >
       <FilterBadge activeTechStack={activeTechStack} currentStack={currentStack} />
-      <span className="">{currentStack}</span>
+      <span className="transition duration-200 ease-in-out group-hover:text-white">
+        {currentStack}
+      </span>
     </button>
   );
 };
