@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { experiencesData, monthNames } from "@/lib/data";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { fadeInAnimationVariants, slideInFromRightVariants } from "@/lib/animations";
 import Badge from "./ui/badge";
 
@@ -143,35 +143,41 @@ const Experience = () => {
                           </>
                         )}
                       </button>
+                      <AnimatePresence>
+                        {expItem?.show && (
+                          <motion.ul
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="flex flex-col flex-wrap justify-start gap-4 text-base md:flex-row md:leading-[1.5]"
+                          >
+                            {experience.items.map((item, index) => (
+                              <motion.li
+                                className="group relative flex w-full flex-col items-start justify-center text-start outline-none md:w-auto"
+                                key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{
+                                  once: true,
+                                }}
+                                custom={index}
+                              >
+                                <div className="absolute -left-4 top-2 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
 
-                      {expItem?.show && (
-                        <ul className="flex flex-col flex-wrap justify-start gap-4 text-base md:flex-row md:leading-[1.5]">
-                          {experience.items.map((item, index) => (
-                            <motion.li
-                              className="group relative flex w-full flex-col items-start justify-center text-start outline-none md:w-auto"
-                              key={index}
-                              variants={fadeInAnimationVariants}
-                              initial="initial"
-                              whileInView="animate"
-                              viewport={{
-                                once: true,
-                              }}
-                              custom={index}
-                            >
-                              <div className="absolute -left-4 top-2 h-1.5 w-1.5 rounded-full bg-[#f1f7feb5]"></div>
-
-                              {item.title && (
-                                <p className="mb-2 text-justify">
-                                  {`${item.title}, ${getDateMonthYear(item.date).year}`}
-                                </p>
-                              )}
-                              <span className="font-normal text-[#f1f7feb5]">
-                                {item.description}
-                              </span>
-                            </motion.li>
-                          ))}
-                        </ul>
-                      )}
+                                {item.title && (
+                                  <p className="mb-2 text-justify">
+                                    {`${item.title}, ${getDateMonthYear(item.date).year}`}
+                                  </p>
+                                )}
+                                <span className="font-normal text-[#f1f7feb5]">
+                                  {item.description}
+                                </span>
+                              </motion.li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     </div>
                   )}
                 </div>
