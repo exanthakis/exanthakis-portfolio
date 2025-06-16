@@ -1,5 +1,14 @@
 import React from "react";
-import { FaJava, FaGitAlt, FaBootstrap, FaAws, FaLinkedinIn, FaPhp, FaVuejs } from "react-icons/fa";
+import {
+  FaJava,
+  FaGitAlt,
+  FaBootstrap,
+  FaAws,
+  FaLinkedinIn,
+  FaPhp,
+  FaVuejs,
+  FaSass,
+} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoGithub } from "react-icons/io";
@@ -100,7 +109,7 @@ export const mainSkillsData = [
 
 export const skillsData = [
   {
-    title: "HTML5",
+    title: "HTML",
     icon: React.createElement(AiOutlineHtml5),
   },
   {
@@ -108,11 +117,15 @@ export const skillsData = [
     icon: React.createElement(IoLogoCss3),
   },
   {
-    title: "Tailwind",
+    title: "Sass",
+    icon: React.createElement(FaSass),
+  },
+  {
+    title: "Tailwind CSS",
     icon: React.createElement(RiTailwindCssFill),
   },
   {
-    title: "MUI",
+    title: "Material UI",
     icon: React.createElement(SiMui),
   },
   {
@@ -136,7 +149,7 @@ export const skillsData = [
     icon: React.createElement(SiNextdotjs),
   },
   {
-    title: "Vue js",
+    title: "Vue.js",
     icon: React.createElement(FaVuejs),
   },
   {
@@ -146,14 +159,6 @@ export const skillsData = [
   {
     title: "Framer Motion",
     icon: React.createElement(TbBrandFramerMotion),
-  },
-  {
-    title: "Java",
-    icon: React.createElement(FaJava),
-  },
-  {
-    title: "PostgreSQL",
-    icon: React.createElement(DiPostgresql),
   },
   {
     title: "AWS (Basics)",
@@ -192,13 +197,13 @@ export const experiencesData = [
       {
         title: "",
         description:
-          "Implemented secure authentication with React, OpenID Connect (OIDC) & Keycloak as the identity provider, leveraging JSON Web Tokens (JWT) for secure routing and role-based access control.",
+          "Implemented secure authentication in React using OpenID Connect (OIDC) with Keycloak as the identity provider, leveraging JSON Web Tokens (JWT) for secure routing and role-based access control.",
         date: "",
       },
       {
         title: "",
         description:
-          "Developed custom React hook utilizing TanStack React Query & Axios to efficiently fetch data, enabling caching and optimizing performance.",
+          "Developed custom React hook utilizing TanStack React Query to efficiently fetch data with Axios, enabling caching and optimizing performance.",
         date: "",
       },
     ],
@@ -218,13 +223,13 @@ export const experiencesData = [
       {
         title: "Front-End Developer (Consultant II)",
         description:
-          "Integrated payment solutions using Datatrans library with React, implementing SecureFields for Visa/Mastercard, Payment button for Google and Apple Pay, and Lightbox for Klarna payment methods to ensure seamless and secure transactions.",
+          "Integrated full payment flow in React using Datatrans payment gateway, implementing integration flows such as SecureFields (Visa/Mastercard), Payment Button (Google/Apple Pay), and Lightbox (Klarna) to ensure seamless and secure transactions.",
         date: "2024-07-17",
       },
       {
         title: "Front-End Developer (Consultant I)",
         description:
-          "Developed and maintained modern, scalable, and high- performance web applications using the Next.js framework, leveraging various AWS services for full cloud-based implementations (implementing AWS Cognito authentication).",
+          "Developed and maintained modern, scalable, and high-performance web applications using Next.js framework, leveraging various AWS services for full cloud-based implementations.",
         date: "2023-07-17",
       },
       {
@@ -250,11 +255,11 @@ export const projectsData = [
     description:
       "CineScope is a dynamic movie-hub web application designed to help users discover, explore, and track their favorite films effortlessly. Powered by Vue 3 and TMDB, CineScope provides an intuitive platform to browse top-rated and trending movies while offering detailed insights into any film of interest—all in one place!",
     techStack: [
-      skillsData[9],
-      skillsData[6],
-      skillsData[2],
+      skillsData[10],
+      skillsData[7],
+      skillsData[3],
+      skillsData[15],
       skillsData[16],
-      skillsData[17],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: CineScopeImg,
@@ -268,10 +273,10 @@ export const projectsData = [
     description:
       "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools. This project was about more than just a portfolio refresh it was an exploration of my growth as a designer, developer, and creator. I wanted to craft a digital space that reflects who I am today and where I’m headed tomorrow. Built with Next.js framework, my portfolio demonstrates the seamless combination of server-side rendering and static site generation, ensuring optimal performance and enhanced SEO. The design is driven by Tailwind CSS, allowing for a clean, responsive, and customizable UI with minimal effort. I’ve also deployed the site on Vercel, ensuring fast load times, secure hosting, and scalability.",
     techStack: [
-      skillsData[8],
-      skillsData[6],
-      skillsData[2],
-      skillsData[11],
+      skillsData[9],
+      skillsData[7],
+      skillsData[3],
+      skillsData[12],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: PortfolioImg,
@@ -285,8 +290,8 @@ export const projectsData = [
     description:
       "A user-friendly scheduling tool to help stay organized and manage time effectively. Build Next.js, enabling a fast and dynamic user experience with server-side rendering and static generation. The design is crafted using Tailwind CSS, ensuring a fully responsive and visually appealing interface that adapts across all devices. The app’s backend is supported by Supabase, providing authentication services and secure and real-time database management for seamless event creation, editing, and syncing across multiple devices. Vercel powers the deployment, offering lightning-fast performance and reliable hosting, allowing users to access their calendars anytime, anywhere with optimal speed and reliability.",
     techStack: [
-      skillsData[8],
-      skillsData[2],
+      skillsData[9],
+      skillsData[3],
       { icon: React.createElement(RiSupabaseLine), title: "Supabase" },
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
@@ -300,7 +305,7 @@ export const projectsData = [
     title: "Vacation Rental Website",
     description:
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
-    techStack: [skillsData[0], skillsData[1], skillsData[5]],
+    techStack: [skillsData[0], skillsData[1], skillsData[6]],
     imageUrl: CasaVasiliaImg,
     link: "https://casavasilia.com/",
     repo: "https://github.com/exanthakis/casavasilia_website",
@@ -314,7 +319,7 @@ export const projectsData = [
     techStack: [
       skillsData[0],
       skillsData[1],
-      skillsData[5],
+      skillsData[6],
       { icon: React.createElement(FaPhp), title: "PHP" },
     ],
     imageUrl: PerigrammataImg,
