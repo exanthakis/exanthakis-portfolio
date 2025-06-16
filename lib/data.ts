@@ -288,7 +288,7 @@ export const projectsData = [
     id: 3,
     title: "My Calendar",
     description:
-      "A user-friendly scheduling tool to help stay organized and manage time effectively. Build Next.js, enabling a fast and dynamic user experience with server-side rendering and static generation. The design is crafted using Tailwind CSS, ensuring a fully responsive and visually appealing interface that adapts across all devices. The app’s backend is supported by Supabase, providing authentication services and secure and real-time database management for seamless event creation, editing, and syncing across multiple devices. Vercel powers the deployment, offering lightning-fast performance and reliable hosting, allowing users to access their calendars anytime, anywhere with optimal speed and reliability.",
+      "Calendar App is a modern and intuitive web application that allows users to manage their schedules efficiently. Users can sign in seamlessly using Google, GitHub, or a Magic Link and add notes for each date through an interactive calendar interface.\n\n Features:\n• Secure Authentication – Sign in via Google, GitHub, or Magic Link.\n• Interactive Calendar – Easily navigate and manage events.\n• Add Notes – Attach personalized notes to specific dates.\n• Cloud-Based Storage – Data is securely stored and retrieved using Supabase.\n• Responsive UI – Built with Tailwind CSS for a sleek and modern design.\n\n Tech Stack:\n• Next.js – Server-side rendering and optimized performance.\n• Tailwind CSS – Modern and responsive styling.\n• Supabase – Authentication & database management.",
     techStack: [
       skillsData[9],
       skillsData[3],
