@@ -253,7 +253,7 @@ export const projectsData = [
     id: 1,
     title: "CineScope",
     description:
-      "CineScope is a dynamic movie-hub web application designed to help users discover, explore, and track their favorite films effortlessly. Powered by Vue 3 and TMDB, CineScope provides an intuitive platform to browse top-rated and trending movies while offering detailed insights into any film of interest—all in one place!",
+      "CineScope is a dynamic movie-hub web application designed to help users discover, explore, and track their favorite films effortlessly. Powered by Vue 3 and TMDB, CineScope provides an intuitive platform to browse top-rated and trending movies while offering detailed insights into any film of interest—all in one place!\n\nFeatures:\n• Advanced Movie Search – Find films based on genres, release date, language, and more.\n• Comprehensive Film Details – Access in-depth information, including cast, crew, synopsis, ratings, and trailers.\n• Trending & Top-Rated Movies – Stay updated with what’s popular in the film industry.\n• Personalized Watchlist – Keep track of movies you want to watch.\n\nBuilt with:\n• Vue 3.5 (Composition API with script setup)\n• TypeScript\n• Pinia\n• Vue Router\n• Tailwind CSS\n• Axios\n• Storybook\n• Vitest",
     techStack: [
       skillsData[10],
       skillsData[7],

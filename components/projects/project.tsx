@@ -125,7 +125,7 @@ const Project = ({
                   </ul>
                   <Divider />
                   <h3 className="mt-[-3.125rem] text-5xl font-semibold">{title}</h3>
-                  <p className="mt-5 text-white/70">{description}</p>
+                  <p className="mt-5 whitespace-pre-line text-white/70">{description}</p>
 
                   <div className="flex flex-col gap-8 pb-10 pt-7 sm:flex-row">
                     {link && (
