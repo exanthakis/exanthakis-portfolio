@@ -42,7 +42,7 @@ const Certifications = () => {
       <ul className="relative z-20 grid w-full grid-cols-1 gap-12 sm:grid-cols-2 md:flex-row md:gap-20 lg:grid-cols-3">
         {certificationsData.map((certification, index) => (
           <motion.li
-            className="col-span-1 flex flex-col p-4"
+            className="col-span-1 flex flex-col p-4 pl-0 sm:pl-4"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
