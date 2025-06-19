@@ -32,7 +32,7 @@ const Certifications = () => {
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center px-0 pb-10 md:max-w-4xl md:px-10 lg:max-w-6xl">
         <Badge className="bg-[#B59AFF]" title={"Certifications"} />
 
-        <span className="text-secondary max-w-3xl px-3 text-center font-normal">
+        <span className="text-secondary max-w-3xl px-3 text-center text-base font-normal">
           Additionally, I&apos;ve earned a few certificates emphasizing my dedication to continual
           learning and skill development. I&apos;m always open to new learning opportunities, eager
           to enhance my skills even further.
@@ -54,7 +54,7 @@ const Certifications = () => {
             </span>
             <h5 className="mb-2 text-left text-2xl font-bold">{certification.title}</h5>
 
-            <p className="text-md mt-auto text-justify">{certification.date}</p>
+            <p className="mt-auto text-justify">{certification.date}</p>
             <div className="flex flex-wrap pt-3 text-xs">
               <Button buttonType={ButtonType.LINK} href={certification.link} target="_blank">
                 Learn more

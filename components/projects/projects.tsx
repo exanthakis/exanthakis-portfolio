@@ -68,7 +68,7 @@ const Projects = () => {
         <h3 className="flex w-full items-start justify-start text-4xl md:w-1/2">
           Side projects over the past couple of years
         </h3>
-        <p className="text-secondary flex w-full items-start justify-start font-medium md:w-1/2">
+        <p className="text-secondary flex w-full items-start justify-start text-base font-medium md:w-1/2">
           In this section, you&apos;ll find a collection of projects that showcase my skills in
           front-end development. Feel free to explore the code, features, and challenges faced
           during development.

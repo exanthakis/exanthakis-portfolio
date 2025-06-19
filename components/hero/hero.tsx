@@ -30,7 +30,7 @@ const Hero = () => {
             Turning Ideas into Digital Products
           </h1>
 
-          <p className={`text-secondary font-normal tracking-[-0.16px] sm:px-10 md:text-lg`}>
+          <p className={`text-secondary text-base font-normal sm:px-10 md:text-lg`}>
             I&apos;m a Greek creative developer based in Chania with years of experience in
             front-end development. I turn ideas ideas into dynamic digital products that meet
             today&apos;s needs and adapt to tomorrow&apos;s challenges.

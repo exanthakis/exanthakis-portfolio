@@ -15,7 +15,7 @@ const AboutParagraph = ({ id, children }: AboutParagraphProps) => {
         once: false,
       }}
       custom={id}
-      className="mb-6 text-left font-sans text-base font-normal md:text-left md:text-[1.125rem] md:leading-[1.5]"
+      className="mb-6 text-left font-sans text-base font-normal md:text-left"
     >
       {children}
     </motion.p>

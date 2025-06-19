@@ -11,7 +11,7 @@ const AboutShowcase = () => {
         <h3 className="flex w-full items-start justify-start text-4xl md:w-1/2">
           Hi I&apos;m Emmanouel
         </h3>
-        <div className="flex w-full flex-col items-start justify-center text-sm md:w-1/2">
+        <div className="flex w-full flex-col items-start justify-center md:w-1/2">
           <AboutParagraph id={1}>
             Graduate with a <span className="font-medium">Master&apos;s degree</span> in Electrical
             and Computer Engineering from the Technical University of Crete, I specialize in

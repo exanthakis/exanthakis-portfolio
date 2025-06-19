@@ -14,7 +14,7 @@ const Skills = () => {
     <div className="mx-auto w-full max-w-5xl px-0 pt-28 text-center md:max-w-4xl md:px-10 lg:max-w-6xl">
       <Badge className="bg-[#d4b144]" title={"Skills"} />
       <h3 className="mb-2 text-left text-2xl font-bold">Technical Skills and Tools</h3>
-      <p className="text-secondary pb-10 text-left font-normal">
+      <p className="text-secondary pb-10 text-left text-base font-normal">
         My technical toolkit focuses mainly on <span className="font-medium"> front-end</span>{" "}
         development, with some experience in <span className="font-medium"> back-end</span> as well,
         along with solid skills in different programming languages, frameworks, and tools.

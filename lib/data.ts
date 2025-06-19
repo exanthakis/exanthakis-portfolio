@@ -189,7 +189,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Chania",
     description:
-      "Software Engineer in Public Administration and Finance Projects. Specializing in the development and maintenance of software solutions for public sector and government projects using React & Material-UI (MUI).",
+      "Software Engineer in Public Administration and Finance Projects. Specializing in the development and maintenance of software solutions for public sector and government projects using React & Material UI.",
     startDate: "2024-11-04",
     endDate: "Present",
     img: UniSystemsImg,
