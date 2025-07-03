@@ -29,10 +29,15 @@ import { BiLogoAdobe } from "react-icons/bi";
 import { SiUdemy } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
+import CalendarXsImg from "../public/images/calendar_xs.png";
 import PortfolioImg from "../public/images/portfolio.png";
+import PortfolioXsImg from "../public/images/portfolio_xs.png";
 import CineScopeImg from "../public/images/cinescope3.jpg";
+import CineScopeXsImg from "../public/images/cinescope_xs.jpg";
 import CasaVasiliaImg from "../public/images/casavasilia.png";
+import CasaVasiliaXsImg from "../public/images/casavasilia_xs.png";
 import PerigrammataImg from "../public/images/perigrammata1.png";
+import PerigrammataXsImg from "../public/images/perigrammata_xs.png";
 import DeloitteImg from "../public/images/deloitte-digital-logo.png";
 import UniSystemsImg from "../public/images/uni-systems-logo-white.png";
 import { RiSupabaseLine } from "react-icons/ri";
@@ -263,6 +268,7 @@ export const projectsData = [
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: CineScopeImg,
+    imageXsUrl: CineScopeXsImg,
     link: "https://cine-scope-olive.vercel.app/",
     repo: "https://github.com/exanthakis/cine-scope",
     tags: ["Vue.js", "Tailwind"],
@@ -280,6 +286,7 @@ export const projectsData = [
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: PortfolioImg,
+    imageXsUrl: PortfolioXsImg,
     link: "https://emmanouelxanthakis.com",
     repo: "",
     tags: ["React", "Next.js", "Tailwind"],
@@ -296,6 +303,7 @@ export const projectsData = [
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: CalendarImg,
+    imageXsUrl: CalendarXsImg,
     link: "https://my-calendar-smoky.vercel.app/",
     repo: "https://github.com/exanthakis/my-calendar",
     tags: ["React", "Next.js", "Tailwind"],
@@ -307,6 +315,7 @@ export const projectsData = [
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
     techStack: [skillsData[0], skillsData[1], skillsData[6]],
     imageUrl: CasaVasiliaImg,
+    imageXsUrl: CasaVasiliaXsImg,
     link: "https://casavasilia.com/",
     repo: "https://github.com/exanthakis/casavasilia_website",
     tags: ["HTML", "CSS", "Javascript"],
@@ -323,6 +332,7 @@ export const projectsData = [
       { icon: React.createElement(FaPhp), title: "PHP" },
     ],
     imageUrl: PerigrammataImg,
+    imageXsUrl: PerigrammataXsImg,
     link: "https://perigrammata.tuc.gr/",
     repo: "",
     tags: ["HTML", "CSS", "Javascript", "PHP"],

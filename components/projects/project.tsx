@@ -17,11 +17,13 @@ const Project = ({
   description,
   techStack,
   imageUrl,
+  imageXsUrl,
   link,
   repo,
   onOpenModal,
 }: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProjImgLoaded, setIsProjImgLoaded] = useState(false);
   const modalRef = useRef<HTMLElement>(null);
 
   // Scroll to the top of the modal on open
@@ -39,6 +41,12 @@ const Project = ({
   const handleCloseModal = () => {
     setIsModalOpen(false);
     onOpenModal(false);
+    setIsProjImgLoaded(false);
+  };
+
+  const handleImageLoad = async () => {
+    await new Promise((res) => setTimeout(res, 1000));
+    setIsProjImgLoaded(true);
   };
 
   return (
@@ -94,15 +102,25 @@ const Project = ({
               ref={modalRef}
               className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
             >
-              <div className="before:z-2 relative h-[55%] w-full shadow-2xl before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:bg-[rgba(0,0,0,0.5)] before:content-['']">
+              <div
+                className={`inset-0 h-[55%] w-full bg-cover before:absolute before:h-[55%] before:w-full before:animate-pulse before:bg-[rgba(255,255,255,0.2)] before:content-[''] ${isProjImgLoaded ? "before:content-none" : ""}`}
+                style={{
+                  backgroundImage: `url('${imageXsUrl?.src}')`,
+                  backgroundPosition: "top",
+                  backgroundSize: "cover",
+                }}
+              >
                 <Image
                   src={imageUrl}
                   alt={title}
-                  layout="fill" // ensures the image covers the container
-                  objectFit="cover" // makes sure the image covers the container without stretching
-                  quality={100} // optional: improves image quality
+                  className={`pointer-events-none ease-in-out ${isProjImgLoaded ? "!opacity-100" : ""} h-full w-full cursor-none bg-cover bg-center object-cover object-top opacity-0 transition-opacity duration-200`}
+                  onLoad={handleImageLoad}
+                  objectFit="cover"
+                  quality={100}
+                  loading="lazy"
                 />
               </div>
+
               <div className="flex h-[45%] w-full flex-col px-5 pb-7 pt-7 sm:pl-10 sm:pt-10">
                 <ul className="mb-[-5.625rem] flex flex-wrap justify-center gap-8">
                   {techStack.map((techItem) => (
