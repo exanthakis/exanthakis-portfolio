@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header
       id="menu"
-      className="bg-background-light supports-backdrop-blur:bg-background-light/95 dark:bg-background-dark/75 fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 px-4 py-4 backdrop-blur transition md:h-[8vh] md:py-6 lg:sticky"
+      className="fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 bg-[#0A0A0ACC] px-4 py-3 backdrop-blur transition md:py-2.5 lg:sticky"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}

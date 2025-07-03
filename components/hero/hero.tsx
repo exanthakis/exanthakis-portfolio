@@ -15,7 +15,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="home"
-      className="relative mt-8 flex h-[100vh] w-full items-center justify-center text-center md:h-[92vh] lg:mt-0"
+      className="relative mt-8 flex h-[100vh] w-full items-center justify-center text-center md:h-[93vh] lg:mt-0"
     >
       <div className="mx-auto max-w-3xl">
         <motion.div
