@@ -67,6 +67,7 @@ type SkillsItemProps = {
   title: string;
   size?: "main" | "default";
   iconColor?: string;
+  animateTitle?: boolean;
 };
 
 type ContactFormEmailProps = {

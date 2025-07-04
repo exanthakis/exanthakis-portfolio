@@ -8,6 +8,11 @@ import {
   FaPhp,
   FaVuejs,
   FaSass,
+  FaFigma,
+  FaJira,
+  FaGitlab,
+  FaGithub,
+  FaChrome,
 } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -21,11 +26,13 @@ import {
   SiStorybook,
   SiVitest,
   SiStackblitz,
+  SiVite,
+  SiPostman,
 } from "react-icons/si";
 import { CgPerformance } from "react-icons/cg";
 import { GrReactjs } from "react-icons/gr";
 import { DiPostgresql } from "react-icons/di";
-import { BiLogoAdobe } from "react-icons/bi";
+import { BiLogoAdobe, BiLogoVisualStudio } from "react-icons/bi";
 import { SiUdemy } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
@@ -184,6 +191,41 @@ export const skillsData = [
   {
     title: "Git",
     icon: React.createElement(FaGitAlt),
+  },
+] as const;
+
+export const toolkitData = [
+  {
+    title: "Visual Studio Code",
+    icon: React.createElement(BiLogoVisualStudio),
+  },
+  {
+    title: "Chrome DevTools",
+    icon: React.createElement(FaChrome),
+  },
+  {
+    title: "Figma",
+    icon: React.createElement(FaFigma),
+  },
+  {
+    title: "Jira",
+    icon: React.createElement(FaJira),
+  },
+  {
+    title: "Github",
+    icon: React.createElement(FaGithub),
+  },
+  {
+    title: "Gitlab",
+    icon: React.createElement(FaGitlab),
+  },
+  {
+    title: "Vite",
+    icon: React.createElement(SiVite),
+  },
+  {
+    title: "Postman",
+    icon: React.createElement(SiPostman),
   },
 ] as const;
 
