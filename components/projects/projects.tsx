@@ -89,7 +89,7 @@ const Projects = () => {
         >
           {filtered.map((project) => {
             return (
-              <motion.div layout className="min-w-[26rem] sm:min-w-[30rem]" key={project.id}>
+              <motion.div layout className="min-w-[21rem] sm:min-w-[30rem]" key={project.id}>
                 <Project {...project} onOpenModal={handleOpenModal} />
               </motion.div>
             );
