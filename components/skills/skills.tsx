@@ -12,7 +12,7 @@ import { PiCodesandboxLogoDuotone } from "react-icons/pi";
 
 const Skills = () => {
   return (
-    <div className="mx-auto w-full max-w-5xl px-0 pt-28 text-center md:max-w-4xl md:px-10 lg:max-w-6xl">
+    <div className="mx-auto w-full max-w-5xl px-0 pb-5 pt-28 text-center md:max-w-4xl md:px-10 lg:max-w-6xl">
       <Badge className="bg-[#d4b144]" title={"Skills"} />
       <h3 className="mb-2 text-left text-2xl font-bold">Technical Skills and Tools</h3>
       <p className="text-secondary pb-10 text-left text-base font-normal">
@@ -39,7 +39,7 @@ const Skills = () => {
         ))}
       </ul>
 
-      <div className="relative z-[4] mx-auto mt-[3rem] flex h-80 w-full max-w-5xl flex-none flex-col flex-nowrap content-center items-center justify-center gap-[30px] overflow-visible p-0 px-0 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
+      <div className="relative z-[4] mx-auto flex h-80 w-full max-w-5xl flex-none flex-col flex-nowrap content-center items-center justify-center gap-[30px] overflow-visible p-0 px-0 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
         <div className="mask-radial absolute inset-0 overflow-hidden opacity-25">
           <div className="absolute left-1/2 top-1/2 flex h-min w-min -translate-x-1/2 -translate-y-1/2 flex-col flex-nowrap items-center justify-center gap-[30px] overflow-hidden p-0">
             <div className="relative z-[1] h-px w-[827px] flex-none overflow-hidden border-[0.5px] border-dashed border-[rgba(181,204,227,0.6)]"></div>

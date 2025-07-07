@@ -51,7 +51,7 @@ const Experience = () => {
   };
 
   return (
-    <div className="bg-gradient relative my-24 -ml-6 w-screen pb-12 pt-[10rem] text-center md:w-[calc(100%+2.5rem)]">
+    <div className="bg-gradient relative -ml-6 mb-24 mt-10 w-screen pb-12 pt-[8rem] text-center md:w-[calc(100%+2.5rem)]">
       <div className="mx-auto flex w-full max-w-5xl flex-col px-0 pb-10 pl-6 pr-6 md:max-w-4xl md:px-10 lg:max-w-6xl">
         <Badge className="bg-[#68CC58]" title={"Experience"} />
 

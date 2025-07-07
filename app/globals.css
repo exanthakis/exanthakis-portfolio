@@ -33,7 +33,7 @@
 
   .mask-radial {
     mask: radial-gradient(
-        33% 41% at 51.7% 50%,
+        33% 41% at 50% 50%,
         rgba(0, 0, 0, 1) 21.30138%,
         rgba(0, 0, 0, 0) 94.39048%
       )
@@ -203,5 +203,16 @@
     filter: blur(0px);
     opacity: 1;
     box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+  }
+
+  @media only screen and (max-width: 640px) {
+    .mask-radial {
+      mask: radial-gradient(
+          60% 40% at 50% 50%,
+          rgba(0, 0, 0, 1) 21.30138%,
+          rgba(0, 0, 0, 0) 94.39048%
+        )
+        add;
+    }
   }
 }
