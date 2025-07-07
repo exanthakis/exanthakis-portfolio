@@ -8,9 +8,14 @@ import { ButtonType } from "@/lib/types";
 import { useState } from "react";
 import MobileNav from "./mobile-nav";
 import DesktopNav from "./desktop-nav";
+import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
+import { links } from "@/lib/data";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
+  const selectedLink = links?.find((link) => link.name === activeSection);
 
   return (
     <header
@@ -31,6 +36,26 @@ const Header = () => {
             exanthakis
             <span className="sr-only">Emmanoul Xanthakis Portfolio Page</span>
           </Link>
+          {selectedLink && (
+            <li
+              key={selectedLink.hash}
+              className="relative ml-auto mr-5 flex h-3/4 items-center justify-end rounded-lg bg-gray-100 md:hidden"
+            >
+              <Link
+                href={selectedLink.hash}
+                className={`flex w-full items-center justify-center px-2.5 py-1 text-sm transition ${
+                  activeSection === selectedLink.name ? "text-gray-950 hover:text-gray-950" : ""
+                } hover:text-gray-300`}
+                onClick={() => {
+                  setTimeOfLastClick(Date.now());
+                  setActiveSection(selectedLink.name);
+                }}
+              >
+                {selectedLink.name}
+              </Link>
+            </li>
+          )}
+
           <button
             type="button"
             className={`group relative z-50 inline-block h-4 w-5 p-2 text-3xl text-white md:hidden`}
