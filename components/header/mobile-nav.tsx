@@ -3,7 +3,6 @@ import { ButtonType, MobileNavProps } from "@/lib/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { MdClose } from "react-icons/md";
 import Button from "../ui/button";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
 import { motion } from "framer-motion";
@@ -27,15 +26,6 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
         priority={true}
         className="absolute left-0 z-10 h-screen w-full select-none opacity-80 md:top-0"
       />
-      <button
-        type="button"
-        className="fixed right-4 top-4 mb-4 block p-2 text-3xl text-white md:hidden"
-        aria-expanded={open}
-        onClick={() => setOpen(false)}
-      >
-        <MdClose />
-        <span className="sr-only">Close menu</span>
-      </button>
 
       <ul className="z-10 grid justify-items-end gap-8 pb-8">
         {links.map((item, index) => (

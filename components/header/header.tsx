@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Button from "../ui/button";
 import { ButtonType } from "@/lib/types";
-import { MdMenu } from "react-icons/md";
 import { useState } from "react";
 import MobileNav from "./mobile-nav";
 import DesktopNav from "./desktop-nav";
@@ -16,7 +15,7 @@ const Header = () => {
   return (
     <header
       id="menu"
-      className="fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 bg-[#0A0A0ACC] px-4 py-3 backdrop-blur transition md:py-2.5 lg:sticky"
+      className="fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 bg-[#0A0A0ACC] px-4 py-2.5 backdrop-blur transition lg:sticky"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -34,11 +33,13 @@ const Header = () => {
           </Link>
           <button
             type="button"
-            className="block p-2 text-3xl text-white md:hidden"
+            className={`group relative z-50 inline-block h-4 w-5 p-2 text-3xl text-white md:hidden`}
             aria-expanded={open}
-            onClick={() => setOpen(true)}
+            onClick={() => setOpen((prevState) => !prevState)}
           >
-            <MdMenu />
+            <span
+              className={`relative block w-5 rounded-sm bg-white transition-all duration-200 ease-in-out before:absolute before:-top-1 before:right-2 before:h-[1px] before:w-5 before:rounded-sm before:bg-white before:transition-all before:duration-200 before:ease-in-out before:content-[''] after:absolute after:-bottom-1 after:right-2 after:h-[1px] after:w-5 after:rounded-sm after:bg-white after:transition-all after:duration-200 after:ease-in-out after:content-[''] ${open ? "bg-transparent before:top-0 before:rotate-45 after:top-0 after:-rotate-45" : ""}`}
+            ></span>
             <span className="sr-only">Open menu</span>
           </button>
         </div>
