@@ -58,12 +58,12 @@ const Header = () => {
 
           <button
             type="button"
-            className={`group relative z-50 inline-block h-4 w-5 p-2 text-3xl text-white md:hidden`}
+            className={`group relative z-50 inline-block h-4 w-4 p-2 text-3xl text-white md:hidden`}
             aria-expanded={open}
             onClick={() => setOpen((prevState) => !prevState)}
           >
             <span
-              className={`relative block w-5 rounded-sm bg-white transition-all duration-200 ease-in-out before:absolute before:-top-1 before:right-2 before:h-[1px] before:w-5 before:rounded-sm before:bg-white before:transition-all before:duration-200 before:ease-in-out before:content-[''] after:absolute after:-bottom-1 after:right-2 after:h-[1px] after:w-5 after:rounded-sm after:bg-white after:transition-all after:duration-200 after:ease-in-out after:content-[''] ${open ? "bg-transparent before:top-0 before:rotate-45 after:top-0 after:-rotate-45" : ""}`}
+              className={`relative block w-4 rounded-sm bg-white transition-all duration-200 ease-in-out before:absolute before:-top-1 before:right-2 before:h-[0.01rem] before:w-4 before:rounded-sm before:bg-white before:transition-all before:duration-200 before:ease-in-out before:content-[''] after:absolute after:-bottom-1 after:right-2 after:h-[0.01rem] after:w-4 after:rounded-sm after:bg-white after:transition-all after:duration-200 after:ease-in-out after:content-[''] ${open ? "bg-transparent before:top-0 before:rotate-45 after:top-0 after:-rotate-45" : ""}`}
             ></span>
             <span className="sr-only">Open menu</span>
           </button>
