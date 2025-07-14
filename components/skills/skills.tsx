@@ -5,7 +5,7 @@ import React from "react";
 import { skillsData, toolkitData } from "@/lib/data";
 import { motion } from "framer-motion";
 import SectionHeading from "../ui/section-heading";
-import { fadeInAnimationVariants } from "@/lib/animations";
+import { fadeInAnimationVariants, fadeInParagraphVariants } from "@/lib/animations";
 import Badge from "../ui/badge";
 import SkillsItem from "./skillsItem";
 import { PiCodesandboxLogoDuotone } from "react-icons/pi";
@@ -77,7 +77,16 @@ const Skills = () => {
           </div>
         </div>
         <div className="relative flex h-min w-full flex-none flex-col flex-nowrap items-center justify-center gap-[0.2rem] overflow-visible p-0">
-          <div className="relative mt-12 flex flex-col items-center justify-center gap-1">
+          <motion.div
+            variants={fadeInParagraphVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={1.5}
+            className="relative mt-12 flex flex-col items-center justify-center gap-1"
+          >
             <div className="] z-[2] flex aspect-square w-[57px] flex-none items-center justify-center gap-[10px] overflow-hidden rounded-[12px] bg-[rgba(181,204,227,0.15)]">
               <div className="border-[rgba(181,204,227,0.6) rounded-[12px] border-[0.5px] border-solid p-[6px]">
                 <PiCodesandboxLogoDuotone size={"34"} />
@@ -85,7 +94,7 @@ const Skills = () => {
             </div>
 
             <h3 className="text-left text-2xl font-bold">My toolbox includes</h3>
-          </div>
+          </motion.div>
 
           <ul className="nav-wrap mb-2 flex flex-wrap items-baseline justify-center gap-0 sm:gap-4">
             {toolkitData?.map((techItem) => (
@@ -97,7 +106,7 @@ const Skills = () => {
                   visible: {
                     opacity: 1,
                     scale: [0.8, 1.2, 1],
-                    transition: { duration: 0.7 },
+                    transition: { duration: 1 },
                   },
                 }}
                 initial="hidden"
