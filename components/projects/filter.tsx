@@ -59,7 +59,7 @@ const Filter = ({ activeTechStack, onActiveTechStack }: FilterProps) => {
       />
       <FilterButton
         activeTechStack={activeTechStack}
-        currentStack={TechStackE.HTML}
+        currentStack={TechStackE.VUE}
         onFilterClick={handleFilterClick}
       />
     </div>
