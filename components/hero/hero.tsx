@@ -26,7 +26,7 @@ const Hero = () => {
             delay: 0.1,
           }}
         >
-          <h1 className="bg-home-hero-title font-titles bg-white bg-clip-text px-0 font-calSans text-5xl font-black leading-[120%] text-transparent md:px-8">
+          <h1 className="bg-home-hero-title bg-white bg-clip-text px-0 font-calSans text-5xl leading-[120%] text-transparent md:px-8">
             Turning Ideas into Digital Products
           </h1>
 
@@ -70,7 +70,7 @@ const Hero = () => {
         ))}
       </ul>
       <div className="z-3 absolute bottom-0 h-[700px] w-full overflow-hidden bg-[radial-gradient(50%_53%_at_50%_100%,_#171717,_#ababab00)]"></div>
-      <div className="framer2 absolute bottom-0 z-[3] h-[33vh] w-full bg-[radial-gradient(50%_53%_at_50%_100%,_#171717,_#ababab00)]"></div>
+      <div className="absolute bottom-0 z-[3] h-[33vh] w-full bg-[radial-gradient(50%_53%_at_50%_100%,_#171717,_#ababab00)]"></div>
     </section>
   );
 };
