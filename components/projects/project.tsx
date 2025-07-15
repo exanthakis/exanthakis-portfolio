@@ -54,7 +54,7 @@ const Project = ({
       <motion.div
         layout
         onClick={handleOpenModal}
-        className="relative flex h-80 flex-col justify-between overflow-hidden rounded-3xl bg-[#131618] px-7 py-8 text-left hover:brightness-[170%] sm:pointer-events-none"
+        className="relative flex h-80 flex-col justify-between overflow-hidden rounded-3xl bg-[#141516] px-7 py-8 text-left transition duration-200 hover:bg-[#191a1b] sm:pointer-events-none"
       >
         <div>
           <ul className="mb-[-5.625rem] flex flex-wrap justify-start gap-4">
