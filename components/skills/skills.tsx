@@ -4,7 +4,6 @@ import React from "react";
 
 import { skillsData, toolkitData } from "@/lib/data";
 import { motion } from "framer-motion";
-import SectionHeading from "../ui/section-heading";
 import { fadeInAnimationVariants, fadeInParagraphVariants } from "@/lib/animations";
 import Badge from "../ui/badge";
 import SkillsItem from "./skillsItem";

@@ -1,4 +1,4 @@
-import { fullName, links } from "@/lib/data";
+import { fullName } from "@/lib/data";
 import React from "react";
 
 const Footer = () => {

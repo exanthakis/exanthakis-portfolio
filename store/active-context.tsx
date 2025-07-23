@@ -10,10 +10,9 @@ type ActiveSectionContentType = {
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
-// obejct that contains react component
-export const ActiveContext = createContext<ActiveSectionContentType | null>(
-  null
-);
+
+// object that contains react component
+export const ActiveContext = createContext<ActiveSectionContentType | null>(null);
 
 const ActiveContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
@@ -25,11 +24,7 @@ const ActiveContextProvider = ({ children }: { children: React.ReactNode }) => {
     timeOfLastClick,
     setTimeOfLastClick,
   };
-  return (
-    <ActiveContext.Provider value={activeCtx}>
-      {children}
-    </ActiveContext.Provider>
-  );
+  return <ActiveContext.Provider value={activeCtx}>{children}</ActiveContext.Provider>;
 };
 
 export default ActiveContextProvider;

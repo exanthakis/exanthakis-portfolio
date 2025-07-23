@@ -1,6 +1,6 @@
 "use client";
 
-import { socialLinks } from "@/lib/data";
+import { fullName, socialLinks } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Button from "../ui/button";
@@ -34,7 +34,7 @@ const Header = () => {
             onClick={() => setOpen(false)}
           >
             exanthakis
-            <span className="sr-only">Emmanoul Xanthakis Portfolio Page</span>
+            <span className="sr-only">{fullName} Portfolio Page</span>
           </Link>
           {selectedLink && (
             <li

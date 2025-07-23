@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FaJava,
   FaGitAlt,
   FaBootstrap,
   FaAws,
@@ -31,9 +30,7 @@ import {
 } from "react-icons/si";
 import { CgPerformance } from "react-icons/cg";
 import { GrReactjs } from "react-icons/gr";
-import { DiPostgresql } from "react-icons/di";
 import { BiLogoAdobe, BiLogoVisualStudio } from "react-icons/bi";
-import { SiUdemy } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
 import CalendarXsImg from "../public/images/calendar_xs.png";

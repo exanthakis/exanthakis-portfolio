@@ -1,9 +1,7 @@
 "use client";
 
-import { ButtonType, ModalProps } from "@/lib/types";
-import { AnimatePresence } from "framer-motion";
-import React, { useEffect, useRef } from "react";
-import { IoCloseOutline } from "react-icons/io5";
+import { ModalProps } from "@/lib/types";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 
