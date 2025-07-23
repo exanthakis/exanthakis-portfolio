@@ -327,7 +327,7 @@ export const projectsData = [
     imageUrl: PortfolioImg,
     imageXsUrl: PortfolioXsImg,
     link: "https://emmanouelxanthakis.com",
-    repo: "",
+    repo: "https://github.com/exanthakis/exanthakis-portfolio",
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
