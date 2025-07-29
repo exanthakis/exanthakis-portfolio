@@ -19,7 +19,7 @@ type SectionHeadingProps = {
   className?: string;
 };
 
-type SectionName = (typeof links)[number]["name"];
+type SectionName = (typeof links)[number]["children"][number]["name"];
 
 interface IButtonProps {
   buttonType: ButtonType;
@@ -93,6 +93,13 @@ type ExperienceItem = {
   show: boolean;
 };
 
+type Metadata = {
+  title: string;
+  publishedAt: string;
+  summary: string;
+  image?: string;
+};
+
 export type {
   SectionHeadingProps,
   SectionName,
@@ -109,4 +116,5 @@ export type {
   InputProps,
   AboutParagraphProps,
   ExperienceItem,
+  Metadata,
 };

@@ -9,13 +9,39 @@ import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { baseUrl } from "./sitemap";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Emmanouel Xanthakis | Personal Portfolio",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Emmanouel Xanthakis | Personal Portfolio",
+    template: "%s | Emmanouel Xanthakis | Personal Portfolio",
+  },
   description:
     "Creative front-end developer based in Chania, showcasing a collection of selected works and side projects using JavaScript, React, and Next.js, with a focus on innovative and responsive design.",
+
+  openGraph: {
+    title: "Emmanouel Xanthakis | Personal Portfolio",
+    description:
+      "Creative front-end developer based in Chania, showcasing a collection of selected works and side projects using JavaScript, React, and Next.js, with a focus on innovative and responsive design.",
+    url: baseUrl,
+    siteName: "Emmanouel Xanthakis | Personal Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -28,21 +54,6 @@ export default function RootLayout({
       <body
         className={`relative bg-black font-generalSansRegular text-gray-50 dark:text-opacity-90`}
       >
-        {/* Circle hero bg */}
-        <div className="absolute top-0 -z-10 flex h-[104vh] w-full items-center justify-center overflow-hidden sm:h-screen md:left-0 md:top-auto">
-          <div className="mask-gradient-fade z-2 absolute inset-0 left-1/2 m-auto aspect-square w-[1080px] max-w-[1180px] -translate-x-1/2 overflow-visible opacity-20 grayscale-[1] md:left-0 md:w-auto md:translate-x-0 md:opacity-30">
-            <div className="mask-gradient-fade2 z-1 h-full rotate-180">
-              <Image
-                src={bgImg}
-                alt="Background image"
-                quality="95"
-                priority={true}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
-        </div>
-
         <ActiveContextProvider>
           <Header />
           {children}

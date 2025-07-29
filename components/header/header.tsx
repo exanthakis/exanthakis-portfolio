@@ -10,12 +10,14 @@ import MobileNav from "./mobile-nav";
 import DesktopNav from "./desktop-nav";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
 import { links } from "@/lib/data";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
-  const selectedLink = links?.find((link) => link.name === activeSection);
+  const pathname = usePathname();
+  const selected = links?.find((el) => el.hash === pathname);
+  const selectedLink = selected?.children?.find((link) => link.name === activeSection);
 
   return (
     <header
@@ -48,7 +50,7 @@ const Header = () => {
                 } hover:text-gray-300`}
                 onClick={() => {
                   setTimeOfLastClick(Date.now());
-                  setActiveSection(selectedLink.name);
+                  setActiveSection(selectedLink?.name);
                 }}
               >
                 {selectedLink.name}

@@ -29,7 +29,7 @@ import {
   SiPostman,
 } from "react-icons/si";
 import { CgPerformance } from "react-icons/cg";
-import { GrReactjs } from "react-icons/gr";
+import { GrReactjs, GrContact } from "react-icons/gr";
 import { BiLogoAdobe, BiLogoVisualStudio } from "react-icons/bi";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import CalendarImg from "../public/images/calendar.png";
@@ -46,6 +46,8 @@ import DeloitteImg from "../public/images/deloitte-digital-logo.png";
 import UniSystemsImg from "../public/images/uni-systems-logo-white.png";
 import { RiSupabaseLine } from "react-icons/ri";
 import { RxVercelLogo } from "react-icons/rx";
+import { MdHome, MdAppSettingsAlt } from "react-icons/md";
+import { BsFilePerson } from "react-icons/bs";
 
 export const fullName = "Emmanouel Xanthakis";
 
@@ -67,19 +69,42 @@ export const monthNames = [
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "/",
+    children: [
+      {
+        name: "Home",
+        hash: "#home",
+        icon: React.createElement(MdHome, {
+          className: "text-xl",
+        }),
+      },
+      {
+        name: "About",
+        hash: "#about",
+        icon: React.createElement(BsFilePerson, {
+          className: "text-xl",
+        }),
+      },
+      {
+        name: "Projects",
+        hash: "#projects",
+        icon: React.createElement(MdAppSettingsAlt, {
+          className: "text-xl",
+        }),
+      },
+      {
+        name: "Contact",
+        hash: "#contact",
+        icon: React.createElement(GrContact, {
+          className: "text-xl",
+        }),
+      },
+    ],
   },
   {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
+    name: "Blog",
+    hash: "/blog",
+    children: [],
   },
 ] as const;
 
