@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { baseUrl } from "@/app/sitemap";
 import { CustomMDX } from "@/components/mdx";
 import { formatDate, getBlogPosts } from "@/lib/utils";
+import Breadcrumb from "@/components/ui/breadcrumb";
+import { TbMathGreater } from "react-icons/tb";
 
 interface BlogPageProps {
   params: {
@@ -59,6 +61,15 @@ export default function Blog({ params }: BlogPageProps) {
 
   return (
     <section className="mx-auto max-w-5xl bg-black px-0 pt-16 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
+      <Breadcrumb
+        homeElement={"Home"}
+        separator={<TbMathGreater className="size-2" />}
+        activeClasses="!text-gray-300 hover:text-gray-100 pointer-events-none"
+        containerClasses="flex py-5 items-center"
+        listClasses="hover:text-gray-100 mx-2 font-bold text-gray-500 text-left text-sm "
+        capitalizeLinks={true}
+        articleTitle={post.metadata.title}
+      />
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -81,13 +92,13 @@ export default function Blog({ params }: BlogPageProps) {
           }),
         }}
       />
-      <h1 className="title text-2xl font-semibold tracking-tighter">{post.metadata.title}</h1>
+      <h1 className="title text-2xl font-semibold">{post.metadata.title}</h1>
       <div className="mb-8 mt-2 flex items-center justify-between text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
-      <article className="prose">
+      <article className="prose leading-6">
         <CustomMDX source={post.content} />
       </article>
     </section>

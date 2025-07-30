@@ -40,22 +40,6 @@
     src: url("../public/fonts/CalSans-SemiBold.otf");
   }
 
-  pre code {
-    counter-reset: sh-line-number;
-  }
-
-  .sh__line::before {
-    counter-increment: sh-line-number 1;
-    content: counter(sh-line-number);
-    margin-right: 24px;
-    text-align: right;
-    color: #a4a4a4;
-  }
-
-  html {
-    color-scheme: dark;
-  }
-
   .mask-radial {
     mask: radial-gradient(
         33% 41% at 50% 50%,
@@ -271,6 +255,7 @@
 
 .prose pre {
   @apply overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm dark:border-neutral-900 dark:bg-neutral-900;
+  line-height: 1em;
 }
 
 .prose code {
@@ -280,7 +265,6 @@
 .prose pre code {
   @apply p-0;
   border: initial;
-  line-height: 1.5;
 }
 
 .prose code span {
@@ -297,19 +281,19 @@
 }
 
 .prose h1 {
-  @apply mb-2 mt-6 text-4xl font-medium tracking-tight;
+  @apply mb-2 mt-6 text-4xl font-medium;
 }
 
 .prose h2 {
-  @apply mb-2 mt-6 text-xl font-medium tracking-tight;
+  @apply mb-2 mt-6 text-xl font-medium;
 }
 
 .prose h3 {
-  @apply mb-2 mt-6 text-xl font-medium tracking-tight;
+  @apply mb-2 mt-6 text-xl font-medium;
 }
 
 .prose h4 {
-  @apply mb-2 mt-6 text-lg font-medium tracking-tight;
+  @apply mb-2 mt-6 text-lg font-medium;
 }
 
 .prose strong {
