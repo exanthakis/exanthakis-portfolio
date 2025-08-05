@@ -93,11 +93,41 @@ type ExperienceItem = {
   show: boolean;
 };
 
+type Tag = {
+  id: number;
+  name: string;
+};
+
 type Metadata = {
   title: string;
   publishedAt: string;
   summary: string;
   image?: string;
+  tags?: string;
+};
+
+type Post = {
+  metadata: Metadata;
+  slug: string;
+  content: string;
+};
+
+type GetPostsOptions = {
+  limit?: number;
+  tags?: string[];
+  page?: number;
+};
+
+type PaginationResult = {
+  posts: Post[];
+  pagination: {
+    total: number;
+    page: number;
+    totalPages: number;
+    limit: number;
+    nextPage?: number | null;
+    prevPage?: number | null;
+  };
 };
 
 export type {
@@ -117,4 +147,8 @@ export type {
   AboutParagraphProps,
   ExperienceItem,
   Metadata,
+  Tag,
+  Post,
+  GetPostsOptions,
+  PaginationResult,
 };
