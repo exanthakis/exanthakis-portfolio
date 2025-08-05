@@ -14,18 +14,21 @@ const DesktopNav = () => {
   return (
     <nav className="hidden items-center gap-2 md:flex">
       <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-        {links.map((link) => (
-          <li key={link.hash} className="relative flex h-3/4 items-center justify-center">
-            <Link
-              href={link.hash}
-              className={`flex w-full items-center justify-center px-2 py-1 transition ${
-                link.hash === pathname ? "text-gray-300 hover:text-gray-100" : ""
-              } hover:text-gray-300`}
-            >
-              {link.name}
-            </Link>
-          </li>
-        ))}
+        {links.map(
+          (link) =>
+            !link?.isButton && (
+              <li key={link.hash} className="relative flex h-3/4 items-center justify-center">
+                <Link
+                  href={link.hash}
+                  className={`flex w-full items-center justify-center px-2 py-1 transition ${
+                    link.hash === pathname ? "text-gray-300 hover:text-gray-100" : ""
+                  } hover:text-gray-300`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ),
+        )}
         <div className="fixed right-0 top-[40vh]">
           {selected?.children?.map((el) => (
             <Link key={el.hash} href={el.hash}>
