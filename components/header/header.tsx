@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header
       id="menu"
-      className="fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 bg-[#0A0A0ACC] px-4 py-2.5 backdrop-blur transition lg:sticky"
+      className="fixed left-0 top-0 z-[999] flex w-full items-center justify-between border-b border-gray-500/15 bg-[#0A0A0ACC] px-4 py-2.5 backdrop-blur transition md:sticky"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -81,7 +81,7 @@ const Header = () => {
         <div className="hidden items-center justify-center gap-2 md:flex">
           <>
             <Link
-              href="#contact"
+              href="/#contact"
               className="group z-[20] mr-4 flex h-fit items-center gap-2 rounded-lg border border-black/10 bg-white px-2 py-1 text-sm text-black outline-none transition hover:bg-white/90 hover:!text-gray-900 focus:scale-110"
               onClick={() => {
                 setActiveSection("Contact");
