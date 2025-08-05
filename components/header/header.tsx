@@ -11,6 +11,7 @@ import DesktopNav from "./desktop-nav";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
 import { links } from "@/lib/data";
 import { usePathname } from "next/navigation";
+import { FaPaperPlane } from "react-icons/fa";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -77,17 +78,30 @@ const Header = () => {
         {/* Desktop Nav */}
         <DesktopNav />
 
-        <div className="hidden justify-center gap-2 md:flex">
-          {socialLinks.map((social) => (
-            <Button
-              buttonType={ButtonType.LINK}
-              href={social.link}
-              key={social.link}
-              target="_blank"
+        <div className="hidden items-center justify-center gap-2 md:flex">
+          <>
+            <Link
+              href="#contact"
+              className="group z-[20] mr-4 flex h-fit items-center gap-2 rounded-lg border border-black/10 bg-white px-2 py-1 text-sm text-black outline-none transition hover:bg-white/90 hover:!text-gray-900 focus:scale-110"
+              onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+              }}
             >
-              {social.icon}
-            </Button>
-          ))}
+              Contact
+              <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1" />{" "}
+            </Link>
+            {socialLinks.map((social) => (
+              <Button
+                buttonType={ButtonType.LINK}
+                href={social.link}
+                key={social.link}
+                target="_blank"
+              >
+                {social.icon}
+              </Button>
+            ))}
+          </>
         </div>
       </motion.div>
     </header>

@@ -12,7 +12,9 @@ import { fadeInAnimationVariants } from "@/lib/animations";
 
 const MobileNav = ({ open, setOpen }: MobileNavProps) => {
   const pathname = usePathname();
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const selected = links?.find((el) => el.hash === pathname);
+
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <div
       className={`fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col items-end justify-between bg-black pb-6 pr-4 pt-14 transition-transform duration-300 ease-in-out motion-reduce:transition-none md:hidden ${
@@ -45,14 +47,14 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
               href={item.hash}
               key={index}
               className={`block px-3 text-3xl ${
-                activeSection === item.name ? "text-white" : "text-gray-500"
-              }`}
+                pathname === (item.hash as string) ? "!text-white" : "text-gray-500"
+              } ${item?.isButton ? "group z-[20] flex h-fit items-center gap-2 rounded-lg border border-black/10 bg-white px-2 py-1 !text-black outline-none transition hover:bg-white/90 hover:!text-gray-900 focus:scale-110" : ""}`}
               onClick={() => {
                 setOpen(false);
-                setActiveSection(item.name);
                 setTimeOfLastClick(Date.now());
+                if (item.hash === "/#contact") setActiveSection("Contact");
               }}
-              aria-current={pathname.includes(item.hash as string) ? "page" : undefined}
+              aria-current={pathname === (item.hash as string) ? "page" : undefined}
             >
               {item.name}
             </Link>

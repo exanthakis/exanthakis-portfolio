@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { baseUrl } from "./sitemap";
+import React from "react";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 

@@ -4,6 +4,7 @@ import { CustomMDX } from "@/components/mdx";
 import { formatDate, getBlogPosts } from "@/lib/utils";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { TbMathGreater } from "react-icons/tb";
+import CoverImage from "@/components/blog/cover-image";
 
 interface BlogPageProps {
   params: {
@@ -60,7 +61,7 @@ export default function Blog({ params }: BlogPageProps) {
   }
 
   return (
-    <section className="mx-auto max-w-5xl bg-black px-0 pt-16 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
+    <section className="mx-auto max-w-5xl bg-black px-4 pt-16 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
       <Breadcrumb
         homeElement={"Home"}
         separator={<TbMathGreater className="size-2" />}
@@ -98,6 +99,7 @@ export default function Blog({ params }: BlogPageProps) {
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
+      {post.metadata.image && <CoverImage src={post.metadata.image} title={post.metadata.title} />}
       <article className="prose leading-6">
         <CustomMDX source={post.content} />
       </article>

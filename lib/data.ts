@@ -100,11 +100,19 @@ export const links = [
         }),
       },
     ],
+    isButton: false,
   },
   {
     name: "Blog",
     hash: "/blog",
     children: [],
+    isButton: false,
+  },
+  {
+    name: "Contact",
+    hash: "/#contact",
+    children: [],
+    isButton: true,
   },
 ] as const;
 
