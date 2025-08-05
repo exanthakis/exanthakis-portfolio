@@ -5,6 +5,7 @@ import { formatDate, getBlogPosts } from "@/lib/utils";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { TbMathGreater } from "react-icons/tb";
 import CoverImage from "@/components/blog/cover-image";
+import Link from "next/link";
 
 interface BlogPageProps {
   params: {
@@ -60,6 +61,8 @@ export default function Blog({ params }: BlogPageProps) {
     notFound();
   }
 
+  const parsedTags: string[] = post.metadata.tags ? JSON.parse(post.metadata.tags) : [];
+
   return (
     <section className="mx-auto max-w-5xl bg-black px-4 pt-16 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
       <Breadcrumb
@@ -103,6 +106,11 @@ export default function Blog({ params }: BlogPageProps) {
       <article className="prose leading-6">
         <CustomMDX source={post.content} />
       </article>
+      {parsedTags?.map((tag, idx) => (
+        <div key={idx} className="mr-2 inline-block text-gray-500 underline">
+          <Link href={`/tag/${tag}`}>#{tag}</Link>
+        </div>
+      ))}
     </section>
   );
 }

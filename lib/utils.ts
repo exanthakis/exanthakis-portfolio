@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { Metadata } from "./types";
+import { GetPostsOptions, Metadata, PaginationResult, Post } from "./types";
 
 export const validateString = (value: unknown, maxLength: number): value is string => {
   if (!value || typeof value !== "string" || value.length > maxLength) {
@@ -53,7 +53,7 @@ function readMDXFile(filePath: string) {
   return parseFrontmatter(rawContent);
 }
 
-function getMDXData(dir: string) {
+function getMDXData(dir: string): Post[] {
   let mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
     let { metadata, content } = readMDXFile(path.join(dir, file));
@@ -71,9 +71,55 @@ export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "app", "blog", "posts"));
 }
 
+export function getPosts({ limit = 10, tags, page = 1 }: GetPostsOptions = {}): PaginationResult {
+  const allPosts = getBlogPosts();
+
+  let filtered = allPosts.filter((post) => {
+    if (!tags) return true;
+
+    const postTags = post.metadata.tags || "";
+    const parsedTags: string[] = postTags ? JSON.parse(postTags) : [];
+    const postTagSlugs = parsedTags.map((tag: string) => tag.toLowerCase().replace(/\s+/g, "-"));
+
+    return tags.some((tag) => postTagSlugs.includes(tag));
+  });
+
+  const total = filtered.length;
+  const totalPages = Math.ceil(total / limit);
+
+  const start = (page - 1) * limit;
+  const paginatedPosts = filtered.slice(start, start + limit);
+
+  return {
+    posts: paginatedPosts,
+    pagination: {
+      total,
+      page,
+      totalPages,
+      limit,
+      nextPage: page < totalPages ? page + 1 : null,
+      prevPage: page - 1 <= totalPages && page - 1 != 0 ? page - 1 : null,
+    },
+  };
+}
+
+export function getTags(): string[] {
+  const posts = getBlogPosts();
+
+  const tagSet = new Set<string>();
+
+  posts.forEach((post) => {
+    const tags = post.metadata.tags || "";
+    const parsedTags: string[] = tags ? JSON.parse(tags) : [];
+    parsedTags.forEach((tag: string) => tagSet.add(tag));
+  });
+
+  return Array.from(tagSet);
+}
+
 export function formatDate(date: string, includeRelative = false) {
   let currentDate = new Date();
-  if (!date.includes("T")) {
+  if (!date?.includes("T")) {
     date = `${date}T00:00:00`;
   }
   let targetDate = new Date(date);
