@@ -60,7 +60,7 @@ const Project = ({
           <ul className="mb-[-5.625rem] flex flex-wrap justify-start gap-4">
             {techStack.map((techItem) => (
               <li
-                key={techItem.title}
+                key={techItem.title} //test
                 className="group flex flex-col items-center justify-center gap-4 text-lg opacity-100 outline-none"
               >
                 {techItem.icon}
