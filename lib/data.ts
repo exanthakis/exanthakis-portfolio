@@ -158,7 +158,7 @@ export const skillsData = [
     icon: React.createElement(SiNextdotjs),
   },
   {
-    title: "Vue.js",
+    title: "Vue.js (Basics)",
     icon: React.createElement(FaVuejs),
   },
   {
