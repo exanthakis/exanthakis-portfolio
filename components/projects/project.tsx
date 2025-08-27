@@ -140,7 +140,7 @@ const Project = ({
                       key={techItem.title}
                       className="group flex flex-col items-center justify-center gap-4 outline-none"
                     >
-                      <SkillsItem icon={techItem.icon} title={techItem.title} />
+                      <SkillsItem {...techItem} />
                     </motion.li>
                   ))}
                 </ul>
