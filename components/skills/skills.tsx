@@ -33,7 +33,7 @@ const Skills = () => {
             }}
             custom={index}
           >
-            <SkillsItem icon={skill.icon} title={skill.title} />
+            <SkillsItem {...skill} />
           </motion.li>
         ))}
       </ul>
@@ -116,7 +116,7 @@ const Skills = () => {
                   once: false,
                 }}
               >
-                <SkillsItem size="main" icon={techItem.icon} title={techItem.title} animateTitle />
+                <SkillsItem size="main" {...techItem} animateTitle />
               </motion.li>
             ))}
           </ul>

@@ -153,74 +153,106 @@ export const skillsData = [
   {
     title: "HTML",
     icon: React.createElement(AiOutlineHtml5),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
   },
   {
     title: "CSS",
     icon: React.createElement(IoLogoCss3),
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
   },
   {
     title: "Sass",
     icon: React.createElement(FaSass),
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
   },
   {
     title: "Tailwind CSS",
     icon: React.createElement(RiTailwindCssFill),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     title: "Material UI",
     icon: React.createElement(SiMui),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg",
   },
   {
     title: "Bootstrap",
     icon: React.createElement(FaBootstrap),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg",
   },
   {
     title: "JavaScript",
     icon: React.createElement(IoLogoJavascript),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
   },
   {
     title: "TypeScript",
     icon: React.createElement(SiTypescript),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
   },
   {
     title: "React",
     icon: React.createElement(GrReactjs),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
   },
   {
     title: "Next.js",
     icon: React.createElement(SiNextdotjs),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
   },
   {
-    title: "Vue.js",
+    title: "Vue.js (Basics)",
     icon: React.createElement(FaVuejs),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg",
   },
   {
     title: "Redux",
     icon: React.createElement(SiRedux),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
   },
   {
     title: "Framer Motion",
     icon: React.createElement(TbBrandFramerMotion),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/framermotion/framermotion-original.svg",
   },
   {
     title: "AWS (Basics)",
     icon: React.createElement(FaAws),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
   },
   {
     title: "AEM 6.5",
     icon: React.createElement(BiLogoAdobe),
+    image: "",
   },
   {
     title: "Storybook",
     icon: React.createElement(SiStorybook),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/storybook/storybook-original.svg",
   },
   {
     title: "Vitest",
     icon: React.createElement(SiVitest),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/vitest/vitest-original.svg",
   },
   {
     title: "Git",
     icon: React.createElement(FaGitAlt),
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
   },
 ] as const;
 
@@ -228,34 +260,49 @@ export const toolkitData = [
   {
     title: "Visual Studio Code",
     icon: React.createElement(BiLogoVisualStudio),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
   },
   {
     title: "Chrome DevTools",
     icon: React.createElement(FaChrome),
-  },
-  {
-    title: "Figma",
-    icon: React.createElement(FaFigma),
-  },
-  {
-    title: "Jira",
-    icon: React.createElement(FaJira),
-  },
-  {
-    title: "Github",
-    icon: React.createElement(FaGithub),
-  },
-  {
-    title: "Gitlab",
-    icon: React.createElement(FaGitlab),
-  },
-  {
-    title: "Vite",
-    icon: React.createElement(SiVite),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/chrome/chrome-original.svg",
   },
   {
     title: "Postman",
     icon: React.createElement(SiPostman),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg",
+  },
+  {
+    title: "Figma",
+    icon: React.createElement(FaFigma),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
+  },
+  {
+    title: "Jira",
+    icon: React.createElement(FaJira),
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original.svg",
+  },
+  {
+    title: "GitHub",
+    icon: React.createElement(FaGithub),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+  },
+  {
+    title: "GitLab",
+    icon: React.createElement(FaGitlab),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg",
+  },
+  {
+    title: "Vite",
+    icon: React.createElement(SiVite),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg",
   },
 ] as const;
 
