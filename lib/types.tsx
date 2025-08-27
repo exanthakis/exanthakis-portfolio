@@ -65,7 +65,7 @@ type FilterProps = {
 type SkillsItemProps = {
   icon: React.FunctionComponentElement<IconBaseProps>;
   title: string;
-  image: string;
+  image?: string;
   size?: "main" | "default";
   iconColor?: string;
   animateTitle?: boolean;
