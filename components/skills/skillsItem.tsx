@@ -1,8 +1,10 @@
 import { SkillsItemProps } from "@/lib/types";
+import Image from "next/image";
 import React from "react";
 
 const SkillsItem = ({
   icon,
+  image,
   title,
   iconColor = "#e5e7eb",
   size = "default",
@@ -19,12 +21,22 @@ const SkillsItem = ({
             : "h-14 w-[4.25rem] rounded-2xl border border-[#d6ebfd30] hover:shadow-[0_6px_20px_rgba(255,255,255,.4)]"
         }`}
       >
-        <span
-          style={{ color: iconColor }}
-          className={`inline leading-[0] ${isMain ? "text-xl" : "text-2xl"}`}
-        >
-          {icon}
-        </span>
+        {image ? (
+          <Image
+            src={image}
+            width={animateTitle ? 24 : 30}
+            height={animateTitle ? 24 : 30}
+            alt="Background image"
+            className={`object-cover ${title === "GitHub" || title === "Framer Motion" ? "invert" : ""}`}
+          />
+        ) : (
+          <span
+            style={{ color: iconColor }}
+            className={`inline leading-[0] ${isMain ? "text-xl" : "text-2xl"}`}
+          >
+            {icon}
+          </span>
+        )}
       </div>
       <span
         className={`sans font-normal transition duration-200 ease-in-out group-hover:text-white ${
