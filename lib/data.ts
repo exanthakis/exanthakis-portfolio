@@ -27,6 +27,7 @@ import {
   SiStackblitz,
   SiVite,
   SiPostman,
+  SiSupabase,
 } from "react-icons/si";
 import { CgPerformance } from "react-icons/cg";
 import { GrReactjs, GrContact } from "react-icons/gr";
@@ -225,6 +226,12 @@ export const skillsData = [
     icon: React.createElement(TbBrandFramerMotion),
     image:
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/framermotion/framermotion-original.svg",
+  },
+  {
+    title: "Supabase",
+    icon: React.createElement(SiSupabase),
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg",
   },
   {
     title: "AWS (Basics)",
