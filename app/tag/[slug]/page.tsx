@@ -4,6 +4,7 @@ import { BlogPosts } from "@/components/blog/posts";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getPosts } from "@/lib/utils";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { TbCircleX, TbMathGreater } from "react-icons/tb";
 
 interface Params {
@@ -32,6 +33,10 @@ const Page = async (props: {
 
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
   const result = getPosts({ limit: 6, tags: [slug], page });
+
+  if (!result.posts.length) {
+    notFound();
+  }
 
   return (
     <section className="mx-auto max-w-5xl bg-black px-4 pt-16 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
