@@ -39,6 +39,8 @@ import PortfolioImg from "../public/images/portfolio.png";
 import PortfolioXsImg from "../public/images/portfolio_xs.png";
 import CineScopeImg from "../public/images/cinescope3.jpg";
 import CineScopeXsImg from "../public/images/cinescope_xs.jpg";
+import OpcoImg from "../public/images/opco.jpg";
+import OpcoXsImg from "../public/images/opco_xs.jpg";
 import CasaVasiliaImg from "../public/images/casavasilia.png";
 import CasaVasiliaXsImg from "../public/images/casavasilia_xs.png";
 import PerigrammataImg from "../public/images/perigrammata1.png";
@@ -349,6 +351,24 @@ export const experiencesData = [
 export const projectsData = [
   {
     id: 1,
+    title: "Opco",
+    description:
+      "Opco is a cutting-edge industrial solutions company that helps businesses thrive in the era of smart operations. By integrating advanced process control, intelligent automation, and data-driven insights, Opco enables clients to reduce variability, increase reliability, and unlock sustainable performance improvements.\n\nBuilt with:\n• Next.js 15.4 for App Router and server-side rendering.\n• TypeScript 5 for type-safe, maintainable code.\n• Tailwind CSS 4 for rapid, responsive styling.\n• Resend + React Email for dynamic email templates.\n• Vercel hosting for seamless deployment and performance.",
+    techStack: [
+      skillsData[9],
+      skillsData[7],
+      skillsData[3],
+      skillsData[12],
+      { icon: React.createElement(RxVercelLogo), title: "Vercel" },
+    ],
+    imageUrl: OpcoImg,
+    imageXsUrl: OpcoXsImg,
+    link: "https://opco.gr/",
+    repo: "",
+    tags: ["React", "Next.js", "Tailwind"],
+  },
+  {
+    id: 2,
     title: "CineScope",
     description:
       "CineScope is a dynamic movie-hub web application designed to help users discover, explore, and track their favorite films effortlessly. Powered by Vue 3 and TMDB, CineScope provides an intuitive platform to browse top-rated and trending movies while offering detailed insights into any film of interest—all in one place!\n\nFeatures:\n• Advanced Movie Search – Find films based on genres, release date, language, and more.\n• Comprehensive Film Details – Access in-depth information, including cast, crew, synopsis, ratings, and trailers.\n• Trending & Top-Rated Movies – Stay updated with what’s popular in the film industry.\n• Personalized Watchlist – Keep track of movies you want to watch.\n\nBuilt with:\n• Vue 3.5 (Composition API with script setup)\n• TypeScript\n• Pinia\n• Vue Router\n• Tailwind CSS\n• Axios\n• Storybook\n• Vitest",
@@ -356,8 +376,8 @@ export const projectsData = [
       skillsData[10],
       skillsData[7],
       skillsData[3],
-      skillsData[15],
       skillsData[16],
+      skillsData[17],
       { icon: React.createElement(RxVercelLogo), title: "Vercel" },
     ],
     imageUrl: CineScopeImg,
@@ -367,7 +387,7 @@ export const projectsData = [
     tags: ["Vue.js", "Tailwind"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Portfolio",
     description:
       "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools.\n\nThis project was about more than just a portfolio refresh it was an exploration of my growth as a designer, developer, and creator. I wanted to craft a digital space that reflects who I am today and where I’m headed tomorrow.\n\nFeatures:\n• Clean and modern design\n• Responsive layout for all devices\n• Fast performance with server-side rendering\n• SEO-friendly pages\n• Easy to update and expand\n\nTech Stack:\n• Next.js – for server-side rendering and static site generation\n• TypeScript – for type safety and better development experience\n• Tailwind CSS – for fast and flexible styling\n• Framer Motion – for animations and UI transitions\n• Vercel – for fast and secure deployment",
@@ -385,7 +405,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
-    id: 3,
+    id: 4,
     title: "My Calendar",
     description:
       "Calendar App is a modern and intuitive web application that allows users to manage their schedules efficiently. Users can sign in seamlessly using Google, GitHub, or a Magic Link and add notes for each date through an interactive calendar interface.\n\n Features:\n• Secure Authentication – Sign in via Google, GitHub, or Magic Link.\n• Interactive Calendar – Easily navigate and manage events.\n• Add Notes – Attach personalized notes to specific dates.\n• Cloud-Based Storage – Data is securely stored and retrieved using Supabase.\n• Responsive UI – Built with Tailwind CSS for a sleek and modern design.\n\n Tech Stack:\n• Next.js – Server-side rendering and optimized performance.\n• Tailwind CSS – Modern and responsive styling.\n• Supabase – Authentication & database management.",
@@ -402,7 +422,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Vacation Rental Website",
     description:
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
@@ -414,7 +434,7 @@ export const projectsData = [
     tags: ["HTML", "CSS", "Javascript"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Perigrammata",
     description:
       "This web application was developed for my diploma thesis. The system functions as a recommender tool for students, helping them plan their course selections based on the skills they wish to enhance. It also provides insights into the reinforcement rates for ABET achievements in courses they have successfully completed. Additionally, the system enables instructors to export course outlines (in compliance with the Quality Assurance and Certification Authority in Higher Education, ADIP) in standard formats such as PDF and HTML. It also supports the documentation of learning outcomes according to ABET accreditation standards. Users are required to log in using their academic credentials via LDAP authentication.",
