@@ -8,9 +8,9 @@ import CoverImage from "@/components/blog/cover-image";
 import Link from "next/link";
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -21,8 +21,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: BlogPageProps) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+export async function generateMetadata({ params }: BlogPageProps) {
+  const slug = (await params)?.slug;
+  let post = getBlogPosts().find((post) => post.slug === slug);
   if (!post) {
     return;
   }
@@ -54,8 +55,9 @@ export function generateMetadata({ params }: BlogPageProps) {
   };
 }
 
-export default function Blog({ params }: BlogPageProps) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+export default async function Blog({ params }: BlogPageProps) {
+  const slug = (await params)?.slug;
+  let post = getBlogPosts().find((post) => post.slug === slug);
 
   if (!post) {
     notFound();
