@@ -49,7 +49,7 @@ export const widthAnimationVariants = {
     transition: {
       delay: 0.05 * index,
       duration: 0.8,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   }),
 };
