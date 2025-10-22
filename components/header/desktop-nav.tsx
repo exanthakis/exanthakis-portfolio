@@ -31,12 +31,15 @@ const DesktopNav = () => {
         )}
         <div className="fixed right-0 top-[40vh]">
           {selected?.children?.map((el) => (
-            <Link key={el.hash} href={el.hash}>
+            <Link
+              key={el.hash}
+              href={el.hash}
+              className="group relative flex flex-row-reverse items-center"
+            >
               <motion.span
-                // layoutId="activeSection"
-                className={`my-2 flex w-full flex-col items-center justify-center px-2 py-1 transition ${
+                className={`my-2 flex w-9 flex-col items-center justify-center p-1 transition ${
                   activeSection === el.name
-                    ? "rounded-lg bg-gray-100 text-gray-950 hover:text-gray-950"
+                    ? "ml-2 rounded-lg bg-gray-100 text-gray-950 hover:text-gray-950"
                     : ""
                 } hover:text-gray-300`}
                 layoutId="activeSection"
@@ -53,17 +56,9 @@ const DesktopNav = () => {
                 {el.icon}
               </motion.span>
 
-              {/* {activeSection === el.name && (
-                    <motion.span
-                      className="absolute inset-0 -z-10 rounded-lg bg-gray-100"
-                      layoutId="activeSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    ></motion.span>
-                  )} */}
+              <span className="sans text-center font-normal leading-5 text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+                {el.name}
+              </span>
             </Link>
           ))}
         </div>
