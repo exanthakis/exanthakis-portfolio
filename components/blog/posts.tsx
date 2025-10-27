@@ -1,21 +1,13 @@
-import { formatDate, getBlogPosts } from "@/lib/utils";
-import Link from "next/link";
 import { PostPreview } from "./post-preview";
-import { motion } from "framer-motion";
-import { Spotlight } from "../ui/spotlight";
 import { Post } from "@/lib/types";
 
 export function BlogPosts({ posts, preview }: { posts?: Post[]; preview?: "grid" | "list" }) {
-  let defaultBlogs = getBlogPosts();
-
-  const allBlogs = posts ?? defaultBlogs;
-
   return (
     <div
       className={`${preview === "list" ? "flex flex-col gap-2" : "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"}`}
     >
-      {allBlogs
-        .sort((a, b) => {
+      {posts
+        ?.sort((a, b) => {
           if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
             return -1;
           }
