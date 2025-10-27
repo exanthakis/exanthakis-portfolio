@@ -1,5 +1,6 @@
 import { BlogPostsPagination } from "@/components/blog/blog-post-pagination";
 import { BlogPosts } from "@/components/blog/posts";
+import LoadingIndicator from "@/components/ui/loading-indicator";
 import { getPosts } from "@/lib/utils";
 
 export const metadata = {
@@ -7,9 +8,7 @@ export const metadata = {
   description: "Read my blog.",
 };
 
-const Page = async (props: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) => {
+const Page = async (props: PageProps<"/blog">) => {
   const searchParams = await props.searchParams;
 
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;

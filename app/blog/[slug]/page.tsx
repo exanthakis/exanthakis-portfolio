@@ -7,12 +7,7 @@ import { TbMathGreater } from "react-icons/tb";
 import CoverImage from "@/components/blog/cover-image";
 import Link from "next/link";
 
-interface BlogPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
+// Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   let posts = getBlogPosts();
 
@@ -21,8 +16,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: BlogPageProps) {
-  const slug = (await params)?.slug;
+export async function generateMetadata(props: PageProps<"/blog/[slug]">) {
+  const { slug } = await props.params;
   let post = getBlogPosts().find((post) => post.slug === slug);
   if (!post) {
     return;
@@ -55,8 +50,10 @@ export async function generateMetadata({ params }: BlogPageProps) {
   };
 }
 
-export default async function Blog({ params }: BlogPageProps) {
-  const slug = (await params)?.slug;
+// Multiple versions of this page will be statically generated
+// using the `params` returned by `generateStaticParams`
+export default async function Blog(props: PageProps<"/blog/[slug]">) {
+  const { slug } = await props.params;
   let post = getBlogPosts().find((post) => post.slug === slug);
 
   if (!post) {

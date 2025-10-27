@@ -7,14 +7,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TbCircleX, TbMathGreater } from "react-icons/tb";
 
-interface Params {
-  slug: string;
-}
-
-export async function generateMetadata(props: { params: Promise<Params> }) {
-  const params = await props.params;
-
-  const { slug } = params;
+export async function generateMetadata(props: PageProps<"/tag/[slug]">) {
+  const { slug } = await props.params;
 
   return {
     title: `#${slug}`,
@@ -22,14 +16,9 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
   };
 }
 
-const Page = async (props: {
-  params: Promise<Params>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) => {
+const Page = async (props: PageProps<"/tag/[slug]">) => {
   const searchParams = await props.searchParams;
-  const params = await props.params;
-
-  const { slug } = params;
+  const { slug } = await props.params;
 
   const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
   const result = getPosts({ limit: 6, tags: [slug], page });
