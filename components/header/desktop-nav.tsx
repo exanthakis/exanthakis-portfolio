@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useActiveSectionContext } from "@/hooks/useActiveSectionContext";
 import { usePathname } from "next/navigation";
+import LoadingIndicator from "../ui/loading-indicator";
 
 const DesktopNav = () => {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ const DesktopNav = () => {
                   } hover:text-gray-300`}
                 >
                   {link.name}
+                  <LoadingIndicator />
                 </Link>
               </li>
             ),

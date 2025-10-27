@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CoverImage from "./cover-image";
 import { formatDate } from "@/lib/utils";
+import LoadingIndicator from "../ui/loading-indicator";
 
 type PostCardProps = {
   title: string;
@@ -24,6 +25,7 @@ export function PostPreview({ title, summary, image, date, slug, tags }: PostCar
         <h3 className="mb-3 text-lg leading-snug text-white">
           <Link href={`/blog/${slug}`} className="font-semibold hover:underline">
             {title}
+            <LoadingIndicator />
           </Link>
         </h3>
         <div className="flex h-full flex-col gap-4 text-sm text-[#888]">

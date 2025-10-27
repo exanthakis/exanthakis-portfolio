@@ -1,6 +1,5 @@
 import { BlogPostsPagination } from "@/components/blog/blog-post-pagination";
 import { BlogPosts } from "@/components/blog/posts";
-import LoadingIndicator from "@/components/ui/loading-indicator";
 import { getPosts } from "@/lib/utils";
 
 export const metadata = {

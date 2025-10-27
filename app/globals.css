@@ -379,3 +379,38 @@ table {
     /* subtle light border */ 0px 2px 2px #00000052,
     /* soft shadow */ 0px 8px 8px -8px #00000029; /* large blur with negative spread */
 }
+
+.link-hint {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.25rem;
+  border-radius: 9999px;
+  background: currentColor;
+  opacity: 0;
+  visibility: hidden; /* reserve space without showing the hint */
+}
+
+.link-hint.is-pending {
+  /* Animation 1: fade in after 100ms and keep final opacity */
+  /* Animation 2: subtle pulsing while pending */
+  visibility: visible;
+  animation-name: fadeIn, pulse;
+  animation-duration: 200ms, 1s;
+  /* Appear only if navigation actually takes time */
+  animation-delay: 100ms, 100ms;
+  animation-timing-function: ease, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.35;
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.15;
+  }
+}
