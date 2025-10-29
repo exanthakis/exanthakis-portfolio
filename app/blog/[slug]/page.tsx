@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
-import { baseUrl } from "@/app/sitemap";
 import { CustomMDX } from "@/components/mdx";
 import { formatDate, getBlogPosts } from "@/lib/utils";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { TbMathGreater } from "react-icons/tb";
 import CoverImage from "@/components/blog/cover-image";
 import Link from "next/link";
+import { baseUrl } from "@/lib/data";
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {

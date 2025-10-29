@@ -53,6 +53,7 @@ import { MdHome, MdAppSettingsAlt } from "react-icons/md";
 import { BsFilePerson } from "react-icons/bs";
 
 export const fullName = "Emmanouel Xanthakis";
+export const baseUrl = "https://emmanouelxanthakis.site";
 
 export const monthNames = [
   "January",

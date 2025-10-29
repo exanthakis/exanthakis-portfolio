@@ -1,4 +1,4 @@
-import { baseUrl } from "./sitemap";
+import { baseUrl } from "@/lib/data";
 
 export default function robots() {
   return {

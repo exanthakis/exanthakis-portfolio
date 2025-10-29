@@ -3,14 +3,12 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
 import ActiveContextProvider from "@/store/active-context";
-import Image from "next/image";
-import bgImg from "@/public/images/heroBg.jpg";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { baseUrl } from "./sitemap";
 import React from "react";
+import { baseUrl } from "@/lib/data";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
