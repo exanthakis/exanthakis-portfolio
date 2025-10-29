@@ -1,3 +1,4 @@
+import Tag from "@/components/ui/tag";
 import { getTags } from "@/lib/utils";
 import Link from "next/link";
 
@@ -18,25 +19,27 @@ export async function generateMetadata() {
   };
 }
 
-export default async function Page() {
+export default async function TagsPage() {
   const result = getTags();
 
   return (
     <section className="mx-auto max-w-5xl bg-black px-4 pt-24 text-left md:max-w-4xl md:px-10 md:py-16 lg:max-w-6xl">
-      <div className="mb-12 mt-20 text-center">
-        <h1 className="mb-2 text-5xl font-bold">Tags</h1>
-        <p className="text-lg opacity-50">List of all tags</p>
-      </div>
-      <div className="my-10 mb-48 max-w-6xl text-balance text-center text-xl">
-        {result.map((tag, idx) => (
-          <Link
-            key={idx}
-            href={`/tag/${tag}`}
-            className="mb-8 mr-3 inline-flex items-center rounded-full border border-transparent bg-white px-2 py-1 text-base font-semibold text-black transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-offset-2"
-          >
-            #{tag}
-          </Link>
-        ))}
+      <div className="flex flex-col items-start justify-start divide-y divide-gray-200 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0 dark:divide-gray-700">
+        <div className="space-x-2 pb-8 pt-6 md:space-y-5">
+          <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl dark:text-gray-100">
+            Tags
+          </h1>
+        </div>
+        <div className="flex max-w-lg flex-wrap">
+          {result.length === 0 && "No tags found."}
+          {result.map((tag) => {
+            return (
+              <div key={tag} className="mb-2 mr-5 mt-2">
+                <Tag text={tag} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -117,6 +117,16 @@ export function getTags(): string[] {
   return Array.from(tagSet);
 }
 
+export function getPostCountByTag(tag: string): number {
+  const posts = getBlogPosts();
+
+  return posts.filter((post) => {
+    const tags = post.metadata.tags || "";
+    const parsedTags: string[] = tags ? JSON.parse(tags) : [];
+    return parsedTags.includes(tag);
+  }).length;
+}
+
 export function formatDate(date: string, includeRelative = false) {
   let currentDate = new Date();
   if (!date?.includes("T")) {

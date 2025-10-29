@@ -5,7 +5,7 @@ import Projects from "@/components/projects/projects";
 import Image from "next/image";
 import bgImg from "@/public/images/heroBg.jpg";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="mx-auto flex flex-col items-center px-6 md:px-4">
       {/* Circle hero bg */}

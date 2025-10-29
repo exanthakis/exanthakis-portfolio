@@ -1,5 +1,4 @@
 import { BlogPostsPagination } from "@/components/blog/blog-post-pagination";
-import { PostPreview } from "@/components/blog/post-preview";
 import { BlogPosts } from "@/components/blog/posts";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getPosts } from "@/lib/utils";
@@ -16,7 +15,7 @@ export async function generateMetadata(props: PageProps<"/tag/[slug]">) {
   };
 }
 
-const Page = async (props: PageProps<"/tag/[slug]">) => {
+const TagPage = async (props: PageProps<"/tag/[slug]">) => {
   const searchParams = await props.searchParams;
   const { slug } = await props.params;
 
@@ -53,4 +52,4 @@ const Page = async (props: PageProps<"/tag/[slug]">) => {
   );
 };
 
-export default Page;
+export default TagPage;

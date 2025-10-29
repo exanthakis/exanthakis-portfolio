@@ -113,6 +113,12 @@ export const links = [
     isButton: false,
   },
   {
+    name: "Tags",
+    hash: "/tag",
+    children: [],
+    isButton: false,
+  },
+  {
     name: "Contact",
     hash: "/#contact",
     children: [],

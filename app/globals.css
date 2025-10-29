@@ -4,6 +4,7 @@
 
 @layer utilities {
   :root {
+    --color-primary: #58c4dc;
     --primary: rgba(239, 247, 255, 0.615);
     --secondary: #eff7ff9d;
     --sh-sign: #8996a3;

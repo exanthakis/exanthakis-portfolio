@@ -52,7 +52,7 @@ export async function generateMetadata(props: PageProps<"/blog/[slug]">) {
 
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
-export default async function Blog(props: PageProps<"/blog/[slug]">) {
+export default async function BlogPage(props: PageProps<"/blog/[slug]">) {
   const { slug } = await props.params;
   let post = getBlogPosts().find((post) => post.slug === slug);
 
