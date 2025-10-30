@@ -4,7 +4,8 @@ import Breadcrumb from "@/components/ui/breadcrumb";
 import { getPosts } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { TbCircleX, TbMathGreater } from "react-icons/tb";
+import { TbCircleX } from "react-icons/tb";
+import { BsArrowRightShort } from "react-icons/bs";
 
 export async function generateMetadata(props: PageProps<"/tag/[slug]">) {
   const { slug } = await props.params;
@@ -30,7 +31,7 @@ const TagPage = async (props: PageProps<"/tag/[slug]">) => {
     <section className="mx-auto max-w-5xl bg-black px-4 pt-16 text-left md:max-w-4xl md:px-10 lg:max-w-6xl">
       <Breadcrumb
         homeElement={"Home"}
-        separator={<TbMathGreater className="size-2" />}
+        separator={<BsArrowRightShort className="size-2.1" />}
         activeClasses="!text-gray-300 hover:text-gray-100 pointer-events-none"
         containerClasses="flex py-5 items-center"
         listClasses="hover:text-gray-100 mx-2 font-bold text-gray-500 text-left text-sm "

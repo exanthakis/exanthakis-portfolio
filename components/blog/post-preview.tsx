@@ -40,6 +40,12 @@ export function PostPreview({ title, summary, image, date, slug, tags }: PostCar
               </div>
             ))}
         </div>
+        <Link
+          href={`/blog/${slug}`}
+          className="duration-400 mt-3 flex items-center justify-center rounded-md bg-[#1A1A1A] p-2 text-center text-sm font-semibold text-[#A1A1A1] transition-colors hover:bg-[#1F1F1F] hover:text-[#EDEDED]"
+        >
+          Read more
+        </Link>
       </div>
     </div>
   );
