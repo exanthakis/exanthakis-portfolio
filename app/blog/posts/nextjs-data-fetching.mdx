@@ -1,6 +1,6 @@
 ---
 title: "Next.js Data Fetching"
-publishedAt: "2025-10-30"
+publishedAt: "2025-11-06"
 summary: "Learn how to fetch data in Server and Client Components in Next.js using the App Router, and how to stream components efficiently using Suspense and a Data Access Layer (DAL)."
 tags: ["nextjs", "data-fetching", "react", "programming"]
 ---
@@ -108,7 +108,7 @@ export default async function HomePage() {
 
 By doing this, the `<h1>` renders immediately, and the list is streamed to the browser once the data becomes available. This allows for faster perceived performance and better user experience.
 
-> 💡 _Pro-tip:_ It’s generally recommended to create a Data Access Layer (DAL) to centralize your data requests, validation, and authorization logic. You can learn more about building a DAL in the related article.
+> 💡 _Pro-tip:_ It’s generally recommended to create a Data Access Layer (DAL) to centralize your data requests, validation, and authorization logic. You can learn more about building a DAL [here](/blog/data-access-layer).
 
 ## Fetching Data in Client Components
 
