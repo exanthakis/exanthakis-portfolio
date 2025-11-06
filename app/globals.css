@@ -256,7 +256,7 @@
 
 .prose pre {
   @apply overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm dark:border-neutral-900 dark:bg-neutral-900;
-  line-height: 0.7em;
+  line-height: 1.1rem;
 }
 
 .prose code {
