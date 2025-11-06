@@ -108,7 +108,7 @@ export default async function BlogPage(props: PageProps<"/blog/[slug]">) {
         <CustomMDX source={post.content} />
       </article>
       {parsedTags?.map((tag, idx) => (
-        <div key={idx} className="mr-2 inline-block text-gray-500 underline">
+        <div key={idx} className="mr-2 inline-block pt-8 text-gray-500 underline">
           <Link href={`/tag/${tag}`}>#{tag}</Link>
         </div>
       ))}
