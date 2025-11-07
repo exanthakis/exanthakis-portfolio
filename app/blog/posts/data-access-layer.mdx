@@ -16,7 +16,6 @@ Here’s a simple example of fetching a user in a Next.js page:
 
 ```tsx
 // app/users/page.tsx
-
 const getUser = async (id: string) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
   const user = await res.json();
@@ -38,7 +37,6 @@ You can create a new folder called data, and inside it, add a user folder. Move 
 
 ```tsx
 // app/data/user/get-user.ts
-
 import "server-only";
 
 export const getUser = async (id: string) => {
@@ -75,7 +73,6 @@ Now that we have both getUser and requireUser, we can require authentication bef
 
 ```tsx
 // app/data/user/get-user.ts
-
 import "server-only";
 import { requireUser } from "@/app/data/auth/auth";
 
