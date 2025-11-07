@@ -12,13 +12,13 @@ const CoverImage = ({ title, src, slug }: CoverImageProps) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className="h-full w-full brightness-[0.8] transition-shadow duration-200 hover:brightness-100"
+      className="h-full w-full brightness-[0.8] transition-shadow duration-200 hover:brightness-100 rounded-tl-lg rounded-tr-lg max-h-[37rem]"
       width={1300}
       height={630}
     />
   );
   return (
-    <div className="h-full">
+    <div className="h-full ">
       {slug ? (
         <Link href={`/blog/${slug}`} aria-label={title}>
           {image}
