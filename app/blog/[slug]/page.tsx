@@ -104,11 +104,11 @@ export default async function BlogPage(props: PageProps<"/blog/[slug]">) {
       </div>
       {post.metadata.image && <CoverImage src={post.metadata.image} title={post.metadata.title} />}
 
-      <article className="prose leading-6">
+      <article className="prose leading-6 pb-8">
         <CustomMDX source={post.content} />
       </article>
       {parsedTags?.map((tag, idx) => (
-        <div key={idx} className="mr-2 inline-block pt-8 text-gray-500 underline">
+        <div key={idx} className="mr-2 inline-block  text-gray-500 underline">
           <Link href={`/tag/${tag}`}>#{tag}</Link>
         </div>
       ))}
