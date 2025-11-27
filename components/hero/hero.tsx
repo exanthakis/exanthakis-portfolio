@@ -26,6 +26,17 @@ const Hero = () => {
             delay: 0.1,
           }}
         >
+          <div className="flex w-fit items-center justify-center gap-3">
+            <span className="inline-flex items-center rounded-xl border border-transparent bg-[#10233D] px-2 py-1 text-xs font-semibold tracking-wide text-primary transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-offset-2">
+              New
+            </span>
+            <Link href="/blog" className="text-secondary group flex gap-1 text-sm font-normal">
+              <h4 className="text-secondary z-[20] font-normal opacity-70 group-hover:opacity-100">
+                Catch up on the new Blog section
+              </h4>
+            </Link>
+          </div>
+
           <h1 className="bg-home-hero-title bg-white bg-clip-text px-0 font-calSans text-5xl leading-[120%] text-transparent md:px-8">
             Turning Ideas into Digital Products
           </h1>
