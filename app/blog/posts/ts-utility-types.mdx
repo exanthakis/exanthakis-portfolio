@@ -1,0 +1,361 @@
+---
+title: "TypeScript Utility Types"
+publishedAt: "2025-11-29"
+summary: "Learn how TypeScript utility types help you transform and manipulate existing types for safer and more expressive code."
+tags: ["typescript", "utility-types", "programming"]
+---
+
+Utility types in TypeScript are special types that **transform**, **filter**, or **derive** new types from existing ones. They make your code more expressive and reduce duplication by letting the compiler infer the shape of related types.
+TypeScript has a bunch of built-in utility types. In this article, we highlight the most common like: **`Pick`**.
+
+## `Pick<Type, Keys>`
+
+`Pick` constructs a new type by **selecting a specific set of properties** from an existing type.
+
+A property key (or union of keys) is used to "pick" fields you want to keep.
+
+#### **Usage**
+
+```tsx
+type User = {
+  name: string;
+  age: number;
+  id: number;
+};
+
+// Expect: { id: number }
+type UserIdOnly = Pick<User, "id">;
+
+const updateUser = (user: UserIdOnly) => {
+  console.log(user.id);
+};
+
+const user: User = { name: "Manolis", age: 20, id: 2 };
+
+// Can be called
+updateUser({ id: 2 });
+
+// That also works!
+updateUser(user);
+```
+
+## `Omit<Type, Keys>`
+
+`Omit` constructs a new type by **removing** one or more properties from an existing type.
+
+#### **Usage**
+
+```ts
+// User type from Pick example
+type UserInfo = Omit<User, "id">;
+
+/*
+UserInfo = {
+   name: string
+   age: number
+ }
+*/
+```
+
+## `Partial<Type>`
+
+`Partial` creates a new type where **all properties of the original type become optional**. This is helpful when you want to allow updating or constructing objects gradually without needing all fields.
+
+#### **Usage**
+
+```ts
+type User = {
+  name: string;
+  age: number;
+  id: number;
+};
+
+type PartialUser = Partial<User>;
+
+/*
+  type PartialUser = {
+    name?: string | undefined;
+    age?: number | undefined;
+    id?: number | undefined;
+  }
+*/
+```
+
+## `Required<Type>`
+
+`Required` constructs a new type where **all properties become mandatory**, including those that were originally optional.  
+This is the opposite of `Partial`.
+
+#### **Usage**
+
+```ts
+type User = {
+  name: string;
+  age: number;
+  id: number;
+  address?: string;
+};
+
+const obj: Required<User> = {
+  name: "Manolis",
+  age: 20,
+  id: 2,
+  address: "chq",
+  // If address missing:
+  // Property 'address' is missing in type '{ name: string; age: number; id: number; }' but required in type 'Required<User>'
+};
+```
+
+## `Readonly<Type>`
+
+`Readonly` creates a new type where **all properties become immutable**. Once assigned, the properties cannot be changed.
+
+#### **Usage**
+
+Marking a single property as `readonly`:
+
+```ts
+type User = {
+  readonly id: number;
+  name: string;
+  age: number;
+  address?: string;
+};
+
+const user: User = {
+  id: 1,
+  name: "Manolis",
+  age: 20,
+};
+
+// ❌ Error: Cannot assign to 'id' because it is a read-only property
+user.id = 1;
+```
+
+You can convert every property of a type to readonly using the built-in utility:
+
+```ts
+type ImmutableUser = Readonly<User>;
+/*
+type ImmutableUser = { 
+  readonly id: number; 
+  readonly name: string; 
+  readonly age: number; 
+  readonly address?: string | undefined; 
+}
+*/
+```
+
+⚠️ Important: Readonly is shallow
+
+`Readonly<Type>` only applies immutability to the top-level properties.Nested objects remain mutable.
+
+```ts
+type User = {
+  id: number;
+  name: string;
+  age: number;
+  address?: string;
+  phone: {
+    mobile: string;
+    tel: string;
+  };
+};
+
+type ImmutableUser = Readonly<User>;
+
+/*
+type ImmutableUser = { 
+  readonly id: number; 
+  readonly name: string; 
+  readonly age: number; 
+  readonly address?: string | undefined; 
+  readonly phone: { 
+    mobile: string; 
+    tel: string; 
+  }; 
+}
+*/
+```
+
+So we are still able to change mobile, tel.
+
+## `Record<Keys, Type>`
+
+`Record` constructs an object type whose property keys are `Keys` and whose property values are `Type`. It’s useful for mapping the properties of a type to another type.
+
+#### **Usage**
+
+```ts
+//Usage with string keys
+type User = {
+  name: string;
+  age: number;
+  id: number;
+  address?: string;
+  phone: { mobile: string; tel: string };
+};
+
+type T = Record<string, User>;
+
+const userRecord: T = {
+  key: {
+    name: "Manolis",
+    age: 20,
+    id: 2,
+    address: "",
+    phone: { mobile: "", tel: "" },
+  },
+};
+```
+
+Here, all keys of userRecord are strings, and all values are of type User.
+
+```ts
+//Usage with a union of keys
+type T = Record<"admin" | "user", User>;
+
+const roles: T = {
+  admin: { name: "Admin", age: 30, id: 1, address: "", phone: { mobile: "", tel: "" } },
+  user: { name: "Manolis", age: 20, id: 2, address: "", phone: { mobile: "", tel: "" } },
+};
+```
+
+You can also use PropertyKey (string | number | symbol) if keys can be general:
+
+```ts
+//Usage with general keys
+type T = Record<PropertyKey, User>;
+
+const generalRecord: T = {
+  1: { name: "A", age: 10, id: 1, address: "", phone: { mobile: "", tel: "" } },
+  two: { name: "B", age: 20, id: 2, address: "", phone: { mobile: "", tel: "" } },
+};
+```
+
+## `Extract<Type, Union>`
+
+`Extract` lets you create a new type by pulling out only the members of a union that match another union. It is useful when you need **subsets of union types** or want to intersect two unions.
+
+Extracting specific members from a union
+
+#### **Usage**
+
+```ts
+type Role = "admin" | "user" | "moderator";
+
+type T = Extract<Role, "admin" | "moderator">;
+// T = "admin" | "moderator"
+```
+
+Extracting the intersection between two unions
+
+```ts
+type Role = "admin" | "user" | "moderator";
+type OtherRole = "testing" | "admin" | "user" | "security";
+
+type T = Extract<Role, OtherRole>;
+// T = "admin" | "user"
+```
+
+## `Exclude<UnionType, ExcludedMembers>`
+
+`Exclude` is the opposite of `Extract`. It constructs a type by excluding from UnionType all union members that are assignable to ExcludedMembers.
+
+#### **Usage**
+
+```ts
+type Role = "admin" | "user" | "moderator";
+type OtherRole = "testing" | "admin" | "user" | "security";
+
+type T = Exclude<Role, OtherRole>;
+// T = "moderator"
+```
+
+## `ReturnType<Type>`
+
+`ReturnType` extracts the return type of a function. TypeScript automatically infers the returned structure, so you don’t need to manually define it.
+
+The main use case for `ReturnType` is when you're working with a library function that **does not expose the type of its return value**, but you still want to use that type elsewhere in your application. Instead of manually recreating the type — which is error-prone and breaks if the library changes — `ReturnType` lets TypeScript **infer it automatically**.
+
+#### **Usage**
+
+```ts
+const f = (id: string) => {
+  return { a: 2, b: "test", id };
+};
+
+type T = ReturnType<typeof f>;
+
+// type T = {
+//   a: number;
+//   b: string;
+//   id: string;
+// };
+```
+
+> 💡 If you’ve not seen the typeof keyword before, this is a TypeScript keyword that takes a value and returns that value’s type. In this case, typeof f would be the function type
+
+```ts
+(id: string) => {
+  a: number;
+  b: string;
+  id: string;
+};
+```
+
+## `Parameters<Type>`
+
+`Parameters` extracts the parameter types of a function and returns them as a **tuple type**. This is useful when you want to reuse a function’s parameter types without manually redefining them.
+
+#### **Usage**
+
+```ts
+const f = (id: string) => {
+  return { a: 2, b: "test", id };
+};
+
+type T = Parameters<typeof f>;
+// type T = [id: string]
+```
+
+## `NonNullable<Type>`
+
+`NonNullable` removes both **`null`** and **`undefined`** from a type. It is useful anytime you want to ensure a value **must** exist and cannot be nullable.
+
+#### **Usage**
+
+```ts
+type V = string | null;
+
+type T = NonNullable<V>;
+// type T = string
+```
+
+How it differs from **`Required<Type>`**
+
+- **`NonNullable<Type>`** removes null and undefined from a type.
+- **`Required<Type>`** makes optional object properties required, but does not remove the possibility of those properties being null or undefined.
+- **`Required<Type>`** is meant for object shapes, while NonNullable is meant for individual types.
+
+## `Awaited<Type>`
+
+`Awaited` helps you extract the resolved value **inside a Promise**. It also works through **multiple nested Promises**, unwrapping them until it reaches the final value.
+
+#### **Usage**
+
+```ts
+const getUser = (name: string) => {
+  return Promise.resolve({ name });
+};
+
+type T = Awaited<ReturnType<typeof getUser>>;
+
+// type T = {
+//   name: string;
+// }
+```
+
+## References
+
+- [TypeScript: Documentation - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html#requiredtype)
