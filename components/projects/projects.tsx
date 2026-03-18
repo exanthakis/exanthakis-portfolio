@@ -8,11 +8,13 @@ import { useSectionInView } from "@/hooks/useSectionInView";
 import { motion, useAnimation } from "framer-motion";
 import Filter from "./filter";
 import { ProjectsT, TechStackE } from "@/lib/types";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
   const projectsCarousel = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
+  const isMobile = useIsMobile();
 
   const [filtered, setFiltered] = useState<ProjectsT[]>(projectsData);
   const [activeTechStack, setActiveTechStack] = useState(TechStackE.All);
@@ -49,6 +51,8 @@ const Projects = () => {
     setFiltered(filtered);
   };
 
+  console.log("isMobile", isMobile);
+
   // Function to reset the drag to the start
   const handleResetDrag = () => {
     controls.start({
@@ -76,37 +80,50 @@ const Projects = () => {
       </div>
 
       <Filter activeTechStack={activeTechStack} onActiveTechStack={handleActiveStack} />
-      <motion.div
-        className="relative cursor-grab overflow-hidden"
-        whileTap={{ cursor: "grabbing" }}
-      >
+
+      {isMobile ? (
         <motion.div
-          ref={projectsCarousel}
-          drag={disableDrag ? false : "x"}
-          dragConstraints={{ right: 0, left: -width }}
-          animate={controls}
-          className="grid grid-flow-col gap-4 md:gap-10"
+          className="relative cursor-grab overflow-hidden"
+          whileTap={{ cursor: "grabbing" }}
         >
+          <motion.div
+            ref={projectsCarousel}
+            drag={disableDrag ? false : "x"}
+            dragConstraints={{ right: 0, left: -width }}
+            animate={controls}
+            className="grid grid-flow-col gap-4 md:gap-10"
+          >
+            {filtered.map((project) => {
+              return (
+                <motion.div
+                  layout
+                  className="w-full min-w-[21rem] max-w-[21rem] sm:min-w-[30rem] sm:max-w-[33rem]"
+                  key={project.id}
+                >
+                  <Project {...project} onOpenModal={handleOpenModal} />
+                </motion.div>
+              );
+            })}
+          </motion.div>
+          <div
+            aria-hidden="true"
+            className="center pointer-events-none absolute -right-10 top-0 h-full w-[300px] max-w-full"
+            style={{
+              background: "linear-gradient(to right,transparent 70%,#080808 95%)",
+            }}
+          ></div>
+        </motion.div>
+      ) : (
+        <div className="relative grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:flex-row lg:grid-cols-3">
           {filtered.map((project) => {
             return (
-              <motion.div
-                layout
-                className="w-full min-w-[21rem] max-w-[21rem] sm:min-w-[30rem] sm:max-w-[33rem]"
-                key={project.id}
-              >
+              <React.Fragment key={project.title}>
                 <Project {...project} onOpenModal={handleOpenModal} />
-              </motion.div>
+              </React.Fragment>
             );
           })}
-        </motion.div>
-        <div
-          aria-hidden="true"
-          className="center pointer-events-none absolute -right-10 top-0 h-full w-[300px] max-w-full"
-          style={{
-            background: "linear-gradient(to right,transparent 70%,#080808 95%)",
-          }}
-        ></div>
-      </motion.div>
+        </div>
+      )}
     </section>
   );
 };

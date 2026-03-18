@@ -56,20 +56,39 @@ const Project = ({
         onClick={handleOpenModal}
         className="relative flex h-80 flex-col justify-between overflow-hidden rounded-3xl bg-[#141516] px-7 py-8 text-left transition duration-200 hover:bg-[#191a1b] sm:pointer-events-none"
       >
-        <div>
-          <ul className="mb-[-5.625rem] flex flex-wrap justify-start gap-4">
-            {techStack.map((techItem) => (
-              <li
-                key={techItem.title} //test
-                className="group flex flex-col items-center justify-center gap-4 text-lg opacity-100 outline-none"
-              >
-                {techItem.icon}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex w-full items-end justify-between">
-          <span className="text-xl">{title}</span>
+        <Image
+          src={imageUrl}
+          alt={title}
+          className={`pointer-events-none absolute inset-0 h-full w-full cursor-none rounded-3xl bg-cover bg-center object-cover object-top opacity-30 transition-opacity duration-200 ease-in-out`}
+          onLoad={handleImageLoad}
+          objectFit="cover"
+          quality={100}
+          loading="lazy"
+        />
+
+        <ul className="relative mb-[-5.625rem] flex w-fit flex-wrap justify-start gap-4 p-2">
+          <div className="absolute inset-0 w-full rounded-2xl bg-black/20 backdrop-blur-md"></div>
+          {techStack.map((techItem) => (
+            <li
+              key={techItem.title} //test
+              className="group z-10 flex flex-col items-center justify-center gap-4 text-lg text-green-300 opacity-100 outline-none"
+            >
+              {techItem.icon}
+            </li>
+          ))}
+        </ul>
+        <div className="relative flex w-full items-end justify-between">
+          <div className="relative">
+            <div className="z-10">
+              <span className="text-xl">
+                <span className="relative z-10 p-2 text-base font-bold">
+                  {title}
+
+                  <div className="absolute inset-0 z-[-1] w-full rounded-2xl bg-black/40 backdrop-blur-md"></div>
+                </span>
+              </span>
+            </div>
+          </div>
           <motion.div
             whileHover={{
               scale: 1.1,
@@ -78,7 +97,7 @@ const Project = ({
               borderColor: "#1c1c1c",
             }}
             transition={{ type: "spring", stiffness: 500 }}
-            className="h hidden h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] sm:pointer-events-auto sm:flex"
+            className="h z-[1] hidden h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-[#1f2326] bg-[#131618] text-[#8a8f98] sm:pointer-events-auto sm:flex"
           >
             <FiPlus className="transition group-hover:translate-x-1" />
           </motion.div>
@@ -106,7 +125,7 @@ const Project = ({
                 className={`inset-0 h-[55%] w-full bg-cover before:absolute before:h-[55%] before:w-full before:animate-pulse before:bg-[rgba(255,255,255,0.2)] before:content-[''] ${isProjImgLoaded ? "before:content-none" : ""}`}
                 style={{
                   backgroundImage: `url('${imageXsUrl?.src}')`,
-                  backgroundPosition: "top",
+                  backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}
               >
