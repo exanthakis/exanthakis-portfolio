@@ -17,9 +17,9 @@ const Project = ({
   description,
   techStack,
   imageUrl,
-  imageXsUrl,
   link,
   repo,
+  blurDataUrl,
   onOpenModal,
 }: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,11 +44,6 @@ const Project = ({
     setIsProjImgLoaded(false);
   };
 
-  const handleImageLoad = async () => {
-    await new Promise((res) => setTimeout(res, 1000));
-    setIsProjImgLoaded(true);
-  };
-
   return (
     <>
       <motion.div
@@ -60,10 +55,11 @@ const Project = ({
           src={imageUrl}
           alt={title}
           className={`pointer-events-none absolute inset-0 h-full w-full cursor-none rounded-3xl bg-cover bg-center object-cover object-top opacity-40 transition-opacity duration-200 ease-in-out`}
-          onLoad={handleImageLoad}
           objectFit="cover"
           quality={100}
           loading="lazy"
+          placeholder="blur"
+          blurDataURL={blurDataUrl}
         />
 
         <ul className="relative mb-[-5.625rem] flex w-fit flex-wrap justify-start gap-4 p-2">
@@ -122,21 +118,22 @@ const Project = ({
               className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
             >
               <div
-                className={`inset-0 h-[55%] w-full bg-cover before:absolute before:h-[55%] before:w-full before:animate-pulse before:bg-[rgba(255,255,255,0.2)] before:content-[''] ${isProjImgLoaded ? "before:content-none" : ""}`}
-                style={{
-                  backgroundImage: `url('${imageXsUrl?.src}')`,
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
+                className={`inset-0 h-[55%] w-full bg-cover`}
+                // style={{
+                //   backgroundImage: `url('${imageXsUrl?.src}')`,
+                //   backgroundPosition: "center",
+                //   backgroundSize: "cover",
+                // }}
               >
                 <Image
                   src={imageUrl}
                   alt={title}
-                  className={`pointer-events-none ease-in-out ${isProjImgLoaded ? "!opacity-100" : ""} h-full w-full cursor-none bg-cover bg-center object-cover object-center opacity-0 transition-opacity duration-200`}
-                  onLoad={handleImageLoad}
+                  className={`pointer-events-none h-full w-full cursor-none bg-contain bg-center object-cover object-center transition-opacity duration-200 ease-in-out`}
                   objectFit="cover"
                   quality={100}
                   loading="lazy"
+                  blurDataURL={blurDataUrl}
+                  placeholder="blur"
                 />
               </div>
 

@@ -10,13 +10,13 @@ import Filter from "./filter";
 import { ProjectsT, TechStackE } from "@/lib/types";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 
-const Projects = () => {
+const Projects = ({ projectData }: { projectData: ProjectsT[] }) => {
   const { ref } = useSectionInView("Projects", 0.5);
   const projectsCarousel = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const isMobile = useIsMobile();
 
-  const [filtered, setFiltered] = useState<ProjectsT[]>(projectsData);
+  const [filtered, setFiltered] = useState<ProjectsT[]>(projectData);
   const [activeTechStack, setActiveTechStack] = useState(TechStackE.All);
   const [width, setWidth] = useState(0);
   const [disableDrag, setDisableDrag] = useState(false);
@@ -50,8 +50,6 @@ const Projects = () => {
 
     setFiltered(filtered);
   };
-
-  console.log("isMobile", isMobile);
 
   // Function to reset the drag to the start
   const handleResetDrag = () => {
@@ -93,7 +91,7 @@ const Projects = () => {
             animate={controls}
             className="grid grid-flow-col gap-4 md:gap-10"
           >
-            {filtered.map((project) => {
+            {filtered?.map((project) => {
               return (
                 <motion.div
                   layout
@@ -115,7 +113,7 @@ const Projects = () => {
         </motion.div>
       ) : (
         <div className="relative grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:flex-row lg:grid-cols-3">
-          {filtered.map((project) => {
+          {filtered?.map((project) => {
             return (
               <React.Fragment key={project.title}>
                 <Project {...project} onOpenModal={handleOpenModal} />

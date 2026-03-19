@@ -55,7 +55,7 @@ type ProjectPropsModal = {
 
 type ProjectsT = (typeof projectsData)[number];
 
-type ProjectProps = ProjectsT & ProjectPropsModal;
+type ProjectProps = ProjectsT & ProjectPropsModal & { blurDataUrl?: string };
 
 type FilterProps = {
   activeTechStack: TechStackE;
