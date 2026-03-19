@@ -394,8 +394,21 @@ export const projectsData = [
   {
     id: 1,
     title: "Casa Vasilia",
-    description:
-      "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
+    description: `
+    Casa Vasilia is a vacation rental website built with Next.js and React, styled with Tailwind CSS, and enhanced with Framer Motion animations. Guests can view the property availability calendar, which is fetched from Airbnb’s .ics calendar, and book their selected dates securely. The site implements client-side and server-side input validation to ensure data integrity and a safe booking experience. The website is deployed on Vercel with google analytics and performance monitoring.\n
+    Features:
+    • Property Calendar – Fetches availability from Airbnb’s .ics calendar.
+    • Secure Booking – Guests can select dates and submit bookings with validation on both client and server sides.
+    • Responsive Design – Optimized for mobile, tablet, and desktop devices.
+    • Interactive UI Elements – Smooth transitions and animations with Framer Motion.
+    • Vercel Deployment – Live site hosted with google-analytics and @vercel/speed-insights.\n
+    Built with:
+    • Next.js 16 & React 19
+    • Tailwind CSS
+    • Framer Motion
+    • google-analytics & @vercel/speed-insights
+    • Additional tools: Resend, react-email for email handling
+    `,
     techStack: [
       skillsData[9],
       skillsData[7],
@@ -406,7 +419,7 @@ export const projectsData = [
     imageUrl: CasaVasiliaImg,
     src: "/images/casavasilia.webp",
     link: "https://casavasilia.com/",
-    repo: "https://github.com/exanthakis/casavasilia_website",
+    // repo: "https://github.com/exanthakis/casavasilia_website",
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
@@ -449,8 +462,22 @@ export const projectsData = [
   {
     id: 4,
     title: "Portfolio",
-    description:
-      "This portfolio showcases my journey in web development, featuring projects that highlight my expertise in modern web technologies, including Next.js, Tailwind CSS, and other cutting-edge tools.\n\nThis project was about more than just a portfolio refresh it was an exploration of my growth as a designer, developer, and creator. I wanted to craft a digital space that reflects who I am today and where I’m headed tomorrow.\n\nFeatures:\n• Clean and modern design\n• Responsive layout for all devices\n• Fast performance with server-side rendering\n• SEO-friendly pages\n• Easy to update and expand\n\nTech Stack:\n• Next.js – for server-side rendering and static site generation\n• TypeScript – for type safety and better development experience\n• Tailwind CSS – for fast and flexible styling\n• Framer Motion – for animations and UI transitions\n• Vercel – for fast and secure deployment",
+    description: `This portfolio showcases my journey in web development, featuring projects built with modern technologies like Next.js and Tailwind CSS.
+
+        Features:
+        • Clean and modern design  
+        • Fully responsive layout  
+        • Fast performance and SEO-friendly pages  
+        • Blog section powered by MDX  
+        • Tag system to explore related blog posts  
+
+        Tech Stack:
+        • Next.js  
+        • TypeScript  
+        • Tailwind CSS  
+        • Framer Motion  
+        • next-mdx-remote  
+        • Vercel  `,
     techStack: [
       skillsData[9],
       skillsData[7],
