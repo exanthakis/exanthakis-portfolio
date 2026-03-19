@@ -33,17 +33,17 @@ import { CgPerformance } from "react-icons/cg";
 import { GrReactjs, GrContact } from "react-icons/gr";
 import { BiLogoAdobe, BiLogoVisualStudio } from "react-icons/bi";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import CalendarImg from "../public/images/calendar.png";
+import CalendarImg from "../public/images/calendar.webp";
 import CalendarXsImg from "../public/images/calendar_xs.png";
-import PortfolioImg from "../public/images/portfolio.png";
+import PortfolioImg from "../public/images/portfolio.webp";
 import PortfolioXsImg from "../public/images/portfolio_xs.png";
-import CineScopeImg from "../public/images/cinescope3.jpg";
+import CineScopeImg from "../public/images/cinescope.webp";
 import CineScopeXsImg from "../public/images/cinescope_xs.jpg";
-import OpcoImg from "../public/images/opco.jpg";
+import OpcoImg from "../public/images/opco.webp";
 import OpcoXsImg from "../public/images/opco_xs.jpg";
-import CasaVasiliaImg from "../public/images/cv3.png";
-import CasaVasiliaXsImg from "../public/images/cv3.png";
-import PerigrammataImg from "../public/images/perigrammata1.png";
+import CasaVasiliaImg from "../public/images/casavasilia.webp";
+import CasaVasiliaXsImg from "../public/images/casavasilia.webp";
+import PerigrammataImg from "../public/images/perigrammata.webp";
 import PerigrammataXsImg from "../public/images/perigrammata_xs.png";
 import DeloitteImg from "../public/images/deloitte-digital-logo.png";
 import UniSystemsImg from "../public/images/uni-systems-logo-white.png";
@@ -394,12 +394,18 @@ export const projectsData = [
     title: "Casa Vasilia",
     description:
       "Built entirely with HTML, CSS, and JavaScript, this website offers a fast, clean, and responsive user experience without relying on any external frameworks and it marks my very first web development project—created from scratch without any prior experience.",
-    techStack: [skillsData[0], skillsData[1], skillsData[6]],
+    techStack: [
+      skillsData[9],
+      skillsData[7],
+      skillsData[3],
+      skillsData[12],
+      { icon: React.createElement(RxVercelLogo), title: "Vercel" },
+    ],
     imageUrl: CasaVasiliaImg,
     imageXsUrl: CasaVasiliaXsImg,
     link: "https://casavasilia.com/",
     repo: "https://github.com/exanthakis/casavasilia_website",
-    tags: ["HTML", "CSS", "Javascript"],
+    tags: ["React", "Next.js", "Tailwind"],
   },
   {
     id: 2,

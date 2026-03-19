@@ -59,7 +59,7 @@ const Project = ({
         <Image
           src={imageUrl}
           alt={title}
-          className={`pointer-events-none absolute inset-0 h-full w-full cursor-none rounded-3xl bg-cover bg-center object-cover object-top opacity-30 transition-opacity duration-200 ease-in-out`}
+          className={`pointer-events-none absolute inset-0 h-full w-full cursor-none rounded-3xl bg-cover bg-center object-cover object-top opacity-40 transition-opacity duration-200 ease-in-out`}
           onLoad={handleImageLoad}
           objectFit="cover"
           quality={100}
@@ -71,7 +71,7 @@ const Project = ({
           {techStack.map((techItem) => (
             <li
               key={techItem.title} //test
-              className="group z-10 flex flex-col items-center justify-center gap-4 text-lg text-green-300 opacity-100 outline-none"
+              className="group z-10 flex flex-col items-center justify-center gap-4 text-base text-green-300 opacity-100 outline-none"
             >
               {techItem.icon}
             </li>
@@ -81,7 +81,7 @@ const Project = ({
           <div className="relative">
             <div className="z-10">
               <span className="text-xl">
-                <span className="relative z-10 p-2 text-base font-bold">
+                <span className="relative z-10 p-2 text-base font-extrabold">
                   {title}
 
                   <div className="absolute inset-0 z-[-1] w-full rounded-2xl bg-black/40 backdrop-blur-md"></div>
@@ -132,7 +132,7 @@ const Project = ({
                 <Image
                   src={imageUrl}
                   alt={title}
-                  className={`pointer-events-none ease-in-out ${isProjImgLoaded ? "!opacity-100" : ""} h-full w-full cursor-none bg-cover bg-center object-cover object-top opacity-0 transition-opacity duration-200`}
+                  className={`pointer-events-none ease-in-out ${isProjImgLoaded ? "!opacity-100" : ""} h-full w-full cursor-none bg-cover bg-center object-cover object-center opacity-0 transition-opacity duration-200`}
                   onLoad={handleImageLoad}
                   objectFit="cover"
                   quality={100}

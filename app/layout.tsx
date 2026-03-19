@@ -63,9 +63,9 @@ export default function RootLayout({
         <SpeedInsights />
 
         {/* Transparent body bg */}
-        <div className="pointer-events-none fixed bottom-full left-0 right-0 top-0 z-10 h-full">
+        {/* <div className="pointer-events-none fixed bottom-full left-0 right-0 top-0 z-10 h-full">
           <div className="h-full w-full bg-[url('/images/transparentBg.png')] bg-[length:128px] bg-repeat opacity-[0.04] md:opacity-[0.05]"></div>
-        </div>
+        </div> */}
       </body>
     </html>
   );
