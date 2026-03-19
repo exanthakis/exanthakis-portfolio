@@ -14,7 +14,7 @@ const DesktopNav = () => {
 
   return (
     <nav className="hidden items-center gap-2 md:flex">
-      <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-400/80 sm:w-[initial] sm:flex-nowrap sm:gap-5">
         {links.map(
           (link) =>
             !link?.isButton && (

@@ -39,8 +39,8 @@ const SkillsItem = ({
         )}
       </div>
       <span
-        className={`sans font-normal transition duration-200 ease-in-out group-hover:text-white ${
-          isMain ? "leading-2 text-xs text-[#f1f7feb5]" : "text-sm leading-[1.6] text-[#f1f7feb5]"
+        className={`sans font-normal text-gray-400/80 transition duration-200 ease-in-out group-hover:text-white ${
+          isMain ? "leading-2 text-xs" : "text-sm leading-[1.6]"
         } ${animateTitle ? "text-center leading-5 opacity-0 group-hover:opacity-100" : ""}`}
       >
         {title}
