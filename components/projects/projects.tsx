@@ -5,7 +5,7 @@ import SectionHeading from "../ui/section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import { motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Filter from "./filter";
 import { ProjectsT, TechStackE } from "@/lib/types";
 import { useIsMobile } from "@/hooks/use-is-mobile";
@@ -79,40 +79,40 @@ const Projects = ({ projectData }: { projectData: ProjectsT[] }) => {
 
       <Filter activeTechStack={activeTechStack} onActiveTechStack={handleActiveStack} />
 
-      {isMobile ? (
+      <motion.div
+        className="relative block cursor-grab overflow-hidden md:hidden"
+        whileTap={{ cursor: "grabbing" }}
+      >
         <motion.div
-          className="relative cursor-grab overflow-hidden"
-          whileTap={{ cursor: "grabbing" }}
+          ref={projectsCarousel}
+          drag={disableDrag ? false : "x"}
+          dragConstraints={{ right: 0, left: -width }}
+          animate={controls}
+          className="grid grid-flow-col gap-4 md:gap-10"
         >
-          <motion.div
-            ref={projectsCarousel}
-            drag={disableDrag ? false : "x"}
-            dragConstraints={{ right: 0, left: -width }}
-            animate={controls}
-            className="grid grid-flow-col gap-4 md:gap-10"
-          >
-            {filtered?.map((project) => {
-              return (
-                <motion.div
-                  layout
-                  className="w-full min-w-[21rem] max-w-[21rem] sm:min-w-[30rem] sm:max-w-[33rem]"
-                  key={project.id}
-                >
-                  <Project {...project} onOpenModal={handleOpenModal} />
-                </motion.div>
-              );
-            })}
-          </motion.div>
-          <div
-            aria-hidden="true"
-            className="center pointer-events-none absolute -right-10 top-0 h-full w-[300px] max-w-full"
-            style={{
-              background: "linear-gradient(to right,transparent 70%,#080808 95%)",
-            }}
-          ></div>
+          {filtered?.map((project) => {
+            return (
+              <motion.div
+                layout
+                className="w-full min-w-[21rem] max-w-[21rem] sm:min-w-[30rem] sm:max-w-[33rem]"
+                key={project.id}
+              >
+                <Project {...project} onOpenModal={handleOpenModal} />
+              </motion.div>
+            );
+          })}
         </motion.div>
-      ) : (
-        <div className="relative grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:flex-row lg:grid-cols-3">
+        <div
+          aria-hidden="true"
+          className="center pointer-events-none absolute -right-10 top-0 h-full w-[300px] max-w-full"
+          style={{
+            background: "linear-gradient(to right,transparent 70%,#080808 95%)",
+          }}
+        ></div>
+      </motion.div>
+
+      <div className="relative hidden w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid md:flex-row lg:grid-cols-3">
+        <AnimatePresence>
           {filtered?.map((project) => {
             return (
               <React.Fragment key={project.title}>
@@ -120,8 +120,8 @@ const Projects = ({ projectData }: { projectData: ProjectsT[] }) => {
               </React.Fragment>
             );
           })}
-        </div>
-      )}
+        </AnimatePresence>
+      </div>
     </section>
   );
 };

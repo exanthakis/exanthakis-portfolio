@@ -128,12 +128,14 @@ export const links = [
 
 export const socialLinks = [
   {
+    key: "github",
     link: "https://github.com/exanthakis",
     icon: React.createElement(IoLogoGithub, {
       className: "opacity-70 group-hover:translate-x-1 transition text-xl",
     }),
   },
   {
+    key: "linkedin",
     link: "https://www.linkedin.com/in/emmanouil-xanthakis",
     icon: React.createElement(FaLinkedinIn, {
       className: "opacity-70 group-hover:translate-x-1 transition text-xl",

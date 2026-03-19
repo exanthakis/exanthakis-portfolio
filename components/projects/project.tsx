@@ -47,9 +47,15 @@ const Project = ({
   return (
     <>
       <motion.div
+        // className="image-card"
+        key={title}
         layout
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative flex h-80 flex-col justify-between overflow-hidden rounded-3xl bg-[#141516] px-7 py-8 text-left hover:bg-[#191a1b] sm:pointer-events-none"
         onClick={handleOpenModal}
-        className="relative flex h-80 flex-col justify-between overflow-hidden rounded-3xl bg-[#141516] px-7 py-8 text-left transition duration-200 hover:bg-[#191a1b] sm:pointer-events-none"
       >
         <Image
           src={imageUrl}
@@ -62,17 +68,20 @@ const Project = ({
           blurDataURL={blurDataUrl}
         />
 
-        <ul className="relative mb-[-5.625rem] flex w-fit flex-wrap justify-start gap-4 p-2">
+        <div className="relative mb-[-5.625rem] w-fit">
           <div className="absolute inset-0 w-full rounded-2xl bg-black/20 backdrop-blur-md"></div>
-          {techStack.map((techItem) => (
-            <li
-              key={techItem.title} //test
-              className="group z-10 flex flex-col items-center justify-center gap-4 text-base text-green-300 opacity-100 outline-none"
-            >
-              {techItem.icon}
-            </li>
-          ))}
-        </ul>
+
+          <ul className="relative z-10 flex flex-wrap justify-start gap-4 p-2">
+            {techStack.map((techItem) => (
+              <li
+                key={techItem.title}
+                className="group flex flex-col items-center justify-center gap-4 text-base text-green-300"
+              >
+                {techItem.icon}
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="relative flex w-full items-end justify-between">
           <div className="relative">
             <div className="z-10">
@@ -115,7 +124,7 @@ const Project = ({
             </motion.div>
             <section
               ref={modalRef}
-              className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg border border-black/5 text-white"
+              className="noScrollbar relative flex h-full cursor-default flex-col justify-start overflow-hidden overflow-x-hidden overflow-y-scroll rounded-lg text-white"
             >
               <div
                 className={`inset-0 h-[55%] w-full bg-cover`}

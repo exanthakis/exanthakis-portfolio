@@ -3,7 +3,7 @@ import Contact from "@/components/contact";
 import Hero from "@/components/hero/hero";
 import Projects from "@/components/projects/projects";
 import Image from "next/image";
-import bgImg from "@/public/images/heroBg.jpg";
+import bgImg from "@/public/images/heroBg.webp";
 import fs from "fs/promises";
 import path from "path";
 import sharp from "sharp";

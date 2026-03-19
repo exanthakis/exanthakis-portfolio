@@ -112,9 +112,9 @@ const Experience = () => {
                     width={experience.id === 1 ? 100 : 64}
                   />
                   <div className="flex flex-col items-start justify-start text-left">
-                    <h5 className="line-clamp-5 pb-4 text-2xl tracking-tight">
+                    <h4 className="line-clamp-5 pb-4 text-2xl tracking-tight">
                       {experience.title}
-                    </h5>
+                    </h4>
                     <span className="mb-4 text-base font-normal text-[#f1f7feb5] md:leading-[1.5]">
                       {experience.description}
                     </span>

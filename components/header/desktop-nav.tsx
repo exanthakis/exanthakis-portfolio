@@ -31,40 +31,41 @@ const DesktopNav = () => {
               </li>
             ),
         )}
-        <div className="fixed right-0 top-[40vh]">
-          {selected?.children?.map((el) => (
-            <Link
-              key={el.hash}
-              href={el.hash}
-              className="group relative flex flex-row-reverse items-center"
-            >
-              <motion.span
-                className={`my-2 flex w-9 flex-col items-center justify-center p-1 transition ${
-                  activeSection === el.name
-                    ? "ml-2 rounded-lg bg-gray-100 text-gray-950 hover:text-gray-950"
-                    : ""
-                } hover:text-gray-300`}
-                layoutId="activeSection"
-                transition={{
-                  type: "spring",
-                  stiffness: 380,
-                  damping: 30,
-                }}
-                onClick={() => {
-                  setTimeOfLastClick(Date.now());
-                  setActiveSection(el.name);
-                }}
-              >
-                {el.icon}
-              </motion.span>
-
-              <span className="sans text-center font-normal leading-5 text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
-                {el.name}
-              </span>
-            </Link>
-          ))}
-        </div>
       </ul>
+
+      <div className="fixed right-0 top-[40vh]">
+        {selected?.children?.map((el) => (
+          <Link
+            key={el.hash}
+            href={el.hash}
+            className="group relative flex flex-row-reverse items-center"
+          >
+            <motion.span
+              className={`my-2 flex w-9 flex-col items-center justify-center p-1 transition ${
+                activeSection === el.name
+                  ? "ml-2 rounded-lg bg-gray-100 text-gray-950 hover:text-gray-950"
+                  : ""
+              } hover:text-gray-300`}
+              layoutId="activeSection"
+              transition={{
+                type: "spring",
+                stiffness: 380,
+                damping: 30,
+              }}
+              onClick={() => {
+                setTimeOfLastClick(Date.now());
+                setActiveSection(el.name);
+              }}
+            >
+              {el.icon}
+            </motion.span>
+
+            <span className="sans text-center font-normal leading-5 text-white opacity-0 transition duration-200 ease-in-out group-hover:opacity-100">
+              {el.name}
+            </span>
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 };

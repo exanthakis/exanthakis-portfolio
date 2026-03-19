@@ -56,9 +56,15 @@ const Certifications = () => {
 
             <p className="mt-auto text-justify">{certification.date}</p>
             <div className="flex flex-wrap pt-3 text-xs">
-              <Button buttonType={ButtonType.LINK} href={certification.link} target="_blank">
+              <Button
+                buttonType={ButtonType.LINK}
+                href={certification.link}
+                target="_blank"
+                aria-label={`Learn more about ${certification.title}`}
+              >
                 Learn more
                 <GoLinkExternal className="opacity-70 transition group-hover:translate-x-1" />
+                <span className="sr-only">{`Learn more about ${certification.title}`}</span>
               </Button>
             </div>
           </motion.li>

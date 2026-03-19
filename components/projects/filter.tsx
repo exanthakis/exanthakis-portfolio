@@ -29,7 +29,7 @@ const FilterButton = ({
   return (
     <button
       className={`group flex gap-3 transition duration-500 ${
-        activeTechStack === currentStack ? "font-medium text-white" : "font-normal text-[#62666d]"
+        activeTechStack === currentStack ? "font-medium text-white" : "font-normal opacity-70"
       }`}
       onClick={() => onFilterClick(currentStack)}
     >

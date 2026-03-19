@@ -97,6 +97,7 @@ const Header = () => {
                 href={social.link}
                 key={social.link}
                 target="_blank"
+                aria-label={`${social.key} button link`}
               >
                 {social.icon}
               </Button>
