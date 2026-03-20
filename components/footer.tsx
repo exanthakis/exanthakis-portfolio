@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
-      className="relative h-24 px-4 text-center text-gray-500"
+      className="relative h-24 px-4 text-center text-gray-300"
       style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%" }}
     >
       <div className="fixed bottom-0 left-0 flex h-24 w-full flex-col items-center justify-center">

@@ -23,7 +23,7 @@ export default async function TagsPage() {
   const result = getTags();
 
   return (
-    <section className="mx-auto max-w-5xl bg-black px-4 pt-24 text-left md:max-w-4xl md:px-10 md:py-16 lg:max-w-6xl">
+    <main className="min-h-screen">
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0 dark:divide-gray-700">
         <div className="space-x-2 pb-2 pt-6 sm:pb-8 md:space-y-5">
           <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl dark:text-gray-100">
@@ -41,6 +41,6 @@ export default async function TagsPage() {
           })}
         </div>
       </div>
-    </section>
+    </main>
   );
 }
