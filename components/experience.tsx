@@ -106,10 +106,10 @@ const Experience = () => {
                   <Image
                     src={experience.img}
                     alt={`${experience.company} logo`}
-                    quality="95"
-                    className="opacity-70"
-                    height={32}
+                    quality={95}
                     width={experience.id === 1 ? 100 : 64}
+                    height={32}
+                    className="h-auto w-auto opacity-70"
                   />
                   <div className="flex flex-col items-start justify-start text-left">
                     <h4 className="line-clamp-5 pb-4 text-2xl tracking-tight">

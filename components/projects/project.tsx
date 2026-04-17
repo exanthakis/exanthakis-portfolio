@@ -61,7 +61,6 @@ const Project = ({
           src={imageUrl}
           alt={title}
           className={`pointer-events-none absolute inset-0 h-full w-full cursor-none rounded-3xl bg-cover bg-center object-cover object-top opacity-40 transition-opacity duration-200 ease-in-out`}
-          objectFit="cover"
           quality={100}
           loading="lazy"
           placeholder="blur"
