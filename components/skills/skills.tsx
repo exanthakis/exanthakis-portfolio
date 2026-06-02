@@ -16,8 +16,8 @@ const Skills = () => {
       <h3 className="mb-2 text-left text-2xl font-bold">Technical Skills and Tools</h3>
       <p className="text-secondary pb-10 text-left text-base font-normal">
         My technical toolkit focuses mainly on <span className="font-medium"> front-end</span>{" "}
-        development, with some experience in <span className="font-medium"> back-end</span> as well,
-        along with solid skills in different programming languages, frameworks, and tools.
+        development, with some experience in <span className="font-medium"> back-end </span> as
+        well, along with solid skills in different programming languages, frameworks, and tools.
         Here&apos;s a list of the main technologies I&apos;ve used to build projects.
       </p>
       <ul className="mx-auto flex max-w-[53rem] flex-wrap justify-center gap-6 text-lg text-gray-800">
